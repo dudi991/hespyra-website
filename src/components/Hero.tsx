@@ -22,7 +22,6 @@ const Hero = () => {
     : "A drinkable evening ritual. Clinically-dosed magnesium, L-theanine and saffron to help you set the day down — without melatonin, without the morning fog.";
 
   const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SHOPPEN" : "SHOP THE FIRST EDITION";
-  const ctaSecondary = language === 'de' ? "ZUR REZEPTUR" : "SEE THE FORMULA";
 
   const reviewsText = language === 'de' 
     ? "4.8 · 2.400+ ruhige Abende"
@@ -48,7 +47,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* Left Column: Wording & CTAs (Stretched to match image height on desktop) */}
           <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
@@ -79,9 +78,13 @@ const Hero = () => {
                 </a>
                 <a 
                   href="#exclusions" 
-                  className="flex items-center justify-center gap-2 text-primary/80 hover:text-primary text-xs tracking-[0.22em] font-bold uppercase transition-all duration-300 border-b border-primary/20 pb-0.5"
+                  className="flex items-center gap-4 text-primary/80 hover:text-accent transition-all duration-300 group/arrow"
                 >
-                  {ctaSecondary} <ArrowRight className="w-6 h-6" strokeWidth={1.5} />
+                  <div className="flex flex-col text-left leading-[1.2] text-[10px] sm:text-xs tracking-[0.22em] font-bold uppercase">
+                    <span>{language === 'de' ? 'ZUR' : 'SEE THE'}</span>
+                    <span>{language === 'de' ? 'REZEPTUR' : 'FORMULA'}</span>
+                  </div>
+                  <ArrowRight className="w-8 h-8 transition-transform duration-300 group-hover/arrow:translate-x-1 text-primary" strokeWidth={2} />
                 </a>
               </div>
 

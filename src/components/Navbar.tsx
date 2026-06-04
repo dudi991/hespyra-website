@@ -21,7 +21,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
   return (
     <nav className="w-full bg-transparent absolute top-0 left-0 z-50 border-b border-border/40">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between relative">
         
         {/* Brand Logo */}
         <a href="#" className="flex items-center text-xl sm:text-2xl tracking-[0.25em] font-sans font-bold leading-none select-none text-primary hover:opacity-80 transition-opacity">
@@ -29,12 +29,12 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
         </a>
 
         {/* Desktop Menu Links */}
-        <div className="hidden lg:flex items-center gap-8 font-sans text-xs tracking-[0.2em] font-semibold text-primary/90 uppercase">
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 xl:gap-8 font-sans text-xs tracking-[0.2em] font-semibold text-primary/90 uppercase">
           {menuItems.map((item) => (
             <a 
-              key={item.label} 
+              key={item.href} 
               href={item.href} 
-              className="hover:text-accent transition-colors duration-300"
+              className="hover:text-accent transition-colors duration-300 whitespace-nowrap"
             >
               {item.label}
             </a>
