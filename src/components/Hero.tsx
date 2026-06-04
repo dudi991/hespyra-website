@@ -42,7 +42,7 @@ const Hero = () => {
       ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-background pt-36 pb-20 z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#F5F2EB] pt-36 pb-20 z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
@@ -111,21 +111,24 @@ const Hero = () => {
 
           {/* Right Column: Image and Overlay Card */}
           <div className="lg:col-span-6 flex justify-center items-center w-full max-w-[500px] lg:max-w-none mx-auto relative">
-            <div className="relative aspect-square w-full bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
-              <img 
-                src="images/heroProdukt.webp" 
-                alt="HESPYRA Product Presentation" 
-                className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
-                loading="eager"
-                draggable="false"
-              />
+            <div className="relative aspect-square w-full group">
+              {/* Rounded image wrapper */}
+              <div className="absolute inset-0 bg-[#D4C9B9] rounded-sm overflow-hidden border border-border/40 analog-wrapper analog-grain">
+                <img 
+                  src="images/heroProdukt.webp" 
+                  alt="HESPYRA Product Presentation" 
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
+                  loading="eager"
+                  draggable="false"
+                />
+              </div>
               
-              {/* Overlay card in bottom-left */}
-              <div className="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur-sm p-5 max-w-[280px] rounded-sm shadow-md border border-border/30 transition-transform duration-500 hover:translate-y-[-2px]">
-                <h4 className="font-serif text-lg text-primary font-medium mb-1">
+              {/* Overlay card in bottom-left - overflows left */}
+              <div className="absolute bottom-6 -left-6 bg-white p-5 max-w-[280px] rounded-sm shadow-xl border border-border/20 transition-transform duration-500 hover:translate-y-[-2px] z-20">
+                <h4 className="font-serif text-lg text-primary font-bold mb-1">
                   The Evening Tin
                 </h4>
-                <p className="font-sans text-[11px] leading-relaxed text-primary/60 tracking-wider">
+                <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide">
                   {language === 'de' 
                     ? "30 Abende · Vanille & Tonka. $48 $58 im Abonnement."
                     : "30 evenings · vanilla & tonka. $48 $58 on subscription."}
