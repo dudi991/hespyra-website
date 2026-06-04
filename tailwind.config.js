@@ -20,7 +20,7 @@ export default {
         midnight: '#111524'
       },
       fontFamily: {
-        serif: ['"Instrument Serif"', 'serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
         sans: ['Inter', 'sans-serif'],
       }
     },

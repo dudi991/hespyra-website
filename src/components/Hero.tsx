@@ -54,15 +54,15 @@ const Hero = () => {
             
             {/* Top Group: Slogan, Title, Description */}
             <div className="space-y-6">
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] font-bold text-primary/60 uppercase block">
+              <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase block">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-[0.06em] font-light max-w-[850px]">
+              <h1 className="text-4xl sm:text-6xl lg:text-[5rem] xl:text-[5.5rem] 2xl:text-[6rem] leading-[1.05] mb-8 font-serif text-primary tracking-[0.02em] font-normal max-w-[950px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
-              <p className="text-primary/70 text-base sm:text-lg leading-relaxed font-light max-w-xl">
+              <p className="text-primary/75 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
                 {description}
               </p>
             </div>
