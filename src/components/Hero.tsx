@@ -58,7 +58,7 @@ const Hero = () => {
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] font-serif text-primary tracking-tight font-light">
+              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-wide font-light max-w-[580px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
@@ -80,7 +80,7 @@ const Hero = () => {
                   href="#exclusions" 
                   className="flex items-center justify-center gap-2 text-primary/80 hover:text-primary text-xs tracking-[0.22em] font-bold uppercase transition-all duration-300 border-b border-primary/20 pb-0.5"
                 >
-                  {ctaSecondary} <ArrowRight className="w-4 h-4" />
+                  {ctaSecondary} <ArrowRight className="w-6 h-6" strokeWidth={1.5} />
                 </a>
               </div>
 
@@ -111,9 +111,9 @@ const Hero = () => {
 
           {/* Right Column: Image and Overlay Card */}
           <div className="lg:col-span-6 flex justify-center items-center w-full max-w-[500px] lg:max-w-none mx-auto relative">
-            <div className="relative aspect-square w-full group">
+            <div className="relative w-full aspect-square bg-[#D4C9B9] rounded-sm shadow-lg border border-border/40 group">
               {/* Rounded image wrapper */}
-              <div className="absolute inset-0 bg-[#D4C9B9] rounded-sm overflow-hidden border border-border/40 analog-wrapper analog-grain">
+              <div className="absolute inset-0 overflow-hidden rounded-sm analog-wrapper analog-grain">
                 <img 
                   src="images/heroProdukt.webp" 
                   alt="HESPYRA Product Presentation" 
