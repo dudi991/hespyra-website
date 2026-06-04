@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Faq = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -18,59 +18,57 @@ const Faq = () => {
     { q: t('faq.q5'), a: t('faq.a5') },
   ];
 
-  return (
-    <section id="faq" className="w-full bg-[#FAF9F6] py-16 lg:py-24 border-t border-primary/5 transition-colors duration-[2.5s] relative z-20 calm-mode:bg-[#151821] calm-mode:border-white/5">
-      <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
-        
-        {/* --- Section Header --- */}
-        <div className="mb-16 lg:mb-20 text-center">
-          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
-            {t('faq.tag')}
-          </span>
-          <div className="flex items-center justify-center gap-2 mt-4 select-none text-primary/50">
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-            <img 
-              src="images/logo1.webp" 
-              alt="HESPYRA Hallmark" 
-              className="h-[18px] w-auto opacity-70"
-            />
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-          </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mt-8">
-            {t('faq.title')}
-          </h2>
-        </div>
+  const title = language === 'de' ? "Fragen, beantwortet." : "Questions, answered.";
+  const tag = language === 'de' ? "HÄUFIGE FRAGEN" : "QUESTIONS, ANSWERED";
 
-        {/* --- Accordion --- */}
-        <div className="max-w-3xl mx-auto space-y-4">
+  return (
+    <section id="faq" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Section Tag */}
+        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
+          {tag}
+        </span>
+        
+        {/* Headline */}
+        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-16 lg:mb-20 max-w-2xl mx-auto">
+          {title}
+        </h2>
+
+        {/* Accordions */}
+        <div className="max-w-3xl mx-auto border-t border-border/65">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
                 key={index} 
-                className="border-b border-primary/10 transition-colors duration-300 pb-4"
+                className="border-b border-border/65 transition-colors duration-300"
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between text-left py-4 focus:outline-none cursor-pointer group"
+                  className="w-full flex items-center justify-between text-left py-6 focus:outline-none cursor-pointer group"
                 >
-                  <span className="font-sans text-base sm:text-[17px] tracking-wide font-medium text-primary/95 group-hover:text-primary transition-colors duration-200">
+                  <span className="font-sans text-sm sm:text-base font-semibold tracking-wide text-primary/80 group-hover:text-primary transition-colors duration-200">
                     {faq.q}
                   </span>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-primary/50 group-hover:text-primary transition-transform duration-300 ease-out flex-shrink-0 ml-4 ${
-                      isOpen ? 'rotate-180' : ''
-                    }`}
-                    strokeWidth={1.5}
-                  />
+                  
+                  {/* Plus / Minus Indicator */}
+                  <div className="text-primary/50 group-hover:text-primary transition-colors duration-200 flex-shrink-0 ml-4">
+                    {isOpen ? (
+                      <Minus className="w-4 h-4 transition-transform duration-300" strokeWidth={1.5} />
+                    ) : (
+                      <Plus className="w-4 h-4 transition-transform duration-300" strokeWidth={1.5} />
+                    )}
+                  </div>
                 </button>
                 
+                {/* Accordion Content */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[300px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                    isOpen ? 'max-h-[300px] opacity-100 mb-6' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="font-sans text-sm sm:text-base text-primary/70 leading-relaxed font-light whitespace-pre-line pb-4">
+                  <p className="font-sans text-[13px] sm:text-sm text-primary/60 leading-relaxed font-light whitespace-pre-line text-left">
                     {faq.a}
                   </p>
                 </div>

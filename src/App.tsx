@@ -1,20 +1,21 @@
 import { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import BenefitStrip from './components/BenefitStrip';
+import LogoTicker from './components/LogoTicker';
 import CustomerStory from './components/CustomerStory';
-import EditorialPause from './components/EditorialPause';
-import Ritual from './components/Ritual';
-import WhyHespyra from './components/WhyHespyra';
+import BenefitStrip from './components/BenefitStrip';
+import Exclusions from './components/Exclusions';
 import Ingredients from './components/Ingredients';
-import Gallery from './components/Gallery';
+import WhyHespyra from './components/WhyHespyra';
+import Testimonials from './components/Testimonials';
+import Purchase from './components/Purchase';
 import Faq from './components/Faq';
 import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
 import Preloader from './components/Preloader';
 
-// Lazy load heavy components (Modals) to dramatically reduce initial JS bundle size
+// Lazy load modals for optimized bundle size
 const ImprintModal = lazy(() => import('./components/ImprintModal'));
 const ContactModal = lazy(() => import('./components/ContactModal'));
 const AboutModal = lazy(() => import('./components/AboutModal'));
@@ -28,29 +29,25 @@ function App() {
   const [isCalm, setIsCalm] = useState(false);
 
   return (
-    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-primary selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-white text-primary'}`}>
+    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-accent selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-[#FAF8F5] text-primary'}`}>
       <Preloader />
-      <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />
-      <Hero isCalm={isCalm} />
       
-      <ScrollReveal>
-        <BenefitStrip />
-      </ScrollReveal>
+      <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />
+      
+      <Hero />
+      
+      <LogoTicker />
       
       <ScrollReveal>
         <CustomerStory />
       </ScrollReveal>
       
       <ScrollReveal>
-        <EditorialPause />
+        <BenefitStrip />
       </ScrollReveal>
       
       <ScrollReveal>
-        <Ritual />
-      </ScrollReveal>
-      
-      <ScrollReveal>
-        <WhyHespyra />
+        <Exclusions />
       </ScrollReveal>
       
       <ScrollReveal>
@@ -58,7 +55,15 @@ function App() {
       </ScrollReveal>
       
       <ScrollReveal>
-        <Gallery />
+        <WhyHespyra />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <Testimonials />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <Purchase />
       </ScrollReveal>
       
       <ScrollReveal>
@@ -76,6 +81,7 @@ function App() {
         onShowPrivacy={() => setShowPrivacy(true)} 
       />
 
+      {/* Suspended lazy modals */}
       {showImprint && (
         <Suspense fallback={null}>
           <ImprintModal isOpen={showImprint} onClose={() => setShowImprint(false)} />

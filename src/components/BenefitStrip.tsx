@@ -1,57 +1,90 @@
 import { useLanguage } from '../context/LanguageContext';
 
 const BenefitStrip = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+
+  const title = language === 'de' ? "Ein kleiner Moment, in drei Teilen." : "A small moment, in three parts.";
+  const subtitle = language === 'de' 
+    ? "Ritual & Zubereitung: Das Abendritual und was dich erwartet." 
+    : "Ritual & Delivery: The evening ritual and what to expect.";
+
+  const steps = language === 'de'
+    ? [
+        {
+          num: 'i.',
+          label: 'Vorbereiten',
+          desc: 'Stimme dich auf den Feierabend ein. Lege Bildschirme beiseite und finde einen ruhigen Ort für dein Ritual.'
+        },
+        {
+          num: 'ii.',
+          label: 'Zubereiten',
+          desc: 'Rühre das Elixier-Pulver in warme Milch oder Wasser ein. Beobachte, wie es sich auflöst und atme den feinen Duft ein.'
+        },
+        {
+          num: 'iii.',
+          label: 'Genießen',
+          desc: 'Trinke langsam Schluck für Schluck, spüre die innere Wärme und lass die Anspannung des Tages los.'
+        }
+      ]
+    : [
+        {
+          num: 'i.',
+          label: 'Before',
+          desc: 'Prepare your mind with a mindful pause. Turn off screens and find a quiet space.'
+        },
+        {
+          num: 'ii.',
+          label: 'Gather',
+          desc: 'Stir the elixir in warm milk or water. Watch it dissolve, smelling the rich vanilla.'
+        },
+        {
+          num: 'iii.',
+          label: 'Savor',
+          desc: 'Sip slowly, feel the warmth, let go of the day. Embrace the transition to rest.'
+        }
+      ];
 
   return (
-    <section className="bg-white pt-24 pb-12 md:pb-20 px-8 lg:px-12 relative z-20">
-      <div className="max-w-[1800px] mx-auto">
-        {/* Centered Section Header formatted exactly like other sections */}
-        <div className="mb-16 lg:mb-24 text-center">
-          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
-            {t('benefits.tag')}
-          </span>
-          <div className="flex items-center justify-center gap-2 mt-4 select-none text-primary/50">
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-            <img 
-              src="images/logo1.webp" 
-              alt="HESPYRA Hallmark" 
-              className="h-[18px] w-auto opacity-70"
-            />
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-          </div>
-        </div>
+    <section id="ritual" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Section Tag */}
+        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
+          {language === 'de' ? 'DAS RITUAL' : 'THE RITUAL'}
+        </span>
+        
+        {/* Headline */}
+        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-4">
+          {title}
+        </h2>
+        
+        {/* Subtitle */}
+        <p className="font-sans text-xs sm:text-sm text-primary/60 tracking-wider uppercase font-semibold mb-16 lg:mb-24">
+          {subtitle}
+        </p>
 
-        {/* 3 columns grid with vertical separators, left-aligned column content, centered in an ultra-wide container */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-y-0 divide-y md:divide-y-0 md:divide-x divide-primary/10 max-w-[1500px] mx-auto">
-          {[1, 2, 3].map((num) => (
-            <div 
-              key={num}
-              className="px-6 md:px-6 lg:px-16 py-8 md:py-0"
-            >
-              {/* Centered content wrapper that is internally left-aligned */}
-              <div className="flex flex-col items-start text-left w-full max-w-[320px] mx-auto">
-                {/* Number - Slightly darker (text-primary/60) and with more vertical distance (mb-6 on mobile, mb-10 on desktop) */}
-                <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-6 md:mb-10 block select-none">
-                  {String(num).padStart(2, '0')}
-                </span>
-
-                {/* Massive Serif Title */}
-                <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary mb-6 md:whitespace-nowrap">
-                  {t(`benefits.title${num}`)}
-                </h3>
-                
-                {/* Thin subtle horizontal divider line - Left-aligned */}
-                <div className="w-10 h-[1px] bg-primary/20 mb-6"></div>
-                
-                {/* Description sentence */}
-                <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
-                  {t(`benefits.desc${num}`)}
-                </p>
-              </div>
+        {/* 3 Columns Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 text-left max-w-5xl mx-auto">
+          {steps.map((step, idx) => (
+            <div key={idx} className="flex flex-col border-t border-border/80 pt-8 relative">
+              {/* Roman numeral / Index indicator */}
+              <span className="font-serif text-xs text-accent/60 uppercase tracking-widest mb-6 font-light">
+                {step.num}
+              </span>
+              
+              {/* Step Title */}
+              <h3 className="font-sans text-sm tracking-[0.2em] font-bold uppercase text-primary mb-4">
+                {step.label}
+              </h3>
+              
+              {/* Step Description */}
+              <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light">
+                {step.desc}
+              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -1,19 +1,22 @@
-
-
 const LogoTicker = () => {
+  const brands = [
+    { name: 'The Green Queen', style: 'font-serif text-xl tracking-tight font-light' },
+    { name: 'BITE ME', style: 'font-sans text-lg font-bold tracking-widest' },
+    { name: 'Glass Magazine', style: 'font-serif text-lg tracking-widest uppercase' },
+    { name: 'Apothecary', style: 'font-serif text-xl italic tracking-wide' },
+    { name: 'WELL+GOOD', style: 'font-sans text-base font-bold tracking-tighter uppercase' },
+  ];
+
   return (
-    <section className="w-full bg-white border-b border-primary/10 pt-6 pb-4 flex flex-col items-center justify-center">
-      <p className="text-[12px] tracking-[0.3em] font-semibold text-primary/60 mb-6 uppercase">
-        Built on science. Made for real life.
-      </p>
-      
-      <div className="flex flex-wrap justify-center items-center gap-16 md:gap-28 opacity-40 grayscale">
-        {/* Using simple text styling as approximations for the logos */}
-        <span className="font-serif text-4xl tracking-tighter">Forbes</span>
-        <span className="font-serif text-4xl uppercase tracking-widest">VOGUE</span>
-        <span className="font-sans text-3xl font-bold uppercase tracking-tighter">HIGHSNOBIETY</span>
-        <span className="font-sans text-2xl font-bold uppercase leading-none text-center">BUSINESS<br/>INSIDER</span>
-        <span className="font-sans text-3xl font-black italic tracking-tighter">Men'sHealth</span>
+    <section className="w-full bg-[#FAF8F5] border-y border-border/60 py-8 flex flex-col items-center justify-center relative z-10">
+      <div className="max-w-[1600px] w-full px-6 mx-auto flex flex-wrap justify-between items-center gap-y-6 gap-x-12 md:gap-x-16 lg:gap-x-24 opacity-60 text-primary/80 select-none">
+        {brands.map((brand, idx) => (
+          <div key={idx} className="flex-1 flex justify-center min-w-[140px]">
+            <span className={`${brand.style}`}>
+              {brand.name}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -7,11 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FFFFFF',
-        primary: '#1A1A1A',
-        accent: '#2A2A2A',
-        border: '#E5E5E5',
-        muted: '#737373',
+        background: '#FAF8F5',
+        primary: '#1C1917',
+        accent: '#B67A53',
+        'accent-hover': '#9A633F',
+        border: '#E6E1DA',
+        muted: '#78716C',
+        'warm-dark': '#1E1611',
+        'warm-dark-card': '#2D231C',
+        cream: '#FAF8F5',
+        'cream-dark': '#F2EDE4',
         midnight: '#111524'
       },
       fontFamily: {

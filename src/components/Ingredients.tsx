@@ -1,207 +1,191 @@
 import { useLanguage } from '../context/LanguageContext';
 
-const groups = [
-  {
-    key: "ruhe",
-    tagKey: "ing.group_ruhe_tag",
-    titleKey: "ing.group_ruhe_title",
-    descKey: "ing.group_ruhe_desc",
-    ingredients: [
-      { nameKey: "ing.name_mag_bis", key: "mag_bis" },
-      { nameKey: "ing.name_theanine", key: "theanine" },
-      { nameKey: "ing.name_apigenin", key: "apigenin" }
-    ]
-  },
-  {
-    key: "balance",
-    tagKey: "ing.group_balance_tag",
-    titleKey: "ing.group_balance_title",
-    descKey: "ing.group_balance_desc",
-    ingredients: [
-      { nameKey: "ing.name_ashwa", key: "ashwa" },
-      { nameKey: "ing.name_saffron", key: "saffron" },
-      { nameKey: "ing.name_phosph", key: "phosph" }
-    ]
-  },
-  {
-    key: "ritual",
-    tagKey: "ing.group_ritual_tag",
-    titleKey: "ing.group_ritual_title",
-    descKey: "ing.group_ritual_desc",
-    ingredients: [
-      { nameKey: "ing.name_reishi", key: "reishi" },
-      { nameKey: "ing.name_glycine", key: "glycine" },
-      { nameKey: "ing.name_vanilla", key: "vanilla" }
-    ]
-  }
-];
-
 const Ingredients = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+
+  const title = language === 'de' 
+    ? "Eine ruhige Komposition für den Abend." 
+    : "A quiet composition for the evening.";
+  
+  const desc = language === 'de'
+    ? "Pflanzenextrakte, Adaptogene und Nährstoffe — sorgfältig ausgewählt, um dein Abendritual zu unterstützen."
+    : "Botanicals, adaptogens and nutrients carefully selected to support your evening ritual.";
+
+  const groups = language === 'de'
+    ? [
+        {
+          title: 'Restore',
+          tag: 'Regeneration',
+          desc: 'Unterstützung für die mentale Erholung nach einem fordernden Tag.',
+          items: [
+            {
+              name: 'Ashwagandha',
+              info: 'Traditionelle Wurzel zur Regulierung des Cortisolspiegels und Minderung von Alltagsstress.'
+            },
+            {
+              name: 'Kamille',
+              info: 'Ein bewährter Pflanzenstoff, der sanft die Gelassenheit und Entspannung fördert.'
+            },
+            {
+              name: 'L-Theanin',
+              info: 'Aus grünem Tee. Begünstigt Alphawellen im Gehirn für mentale Ruhe ohne Benommenheit.'
+            }
+          ]
+        },
+        {
+          title: 'Calm',
+          tag: 'Beruhigung',
+          desc: 'Entlastung für ein überreiztes Nervensystem und müde Muskeln.',
+          items: [
+            {
+              name: 'Magnesium',
+              info: 'Bioaktive Formen, gezielt ausgewählt für die Muskelentspannung und Beruhigung des vegetativen Nervensystems.'
+            },
+            {
+              name: 'Zitronenmelisse',
+              info: 'Fördert die seelische Balance und hilft, die Gedankenflut am Abend zu stoppen.'
+            },
+            {
+              name: 'Passionsblume',
+              info: 'Unterstützt das Abschalten bei mentaler Überforderung und innerer Unruhe.'
+            }
+          ]
+        },
+        {
+          title: 'Sleep',
+          tag: 'Schlaf',
+          desc: 'Vorbereitung auf eine tiefe, erholsame Nachtruhe.',
+          items: [
+            {
+              name: 'Baldrian',
+              info: 'Der klassische pflanzliche Helfer zur natürlichen Regulierung der Einschlafbereitschaft.'
+            },
+            {
+              name: 'Hopfen',
+              info: 'Wirkt synergistisch mit Baldrian und unterstützt das sanfte Abgleiten in den Tiefschlaf.'
+            },
+            {
+              name: 'Sauerkirsche',
+              info: 'Liefert natürliche Pflanzenstoffe, die den körpereigenen Schlafzyklus ganz ohne künstliche Hormone harmonisieren.'
+            }
+          ]
+        }
+      ]
+    : [
+        {
+          title: 'Restore',
+          tag: 'Recovery',
+          desc: 'Support for mental recovery and cognitive relief after demanding hours.',
+          items: [
+            {
+              name: 'Ashwagandha',
+              info: 'Traditional root that helps regulate cortisol levels and reduce daily environmental stress.'
+            },
+            {
+              name: 'Chamomile',
+              info: 'A time-tested botanical containing apigenin to gently soothe and relax the mind.'
+            },
+            {
+              name: 'L-Theanine',
+              info: 'Derived from green tea. Promotes alpha brain waves for tranquil focus without drowsiness.'
+            }
+          ]
+        },
+        {
+          title: 'Calm',
+          tag: 'Tranquility',
+          desc: 'Ease for an overstimulated nervous system and physical tension.',
+          items: [
+            {
+              name: 'Magnesium',
+              info: 'Bioactive forms selected to relax tense muscles and calm nervous pathways.'
+            },
+            {
+              name: 'Lemon Balm',
+              info: 'Promotes emotional balance and aids in quieting racing thoughts as night approaches.'
+            },
+            {
+              name: 'Passionflower',
+              info: 'Helps silence mental chatter and transition away from high-alert daytime states.'
+            }
+          ]
+        },
+        {
+          title: 'Sleep',
+          tag: 'Rest',
+          desc: 'Preparation of your body cycles for deep, restorative sleep.',
+          items: [
+            {
+              name: 'Valerian',
+              info: 'Classic botanical helper that naturally supports sleep latency and readiness.'
+            },
+            {
+              name: 'Hops',
+              info: 'Works synergistically with valerian to encourage deeper, less interrupted rest.'
+            },
+            {
+              name: 'Tart Cherry',
+              info: 'Provides natural phytonutrients that harmonize your sleep-wake cycle without synthetic hormones.'
+            }
+          ]
+        }
+      ];
 
   return (
-    <section id="ingredients" className="bg-white pt-16 md:pt-16 pb-16 md:pb-20 px-8 lg:px-12 relative z-20">
-      <div className="max-w-[1800px] mx-auto">
-        {/* Centered Section Header formatted exactly like other sections */}
-        <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-2xl mx-auto px-6">
-          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
-            {t('ingredients.tag')}
-          </span>
-          <div className="flex items-center justify-center gap-2 mt-4 select-none text-primary/50">
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-            <img 
-              src="images/logo1.webp" 
-              alt="HESPYRA Hallmark" 
-              className="h-[18px] w-auto opacity-70"
-            />
-            <div className="w-8 h-[1px] bg-primary/25"></div>
-          </div>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary mt-8 mb-4 max-w-xl mx-auto leading-tight">
-            {t('ingredients.title')}
-          </h2>
-          <p className="font-sans text-base md:text-lg leading-relaxed font-light text-primary/80 mt-4 max-w-xl mx-auto">
-            {t('ingredients.desc')}
-          </p>
-        </div>
+    <section id="ingredients" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Section Tag */}
+        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
+          {language === 'de' ? 'DIE REZEPTUR' : 'THE INGREDIENTS'}
+        </span>
+        
+        {/* Headline */}
+        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-6 max-w-3xl mx-auto">
+          {title}
+        </h2>
+        
+        {/* Description */}
+        <p className="font-sans text-sm sm:text-base text-primary/60 max-w-xl mx-auto leading-relaxed font-light mb-16 lg:mb-24">
+          {desc}
+        </p>
 
-        {/* MOBILE VIEWPORT LAYOUT: Stacked chapters (Chapter 1 + ingredients, Chapter 2 + ingredients, etc.) */}
-        <div className="md:hidden flex flex-col space-y-16 divide-y divide-primary/10">
-          {groups.map((group, idx) => {
-            const num = idx + 1;
-            return (
-              <div 
-                key={`mobile-${group.key}`}
-                className="pt-12 first:pt-0 px-6 flex flex-col items-start text-left w-full max-w-[320px] mx-auto"
-              >
-                {/* Number */}
-                <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-6 block select-none">
-                  {String(num).padStart(2, '0')}
+        {/* 3-Column Ingredients Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 text-left max-w-5xl mx-auto">
+          {groups.map((group, gIdx) => (
+            <div key={gIdx} className="flex flex-col border-t border-border/80 pt-8">
+              
+              {/* Group Title (Restore, Calm, Sleep) */}
+              <div className="mb-8">
+                <span className="font-serif text-xs text-accent uppercase tracking-widest font-light mb-2 block">
+                  {group.tag}
                 </span>
-
-                {/* Massive Serif Title */}
-                <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary mb-6 md:whitespace-nowrap">
-                  {t(group.titleKey)}
+                <h3 className="font-sans text-lg tracking-[0.2em] font-bold uppercase text-primary mb-3">
+                  {group.title}
                 </h3>
-                
-                {/* Thin subtle horizontal divider line */}
-                <div className="w-10 h-[1px] bg-primary/20 mb-6"></div>
-                
-                {/* Description sentence */}
-                <p className="font-sans text-base leading-relaxed font-light text-primary/70 mb-8">
-                  {t(group.descKey)}
+                <p className="font-sans text-[12px] leading-relaxed text-primary/50 font-light">
+                  {group.desc}
                 </p>
-
-                {/* Ingredients List */}
-                <div className="space-y-8 w-full mt-2">
-                  {group.ingredients.map((ing, iIdx) => (
-                    <div key={iIdx} className="flex flex-col items-start text-left">
-                      <h4 className="font-sans text-[16px] font-semibold tracking-wide text-primary mb-1.5">
-                        {t(ing.nameKey)}
-                      </h4>
-                      <p className="font-sans text-base leading-relaxed font-light text-primary/70">
-                        {t(`ing.${ing.key}`)}
-                      </p>
-                    </div>
-                  ))}
-                </div>
               </div>
-            );
-          })}
+
+              {/* Group Ingredients Items */}
+              <div className="space-y-8">
+                {group.items.map((item, iIdx) => (
+                  <div key={iIdx} className="flex flex-col text-left border-l border-accent/20 pl-4 py-1">
+                    <h4 className="font-sans text-xs tracking-wider font-bold uppercase text-primary/90 mb-1.5">
+                      {item.name}
+                    </h4>
+                    <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light">
+                      {item.info}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ))}
         </div>
 
-        {/* DESKTOP VIEWPORT LAYOUT: Pure Grid Rows to guarantee perfect horizontal alignment across columns */}
-        <div className="hidden md:grid grid-cols-3 max-w-[1500px] mx-auto">
-          {/* Row 1: Chapters Headers & Descriptions */}
-          {groups.map((group, idx) => {
-            const num = idx + 1;
-            return (
-              <div 
-                key={`desktop-head-${group.key}`}
-                className={`px-6 md:px-6 lg:px-16 pb-12 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
-              >
-                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
-                  {/* Number */}
-                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-10 block select-none">
-                    {String(num).padStart(2, '0')}
-                  </span>
-
-                  {/* Massive Serif Title */}
-                  <h3 className="font-serif text-5xl lg:text-6xl tracking-tight text-primary mb-6 whitespace-nowrap">
-                    {t(group.titleKey)}
-                  </h3>
-                  
-                  {/* Thin subtle horizontal divider line */}
-                  <div className="w-10 h-[1px] bg-primary/20 mb-6"></div>
-                  
-                  {/* Description sentence */}
-                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
-                    {t(group.descKey)}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* Row 2: First Ingredients */}
-          {groups.map((group, idx) => {
-            const ing = group.ingredients[0];
-            return (
-              <div 
-                key={`desktop-ing-0-${group.key}`}
-                className={`px-6 md:px-6 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
-              >
-                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
-                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
-                    {t(ing.nameKey)}
-                  </h4>
-                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
-                    {t(`ing.${ing.key}`)}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* Row 3: Second Ingredients */}
-          {groups.map((group, idx) => {
-            const ing = group.ingredients[1];
-            return (
-              <div 
-                key={`desktop-ing-1-${group.key}`}
-                className={`px-6 md:px-6 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
-              >
-                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
-                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
-                    {t(ing.nameKey)}
-                  </h4>
-                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
-                    {t(`ing.${ing.key}`)}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* Row 4: Third Ingredients */}
-          {groups.map((group, idx) => {
-            const ing = group.ingredients[2];
-            return (
-              <div 
-                key={`desktop-ing-2-${group.key}`}
-                className={`px-6 md:px-6 lg:px-16 pt-8 pb-4 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
-              >
-                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
-                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
-                    {t(ing.nameKey)}
-                  </h4>
-                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
-                    {t(`ing.${ing.key}`)}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Mail, Gift } from 'lucide-react';
+import { Truck, Leaf, Shield, Check } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Waitlist = () => {
@@ -7,7 +7,7 @@ const Waitlist = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,10 +17,9 @@ const Waitlist = () => {
     setError('');
 
     try {
-      // Dev-Mode Mock: Simulate successful subscription locally if the Vercel API is not running
       if (import.meta.env.DEV) {
         console.log('[Dev Mode] Simulating Waitlist API subscription for:', email.trim());
-        await new Promise((resolve) => setTimeout(resolve, 850));
+        await new Promise((resolve) => setTimeout(resolve, 800));
         setSubmitted(true);
         setEmail('');
         setIsSubmitting(false);
@@ -32,15 +31,10 @@ const Waitlist = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          email: email.trim(),
-          consent: true // Implicit consent on form submit, verified via Double Opt-in
-        }),
+        body: JSON.stringify({ email: email.trim(), consent: true }),
       });
 
-      if (!response.ok) {
-        throw new Error('Subscription failed');
-      }
+      if (!response.ok) throw new Error('Subscription failed');
 
       const data = await response.json();
       if (data && data.success) {
@@ -60,109 +54,120 @@ const Waitlist = () => {
     }
   };
 
+  const title = language === 'de' ? "Die erste Edition von HESPYRA." : "The first edition of HESPYRA.";
+  const desc = language === 'de'
+    ? "Wir öffnen HESPYRA in kleinen Batches. Trag dich in die Warteliste ein, um bevorzugten Zugang zum nächsten Release zu erhalten."
+    : "We launch HESPYRA in limited quantities. Join the list to secure priority access to the first batch and exclusive updates.";
+
+  const usps = language === 'de'
+    ? [
+        {
+          icon: <Truck className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Kostenloser Versand",
+          desc: "Klimaneutrale Lieferung auf alle Abonnements."
+        },
+        {
+          icon: <Leaf className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Klimaneutral",
+          desc: "Wir kompensieren 100% unserer CO2-Emissionen."
+        },
+        {
+          icon: <Shield className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Geld-zurück-Garantie",
+          desc: "Risikofrei testen. Wenn es dir nicht gefällt, erstatten wir den Kaufpreis."
+        }
+      ]
+    : [
+        {
+          icon: <Truck className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Free shipping",
+          desc: "Climate-neutral delivery on all subscriptions."
+        },
+        {
+          icon: <Leaf className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Carbon neutral",
+          desc: "We offset 100% of our carbon footprint."
+        },
+        {
+          icon: <Shield className="w-5 h-5" strokeWidth={1.5} />,
+          title: "Money-back guarantee",
+          desc: "Love it or it's on us. 30-day money-back guarantee."
+        }
+      ];
+
   return (
-    <section id="waitlist" className="pt-10 pb-10 lg:pt-12 lg:pb-12 px-8 bg-white relative z-20">
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-12 items-center">
+    <section id="waitlist" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center max-w-5xl mx-auto">
           
-          {/* Column 1 - Left: Serif Headline */}
-          <div className="text-center md:text-left">
-            <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight max-w-xs mx-auto md:mx-0">
-              {t('waitlist.title').split('\n').map((line, i) => (
-                <span key={i}>
-                  {line}
-                  {i < t('waitlist.title').split('\n').length - 1 && <br />}
-                </span>
-              ))}
+          {/* Left Column - Headline, Desc, and Form */}
+          <div className="lg:col-span-7 text-left">
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
+              {language === 'de' ? 'COMMUNITY / ANMELDUNG' : 'COMMUNITY / WAITLIST'}
+            </span>
+            <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-6">
+              {title}
             </h2>
-          </div>
-          
-          {/* Column 2 - Middle: Description & Clean Form */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-primary/70 text-sm md:text-base font-light leading-relaxed max-w-[320px] mx-auto mb-8">
-              {t('waitlist.desc').split('\n').map((line, i) => (
-                <span key={i}>
-                  {line}
-                  {i < t('waitlist.desc').split('\n').length - 1 && <br />}
-                </span>
-              ))}
+            <p className="font-sans text-sm sm:text-base text-primary/60 leading-relaxed font-light mb-8 max-w-lg">
+              {desc}
             </p>
-            
+
             {submitted ? (
-              <div className="bg-white border border-primary/10 px-8 py-8 rounded-sm w-full max-w-[320px] shadow-sm flex flex-col items-center justify-center">
-                <svg className="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                <p className="text-primary text-sm font-light text-center leading-normal">
-                  {t('waitlist.success')}
-                </p>
+              <div className="bg-white border border-accent/20 px-6 py-5 rounded-sm max-w-md shadow-sm flex items-center gap-3 text-accent font-sans text-sm">
+                <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                </div>
+                <span>
+                  {language === 'de' ? 'Danke. Wir melden uns leise bei dir.' : 'Thank you. We will reach out to you quietly.'}
+                </span>
               </div>
             ) : (
-              <form 
-                className="flex flex-col gap-3 w-full max-w-[320px] mx-auto"
-                onSubmit={handleSubmit}
-              >
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
                 <input 
                   type="email" 
-                  placeholder={t('waitlist.placeholder')} 
+                  placeholder={language === 'de' ? 'E-Mail-Adresse' : 'Enter your email'} 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className="w-full bg-white border border-primary/20 text-primary px-6 py-3.5 text-xs focus:outline-none focus:border-primary/50 transition-colors font-light placeholder-primary/40 rounded-sm text-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 bg-white border border-border text-primary px-5 py-3.5 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
                   required
                   autoComplete="off"
                 />
-
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-primary text-white w-full py-4 text-xs font-semibold tracking-widest uppercase hover:bg-opacity-90 transition-opacity rounded-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="bg-primary text-background hover:bg-accent hover:text-white px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting 
                     ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
-                    : t('waitlist.submit')}
+                    : (language === 'de' ? 'ANMELDEN' : 'JOIN THE LIST')}
                 </button>
-                {error && (
-                  <p className="text-[11px] font-sans text-red-500 mt-1 tracking-wide animate-fade-in text-center leading-normal">
-                    {error}
-                  </p>
-                )}
               </form>
             )}
+            {error && (
+              <p className="text-[11px] font-sans text-red-500 mt-2 tracking-wide">
+                {error}
+              </p>
+            )}
           </div>
-          
-          {/* Column 3 - Right: Three aligned benefit items */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 text-center items-start">
-            {/* Item 1 */}
-            <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Star className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
-              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
-                {t('waitlist.benefit1_title')}
-              </h4>
-              <p className="text-[15px] text-primary/60 leading-snug font-light">
-                {t('waitlist.benefit1_desc')}
-              </p>
-            </div>
-            {/* Item 2 */}
-            <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Mail className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
-              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
-                {t('waitlist.benefit2_title')}
-              </h4>
-              <p className="text-[15px] text-primary/60 leading-snug font-light">
-                {t('waitlist.benefit2_desc')}
-              </p>
-            </div>
-            {/* Item 3 */}
-            <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Gift className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
-              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
-                {t('waitlist.benefit3_title')}
-              </h4>
-              <p className="text-[15px] text-primary/60 leading-snug font-light">
-                {t('waitlist.benefit3_desc')}
-              </p>
-            </div>
+
+          {/* Right Column - Brand USPs */}
+          <div className="lg:col-span-5 flex flex-col gap-8 text-left">
+            {usps.map((usp, idx) => (
+              <div key={idx} className="flex gap-4 items-start border-l border-border/80 pl-4 py-1">
+                <div className="text-accent flex-shrink-0 mt-0.5">
+                  {usp.icon}
+                </div>
+                <div className="flex flex-col text-left">
+                  <h4 className="font-sans text-xs tracking-wider font-bold uppercase text-primary">
+                    {usp.title}
+                  </h4>
+                  <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light mt-1">
+                    {usp.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>
