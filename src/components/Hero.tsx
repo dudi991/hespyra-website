@@ -29,12 +29,14 @@ const Hero = () => {
         "Melatoninfrei",
         "Vegan",
         "Ohne Eisen",
+        "Laborgeprüft",
         "Warm oder kalt"
       ]
     : [
         "Melatonin-free",
         "Vegan",
         "Iron-free",
+        "Third-party tested",
         "Warm or cold"
       ];
 
