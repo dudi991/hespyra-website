@@ -6,13 +6,13 @@ const Hero = () => {
 
   const titleGerman = (
     <>
-      Feierabend beginnt im <span className="italic text-accent font-serif font-normal">Kopf.</span>
+      Feierabend beginnt<br />im <span className="italic text-accent font-serif font-normal">Kopf.</span>
     </>
   );
 
   const titleEnglish = (
     <>
-      Evening starts in your <span className="italic text-accent font-serif font-normal">mind.</span>
+      Evening starts<br />in your <span className="italic text-accent font-serif font-normal">mind.</span>
     </>
   );
 
@@ -32,12 +32,12 @@ const Hero = () => {
     : ["Organic ingredients", "Scientifically proven", "Non-habit forming"];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-background pt-32 pb-16 px-6 sm:px-8 lg:px-12 z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-background pt-32 pb-16 z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-      <div className="max-w-[1600px] mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+      <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
           
           {/* Left Column: Wording & CTAs */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left max-w-2xl">

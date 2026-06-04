@@ -21,7 +21,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
   return (
     <nav className="w-full bg-transparent absolute top-0 left-0 z-50">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 py-6 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between">
         
         {/* Brand Logo */}
         <a href="#" className="flex items-center text-xl sm:text-2xl tracking-[0.25em] font-sans font-bold leading-none select-none text-primary hover:opacity-80 transition-opacity">

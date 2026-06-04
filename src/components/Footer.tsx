@@ -23,7 +23,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
 
   return (
     <footer className="w-full bg-[#FAF8F5] border-t border-border/40 py-8 lg:py-6 relative z-20">
-      <div className="w-full px-8 lg:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
           
           {/* Left Column: Brand Logo & Celestial Hallmark */}
