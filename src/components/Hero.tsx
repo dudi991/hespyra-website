@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* Left Column: Wording & CTAs (Stretched to match image height on desktop) */}
-          <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
+          <div className="lg:col-span-6 flex flex-col justify-center text-left max-w-2xl py-2">
             
             {/* Top Group: Slogan, Title, Description */}
             <div className="space-y-6">
@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
 
             {/* Middle Group: CTA Buttons */}
-            <div className="space-y-6 my-8">
+            <div className="my-6">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6">
                 <a 
                   href="#purchase" 
@@ -89,7 +89,7 @@ const Hero = () => {
             </div>
 
             {/* Bottom Group: Capsule claims */}
-            <div className="flex flex-wrap items-center gap-3 font-sans text-xs tracking-wider">
+            <div className="flex flex-wrap items-center gap-3 font-sans text-xs tracking-wider mt-2">
               {claims.map((claim, idx) => (
                 <div key={idx} className="flex items-center gap-2 bg-white/60 border border-border/50 px-4 py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
                   <span className="text-accent text-[11px] font-bold">✓</span>
@@ -121,12 +121,12 @@ const Hero = () => {
                 </h4>
                 <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide">
                   {language === 'de' 
-                    ? "30 Abendrituale · Kakao · Vanille · Tonka"
-                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
+                    ? "30 Abendrituale · Kakao · Vanille · Tonka · "
+                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka · "}
+                  <span className="font-bold text-[10px] tracking-widest text-accent uppercase whitespace-nowrap">
+                    {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
+                  </span>
                 </p>
-                <div className="mt-2 text-[11px] font-sans font-bold tracking-widest text-accent uppercase leading-none">
-                  {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
-                </div>
               </div>
             </div>
           </div>
