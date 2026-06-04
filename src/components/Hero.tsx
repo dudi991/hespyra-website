@@ -1,6 +1,6 @@
 import { Star, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import heroProdukt from '../assets/heroProdukt.webp';
+import heroProdukt from '../assets/heroProdukt.png';
 
 const Hero = () => {
   const { language } = useLanguage();
