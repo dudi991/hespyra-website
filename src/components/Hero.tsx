@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* Left Column: Wording & CTAs (Stretched to match image height on desktop) */}
-          <div className="lg:col-span-6 flex flex-col justify-center text-left max-w-2xl py-2">
+          <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
             
             {/* Top Group: Slogan, Title, Description */}
             <div className="space-y-6">
@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
 
             {/* Middle Group: CTA Buttons */}
-            <div className="my-6">
+            <div className="space-y-6 my-8">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6">
                 <a 
                   href="#purchase" 
@@ -89,7 +89,7 @@ const Hero = () => {
             </div>
 
             {/* Bottom Group: Capsule claims */}
-            <div className="flex flex-wrap items-center gap-3 font-sans text-xs tracking-wider mt-2">
+            <div className="flex flex-wrap items-center gap-3 font-sans text-xs tracking-wider">
               {claims.map((claim, idx) => (
                 <div key={idx} className="flex items-center gap-2 bg-white/60 border border-border/50 px-4 py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
                   <span className="text-accent text-[11px] font-bold">✓</span>
