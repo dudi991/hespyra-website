@@ -20,7 +20,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
   ];
 
   return (
-    <nav className="w-full bg-transparent absolute top-0 left-0 z-50">
+    <nav className="w-full bg-transparent absolute top-0 left-0 z-50 border-b border-border/40">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between">
         
         {/* Brand Logo */}
@@ -29,12 +29,12 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
         </a>
 
         {/* Desktop Menu Links */}
-        <div className="hidden lg:flex items-center gap-8 font-sans text-xs tracking-[0.2em] font-medium text-primary/70 uppercase">
+        <div className="hidden lg:flex items-center gap-8 font-sans text-xs tracking-[0.2em] font-semibold text-primary/90 uppercase">
           {menuItems.map((item) => (
             <a 
               key={item.label} 
               href={item.href} 
-              className="hover:text-primary transition-colors duration-300"
+              className="hover:text-accent transition-colors duration-300"
             >
               {item.label}
             </a>
@@ -44,11 +44,11 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
         {/* Right side: Language, Cart, and CTA */}
         <div className="hidden lg:flex items-center gap-6 font-sans text-xs tracking-[0.15em] font-semibold leading-none">
           {/* Language Switcher */}
-          <div className="flex items-center gap-2 text-primary/50 text-[10px]">
+          <div className="flex items-center gap-2 text-primary/90 text-xs tracking-[0.2em] font-semibold">
             <button 
               onClick={() => setLanguage('de')} 
-              className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-primary ${
-                language === 'de' ? 'text-primary font-bold' : ''
+              className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-accent ${
+                language === 'de' ? 'text-primary font-bold' : 'text-primary/50 font-normal'
               }`}
             >
               DE
@@ -56,20 +56,20 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
             <span className="text-primary/20">/</span>
             <button 
               onClick={() => setLanguage('en')} 
-              className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-primary ${
-                language === 'en' ? 'text-primary font-bold' : ''
+              className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-accent ${
+                language === 'en' ? 'text-primary font-bold' : 'text-primary/50 font-normal'
               }`}
             >
               EN
             </button>
           </div>
 
-          <span className="text-primary/10">|</span>
+          <span className="text-primary/20 text-xs font-light">|</span>
 
           {/* Cart with Orange-Brown Circle Badge */}
           <a 
             href="#purchase" 
-            className="text-primary/80 hover:text-primary transition-colors flex items-center gap-2 uppercase font-bold text-[10px] tracking-[0.2em]"
+            className="text-primary/90 hover:text-accent transition-colors flex items-center gap-2 uppercase font-semibold text-xs tracking-[0.2em]"
           >
             {language === 'de' ? 'Warenkorb' : 'Cart'}
             <span className="bg-accent text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center font-sans tracking-normal">
@@ -80,7 +80,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
           {/* Solid Black Shop Button */}
           <a 
             href="#purchase" 
-            className="bg-primary text-background hover:bg-accent hover:text-white px-6 py-3.5 rounded-sm transition-all duration-300 text-[10px] tracking-[0.2em] uppercase font-bold"
+            className="bg-primary text-background hover:bg-accent hover:text-white px-6 py-3 rounded-sm transition-all duration-300 text-xs tracking-[0.2em] uppercase font-bold"
           >
             {language === 'de' ? 'SHOPPEN' : 'SHOP'}
           </a>
