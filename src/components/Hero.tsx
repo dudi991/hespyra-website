@@ -1,0 +1,95 @@
+import { useLanguage } from '../context/LanguageContext';
+
+interface HeroProps {
+  isCalm: boolean;
+}
+
+const Hero = ({ isCalm }: HeroProps) => {
+  const { t } = useLanguage();
+
+  return (
+    <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-white pt-24 sm:pt-28 lg:pt-28 pb-12 lg:pb-12">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 overflow-hidden analog-grain">
+        <img 
+          src="images/heroWarm2.webp" 
+          alt="HESPYRA Night Reset Background" 
+          className={`w-full h-full object-cover object-center opacity-94 saturate-[0.96] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.02]' : 'brightness-[0.96]'}`}
+        />
+        
+        {/* --- Hero Gradient Overlays (Horizontal) --- */}
+        {/* Day Mode Horizontal Overlay (Original natural foggier settings restored) */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-white/60 lg:bg-gradient-to-r lg:from-white/60 lg:via-white/20 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        {/* Calm Mode Horizontal Overlay (Perfect contrast for dark mode on light wall) */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/75 via-[#0B0D14]/40 to-[#0B0D14]/20 lg:bg-gradient-to-r lg:from-[#0B0D14]/70 lg:via-[#0B0D14]/30 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+ 
+        {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
+        {/* Day Mode Top Navbar Overlay (Original natural foggier settings restored) */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/70 via-white/15 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        {/* Calm Mode Top Navbar Overlay (twilight vignette for crisp white navbar text contrast) */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/70 via-[#0B0D14]/25 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+      </div>
+ 
+      {/* Lunar Monogram Watermark (Signature Element) */}
+      <div className="absolute -right-32 lg:-right-48 top-1/4 lg:top-1/2 lg:-translate-y-1/2 w-[400px] lg:w-[800px] h-[400px] lg:h-[800px] z-0 opacity-[0.04] pointer-events-none text-midnight">
+        <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_120s_linear_infinite]">
+          {/* Outer perfect circle */}
+          <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" strokeWidth="0.15" />
+          {/* Inner partial arcs to make the ultra-slow rotation visible */}
+          <path d="M50 4 A46 46 0 0 1 96 50" fill="none" stroke="currentColor" strokeWidth="0.4" />
+          <path d="M50 96 A46 46 0 0 1 4 50" fill="none" stroke="currentColor" strokeWidth="0.4" />
+          <circle cx="50" cy="4" r="0.8" fill="currentColor" />
+          <circle cx="50" cy="96" r="0.8" fill="currentColor" />
+        </svg>
+      </div>
+ 
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 sm:px-8 pt-0 pb-0">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Column: Text & CTA */}
+            <div className="lg:col-span-7 flex flex-col justify-center max-w-2xl text-left">
+              {/* Elegant Sub-headline/Slogan Tag */}
+              <span className="font-sans text-[11px] sm:text-[14px] tracking-[0.25em] sm:tracking-[0.3em] font-semibold text-primary/80 uppercase mb-6 sm:mb-8 block whitespace-pre-line leading-relaxed">{t('hero.slogan')}</span>
+   
+              {/* 2. Headline H1 */}
+              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.12] sm:leading-[1.08] mb-8 sm:mb-12 font-serif text-primary">
+                {t('hero.title').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('hero.title').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </h1>
+   
+              {/* 4. Description */}
+              <p className="text-primary text-base sm:text-lg lg:text-xl mb-12 sm:mb-16 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
+   
+              {/* 6. CTA */}
+              <div>
+                <a href="#waitlist" className="inline-block text-center bg-accent px-5 w-full max-w-[290px] py-2.5 text-xs tracking-[0.22em] font-normal whitespace-nowrap uppercase rounded-sm mb-4 text-white hover:bg-opacity-80 transition-all duration-300 shadow-sm">{t('hero.cta')}</a>
+              </div>
+            </div>
+
+            {/* Right Column: Premium Product Visual */}
+            <div className="lg:col-span-5 flex justify-center items-center w-full max-w-[480px] lg:max-w-none mx-auto">
+              <div className="relative aspect-square w-full bg-primary/3 rounded-sm overflow-hidden shadow-md border border-primary/5 analog-wrapper analog-grain group">
+                <img 
+                  src="images/HESPYRA_HERO.webp" 
+                  alt="HESPYRA Product Presentation" 
+                  className="absolute inset-0 w-full h-full object-cover object-center grayscale-[0.05] hover:grayscale-0 hover:scale-102 transition-all duration-[1.5s] ease-out analog-image"
+                  loading="eager"
+                  draggable="false"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

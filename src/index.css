@@ -1,0 +1,333 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-background text-primary font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .hyphens-auto {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-ken-burns {
+    animation: kenBurns 40s ease-in-out infinite alternate;
+  }
+  @keyframes kenBurns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.06);
+    }
+  }
+  
+
+  /* Calm Mode CSS Transitions & Overrides */
+  .calm-mode .bg-white,
+  .calm-mode .bg-secondary,
+  .calm-mode section,
+  .calm-mode footer {
+    background-color: #0B0D14 !important;
+  }
+  
+  /* Ingredients cards and bottom trust strip background overrides */
+  .calm-mode .bg-\[\#FAF9F6\] {
+    background-color: #151821 !important;
+    border-color: rgba(243, 244, 246, 0.08) !important;
+  }
+  
+  /* Circles inside ingredients cards */
+  .calm-mode .bg-white.w-14.h-14,
+  .calm-mode .w-14.h-14 {
+    background-color: #1F2432 !important;
+    border-color: rgba(243, 244, 246, 0.08) !important;
+  }
+  
+
+  
+  .calm-mode .text-primary,
+  .calm-mode h1,
+  .calm-mode h2,
+  .calm-mode h3 {
+    color: #F3F4F6 !important;
+  }
+  
+  .calm-mode .text-primary\/80,
+  .calm-mode p {
+    color: rgba(243, 244, 246, 0.8) !important;
+  }
+  
+  .calm-mode .text-primary\/70,
+  .calm-mode [class*="text-primary/70"] {
+    color: rgba(243, 244, 246, 0.75) !important;
+  }
+  
+  .calm-mode .text-primary\/60,
+  .calm-mode [class*="text-primary/60"] {
+    color: rgba(243, 244, 246, 0.82) !important; /* Brighter kicker text for enhanced night mode contrast */
+  }
+  
+  .calm-mode .text-primary\/50,
+  .calm-mode [class*="text-primary/50"] {
+    color: rgba(243, 244, 246, 0.65) !important;
+  }
+  
+  .calm-mode .text-primary\/40,
+  .calm-mode [class*="text-primary/40"] {
+    color: rgba(243, 244, 246, 0.55) !important; /* Soft, slightly darkened kicker text in Calm Mode */
+  }
+
+  /* Make all Lucide icons crisp, bright, and perfectly balanced in calm mode */
+  .calm-mode svg.lucide,
+  .calm-mode #ingredients svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    stroke-width: 1.4px !important;
+    opacity: 0.95 !important;
+  }
+  
+  .calm-mode .border-primary\/10,
+  .calm-mode .border-primary\/5,
+  .calm-mode .border-t,
+  .calm-mode .divide-primary\/10 > :not([hidden]) ~ :not([hidden]),
+  .calm-mode .md\:border-r,
+  .calm-mode [class*="border-primary/10"],
+  .calm-mode [class*="border-primary/5"],
+  .calm-mode [class*="divide-primary/10"] > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgba(243, 244, 246, 0.25) !important; /* Restored contrast for separators in night mode */
+  }
+
+  .calm-mode .bg-primary\/25,
+  .calm-mode [class*="bg-primary/25"] {
+    background-color: rgba(243, 244, 246, 0.45) !important; /* Brighter kicker lines in night mode */
+  }
+
+  .calm-mode .bg-primary\/10,
+  .calm-mode .bg-primary\/20,
+  .calm-mode [class*="bg-primary/10"],
+  .calm-mode [class*="bg-primary/20"] {
+    background-color: rgba(243, 244, 246, 0.32) !important; /* Restored contrast for fine dividers in night mode */
+  }
+
+  /* Key out the white background rectangle of the ritual symbol logo in day-mode */
+  img[src*="logo1"],
+  nav img {
+    mix-blend-mode: multiply !important;
+    filter: contrast(1.4) brightness(1.15) !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
+  /* Key out the white background rectangle of the ritual symbol logo in calm-mode */
+  .calm-mode img[src*="logo1"],
+  .calm-mode nav img {
+    filter: contrast(1.4) brightness(1.15) invert(1) !important;
+    mix-blend-mode: screen !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
+  /* Apply mix-blend-mode to nav container to key out the logo's black background rectangle in the absolute positioning stacking context */
+  .calm-mode nav {
+    mix-blend-mode: screen !important;
+  }
+
+  /* Slightly darken the kicker ritual symbols in sections */
+  .calm-mode section img[src*="logo1"] {
+    opacity: 0.9 !important; /* Brighter and clearer for excellent night-mode visibility */
+    height: 22px !important; /* Slightly larger to compensate for optical illusion on dark background */
+    width: auto !important;
+  }
+  
+  .calm-mode input,
+  .calm-mode textarea {
+    color: #F3F4F6 !important;
+    border-color: rgba(243, 244, 246, 0.2) !important;
+  }
+  
+  .calm-mode input:focus,
+  .calm-mode textarea:focus {
+    border-color: #F3F4F6 !important;
+  }
+
+  /* Modal navigation close bar background override in calm mode */
+  .calm-mode .bg-white\/95 {
+    background-color: rgba(11, 13, 20, 0.95) !important;
+  }
+
+  /* Specific modal introductory text readability fix in calm mode */
+  .calm-mode .text-primary\/95 {
+    color: rgba(243, 244, 246, 0.95) !important;
+  }
+
+  /* Buttons and CTAs in Calm Mode */
+  .calm-mode .bg-primary {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
+  
+  .calm-mode .bg-accent {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
+
+  /* SVG icon color override inside primary/accent elements in Calm Mode */
+  .calm-mode .bg-primary svg,
+  .calm-mode .bg-accent svg {
+    color: #0B0D14 !important;
+    stroke: #0B0D14 !important;
+  }
+
+  .calm-mode .border-primary {
+    border-color: #F3F4F6 !important;
+    color: #F3F4F6 !important;
+  }
+
+  .calm-mode .border-primary:hover {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
+  
+  /* Prevent text-primary hover elements from turning dark/invisible on dark background */
+  .calm-mode .hover\:text-primary:hover,
+  .calm-mode [class*="hover:text-primary"]:hover {
+    color: #FFFFFF !important;
+  }
+  
+  /* Gallery image borders and background override in calm mode */
+  .calm-mode .border-white {
+    border-color: #0B0D14 !important;
+  }
+  .calm-mode .bg-primary\/5 {
+    background-color: #0B0D14 !important;
+  }
+  
+  /* Optimized smooth transition rule for calm mode to prevent scroll jank */
+  body,
+  .min-h-screen,
+  section,
+  footer,
+  nav,
+  input,
+  textarea,
+  button,
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  .bg-\[\#FAF9F6\],
+  .w-14.h-14,
+  .border-white,
+  .bg-primary\/5 {
+    transition: background-color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 2.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Subtle Analog Film Grain and Soft Focus Overlays */
+  .analog-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 
+    Idea A: Dynamic active film grain overlay
+    We animate the background-position of the SVG noise using a rapid 4-step loop
+    to simulate real-time chemical film grain.
+  */
+  @keyframes activeGrain {
+    0%, 100% { background-position: 0px 0px; }
+    20% { background-position: 15px 30px; }
+    40% { background-position: -25px 10px; }
+    60% { background-position: 30px -15px; }
+    80% { background-position: -10px -25px; }
+  }
+
+  .analog-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0.058; /* Slightly increased for a more textured, physical paper/film feel to break up plastic AI surfaces */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: activeGrain 0.35s steps(5) infinite; /* Fast, stepped grain loop simulating analog film projection */
+  }
+
+  /* 
+    Idea C: Subtle ambient warm light leak (Lens Flare)
+    A very soft amber radial gradient positioned in the top-right corner of the container.
+    At 5.5% opacity, it merges beautifully with the image colors.
+  */
+  .analog-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.055; /* Ultra-subtle counter-light flare */
+    background: radial-gradient(circle at 85% 15%, rgba(255, 175, 90, 1) 0%, rgba(255, 150, 50, 0.4) 40%, transparent 80%);
+    mix-blend-mode: screen;
+  }
+
+  /* 
+    Idea B: Vintage lens characteristics (Anti-sharpening, subtle warm chemical emulsion)
+    Reduces artificial digital sharpening, providing a natural, warm lens focus.
+    We desaturate slightly, reduce harsh contrast, and introduce a tiny warm sepia tint to mimic organic film.
+  */
+  .analog-image {
+    filter: saturate(0.92) contrast(0.96) brightness(1.00) blur(0.35px) sepia(0.02);
+    transition: filter 0.8s ease, transform 0.8s ease;
+  }
+
+  .analog-image:hover {
+    filter: saturate(0.96) contrast(0.99) brightness(1.01) blur(0.1px) sepia(0.01);
+  }
+}

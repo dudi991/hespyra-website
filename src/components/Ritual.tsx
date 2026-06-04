@@ -1,0 +1,131 @@
+import { GlassWater, Wind, Moon } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+
+const Ritual = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section id="ritual" className="w-full bg-white pt-10 pb-4 lg:pt-12 lg:pb-14">
+      <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
+        {/* items-stretch ensures the middle column (image) and columns share the exact same height on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-stretch">
+          
+          {/* Left Column - Clean, full-height alignment */}
+          <div className="lg:col-span-4 flex flex-col justify-between h-full py-1">
+            {/* Top block */}
+            <div className="text-center lg:text-left">
+              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-4 block">
+                {t('ritual.tag')}
+              </span>
+              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/50">
+                <div className="w-8 h-[1px] bg-primary/25"></div>
+                <img 
+                  src="images/logo1.webp" 
+                  alt="HESPYRA Hallmark" 
+                  className="h-[18px] w-auto opacity-70"
+                />
+                <div className="w-8 h-[1px] bg-primary/25"></div>
+              </div>
+            </div>
+
+            {/* Middle block (vertically centered next to the image, grouped with description) */}
+            <div className="text-center lg:text-left pt-6 pb-2 lg:py-0 my-auto flex flex-col items-center lg:items-start justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
+              <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight">
+                {t('ritual.title').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('ritual.title').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </h2>
+              <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm mt-6 lg:mt-8 mx-auto lg:mx-0">
+                {t('ritual.desc').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('ritual.desc').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            </div>
+
+            {/* Bottom spacer to guarantee perfect mathematical vertical centering of the middle block */}
+            <div className="hidden lg:block h-6"></div>
+          </div>
+
+          {/* Middle Column - Clean Square Image (Show only Step 2 Image statically) */}
+          <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative analog-wrapper analog-grain">
+            <img 
+              src="images/ritualHESPYRA.webp" 
+              alt={t('ritual.alt')} 
+              className="absolute inset-0 w-full h-full object-cover object-center analog-image"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Right Column - Typographic Steps with Left Icons spanning the full height of the middle image */}
+          <div className="lg:col-span-4 flex flex-col gap-10 lg:gap-0 lg:justify-between lg:h-full lg:pl-8 py-1 w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
+            
+            {/* Step I */}
+            <div className="flex flex-row items-center gap-6">
+              <div className="text-primary flex-shrink-0">
+                <GlassWater className="w-10 h-10" strokeWidth={1} />
+              </div>
+              <div className="flex flex-col text-left">
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step1_tag')}
+                </h4>
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
+                  {t('ritual.step1_text')}
+                </p>
+              </div>
+            </div>
+
+            {/* Step II */}
+            <div className="flex flex-row items-center gap-6">
+              <div className="text-primary flex-shrink-0">
+                <Wind className="w-10 h-10" strokeWidth={1} />
+              </div>
+              <div className="flex flex-col text-left">
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step2_tag')}
+                </h4>
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
+                  {t('ritual.step2_text')}
+                </p>
+              </div>
+            </div>
+
+            {/* Step III */}
+            <div className="flex flex-row items-center gap-6">
+              <div className="text-primary flex-shrink-0">
+                <Moon className="w-10 h-10" strokeWidth={1} />
+              </div>
+              <div className="flex flex-col text-left">
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step3_tag')}
+                </h4>
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
+                  {t('ritual.step3_text')}
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Centered Product Clarity Signoff / Bridge */}
+        <div className="mt-16 lg:mt-20 text-center max-w-sm mx-auto select-none">
+          <p className="font-sans text-sm sm:text-base text-primary/80 font-normal mb-1">
+            {t('ritual.clarity_line1')}
+          </p>
+          <p className="font-sans text-sm sm:text-base text-primary/50 font-light">
+            {t('ritual.clarity_line2')}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Ritual;
