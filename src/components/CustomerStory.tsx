@@ -43,17 +43,17 @@ const CustomerStory = () => {
   return (
     <section id="philosophy" className="w-full bg-[#F5F2EB] py-20 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           
           {/* Left Column: Text Content & Editorial List */}
-          <div className="lg:col-span-6 flex flex-col justify-center py-4 text-left">
+          <div className="lg:col-span-7 flex flex-col justify-center py-4 text-left">
             {/* Category Tag */}
             <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-6 block">
               {t('philosophy.tag')}
             </span>
             
             {/* Headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-2xl whitespace-pre-line">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-2xl whitespace-pre-line">
               {t('philosophy.title')}
             </h2>
 
@@ -87,7 +87,7 @@ const CustomerStory = () => {
           </div>
 
           {/* Right Column: Square Image on mobile, stretching to match height on desktop */}
-          <div className="lg:col-span-6 flex justify-center items-stretch w-full max-w-[550px] lg:max-w-none mx-auto">
+          <div className="lg:col-span-5 flex justify-center items-stretch w-full max-w-[550px] lg:max-w-none mx-auto">
             <div className="relative aspect-square lg:aspect-auto w-full lg:h-full min-h-[350px] lg:min-h-[600px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
               <img 
                 src="images/philosophieHESPYRA.webp" 
