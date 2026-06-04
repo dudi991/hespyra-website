@@ -1,4 +1,4 @@
-import { Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import heroProdukt from '../assets/heroProdukt.webp';
 
@@ -18,27 +18,27 @@ const Hero = () => {
   );
 
   const description = language === 'de' 
-    ? "Ein trinkbares Abendritual. Klinisch dosiertes Magnesium, L-Theanin und Safran helfen dir, den Tag hinter dir zu lassen – ohne Melatonin, ohne Benommenheit am Morgen."
-    : "A drinkable evening ritual. Clinically-dosed magnesium, L-theanine and saffron to help you set the day down — without melatonin, without the morning fog.";
+    ? "Ein trinkbares Abendritual mit 9 gezielt ausgewählten Inhaltsstoffen — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
+    : "A drinkable evening ritual with 9 purposefully selected ingredients — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
 
-  const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SHOPPEN" : "SHOP THE FIRST EDITION";
+  const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SICHERN" : "SECURE THE FIRST EDITION";
 
-  const reviewsText = language === 'de' 
-    ? "4.8 · 2.400+ ruhige Abende"
-    : "4.8 · 2,400+ evenings reclaimed";
+  const ratingLineText = language === 'de' 
+    ? "30 Abendrituale · 9 Inhaltsstoffe · Ohne Melatonin"
+    : "30 evening rituals · 9 ingredients · Melatonin-free";
 
   const claims = language === 'de'
     ? [
         "Melatoninfrei",
-        "Kein Gewöhnungseffekt",
-        "Laborgeprüft",
-        "Vegan & zuckerfrei"
+        "Vegan",
+        "Ohne Eisen",
+        "Warm oder kalt"
       ]
     : [
-        "No melatonin",
-        "Non-habit forming",
-        "Third-party tested",
-        "Vegan & sugar-free"
+        "Melatonin-free",
+        "Vegan",
+        "Iron-free",
+        "Warm or cold"
       ];
 
   return (
@@ -88,15 +88,10 @@ const Hero = () => {
                 </a>
               </div>
 
-              {/* Star Ratings below the buttons */}
+              {/* Info line below the buttons */}
               <div className="flex items-center gap-3">
-                <div className="flex text-accent">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current stroke-current" />
-                  ))}
-                </div>
                 <span className="font-sans text-xs text-primary/60 font-semibold tracking-wider">
-                  {reviewsText}
+                  {ratingLineText}
                 </span>
               </div>
             </div>
