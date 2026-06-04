@@ -114,7 +114,7 @@ const Hero = () => {
           <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
             <div className="relative w-full aspect-square bg-[#D4C9B9] rounded-sm shadow-lg border border-border/40 group">
               {/* Rounded image wrapper */}
-              <div className="absolute inset-0 overflow-hidden rounded-sm analog-wrapper analog-grain">
+              <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain">
                 <img 
                   src={heroProdukt} 
                   alt="HESPYRA Product Presentation" 
