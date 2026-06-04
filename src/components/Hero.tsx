@@ -58,7 +58,7 @@ const Hero = () => {
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-wide font-light max-w-[850px]">
+              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-[0.06em] font-light max-w-[850px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
@@ -115,7 +115,7 @@ const Hero = () => {
               {/* Rounded image wrapper */}
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-wrapper analog-grain">
                 <img 
-                  src="/images/heroProdukt.webp" 
+                  src="images/heroProdukt.webp" 
                   alt="HESPYRA Product Presentation" 
                   className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
                   loading="eager"
