@@ -47,18 +47,18 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
           
           {/* Left Column: Wording & CTAs (Stretched to match image height on desktop) */}
           <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
             
             {/* Top Group: Slogan, Title, Description */}
             <div className="space-y-6">
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] sm:tracking-[0.35em] font-bold text-primary/60 uppercase block">
+              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] font-bold text-primary/60 uppercase block">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-wide font-light max-w-[580px]">
+              <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-wide font-light max-w-[850px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
@@ -109,13 +109,13 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Column: Image and Overlay Card */}
-          <div className="lg:col-span-6 flex justify-center items-center w-full max-w-[500px] lg:max-w-none mx-auto relative">
+          {/* Right Column: Image and Overlay Card (Block layout to prevent aspect-ratio collapse) */}
+          <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
             <div className="relative w-full aspect-square bg-[#D4C9B9] rounded-sm shadow-lg border border-border/40 group">
               {/* Rounded image wrapper */}
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-wrapper analog-grain">
                 <img 
-                  src="images/heroProdukt.webp" 
+                  src="/images/heroProdukt.webp" 
                   alt="HESPYRA Product Presentation" 
                   className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
                   loading="eager"
