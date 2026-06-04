@@ -1,6 +1,6 @@
 import { Star, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import heroProdukt from '../assets/heroProdukt.png';
+import heroProdukt from '../assets/heroProdukt.webp';
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -112,9 +112,9 @@ const Hero = () => {
 
           {/* Right Column: Image and Overlay Card (Block layout to prevent aspect-ratio collapse) */}
           <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
-            <div className="relative w-full aspect-square bg-[#D4C9B9] rounded-sm shadow-lg border border-border/40 group">
+            <div className="relative w-full aspect-square bg-white rounded-sm shadow-lg border border-border/40 group">
               {/* Rounded image wrapper */}
-              <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain">
+              <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
                 <img 
                   src={heroProdukt} 
                   alt="HESPYRA Product Presentation" 
