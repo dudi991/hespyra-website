@@ -37,10 +37,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Column: Wording & CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center text-left max-w-3xl">
+          <div className="lg:col-span-6 flex flex-col justify-center text-left max-w-2xl">
             
             {/* Elegant Sub-headline/Slogan Tag */}
             <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] sm:tracking-[0.35em] font-bold text-primary/60 uppercase mb-6 sm:mb-8 block">
@@ -48,7 +48,7 @@ const Hero = () => {
             </span>
 
             {/* Headline H1 */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-tight font-light">
+            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] mb-8 font-serif text-primary tracking-tight font-light max-w-[580px]">
               {language === 'de' ? titleGerman : titleEnglish}
             </h1>
 
@@ -98,7 +98,7 @@ const Hero = () => {
           </div>
 
           {/* Right Column: Image and Overlay Card */}
-          <div className="lg:col-span-5 flex justify-center items-center w-full max-w-[500px] lg:max-w-none mx-auto relative">
+          <div className="lg:col-span-6 flex justify-center items-center w-full max-w-[500px] lg:max-w-none mx-auto relative">
             <div className="relative aspect-square w-full bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
               <img 
                 src="images/heroProdukt.webp" 
