@@ -23,9 +23,6 @@ const Hero = () => {
 
   const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SICHERN" : "SECURE THE FIRST EDITION";
 
-  const ratingLineText = language === 'de' 
-    ? "30 Abendrituale · 9 Inhaltsstoffe · Ohne Melatonin"
-    : "30 evening rituals · 9 ingredients · Melatonin-free";
 
   const claims = language === 'de'
     ? [
@@ -58,7 +55,7 @@ const Hero = () => {
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[5rem] xl:text-[5.5rem] 2xl:text-[6rem] leading-[1.05] mb-8 font-serif text-primary tracking-[0.02em] font-normal max-w-[950px]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] leading-[1.05] mb-8 font-serif text-primary tracking-[0.02em] font-normal max-w-[950px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
@@ -67,7 +64,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Middle Group: CTA Buttons and Ratings */}
+            {/* Middle Group: CTA Buttons */}
             <div className="space-y-6 my-8">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6">
                 <a 
@@ -86,13 +83,6 @@ const Hero = () => {
                   </div>
                   <ArrowRight className="w-8 h-8 transition-transform duration-300 group-hover/arrow:translate-x-1 text-primary" strokeWidth={2} />
                 </a>
-              </div>
-
-              {/* Info line below the buttons */}
-              <div className="flex items-center gap-3">
-                <span className="font-sans text-xs text-primary/60 font-semibold tracking-wider">
-                  {ratingLineText}
-                </span>
               </div>
             </div>
 
