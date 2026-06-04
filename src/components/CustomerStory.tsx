@@ -48,12 +48,12 @@ const CustomerStory = () => {
           {/* Left Column: Text Content & Editorial List */}
           <div className="lg:col-span-6 flex flex-col justify-center py-4 text-left">
             {/* Category Tag */}
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-4 block">
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-6 block">
               {t('philosophy.tag')}
             </span>
             
             {/* Headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem] leading-[1.1] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-xl whitespace-pre-line">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-2xl whitespace-pre-line">
               {t('philosophy.title')}
             </h2>
 
