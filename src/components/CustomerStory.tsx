@@ -6,80 +6,67 @@ const CustomerStory = () => {
   const benefits = language === 'de'
     ? [
         {
-          num: '01',
-          title: 'Alltagsstress auflösen',
-          desc: 'Unterstützt die Entlastung des überreizten Nervensystems nach langen Tagen.'
+          title: 'Nicht für den Schlaf. Für den Moment davor.',
+          desc: 'HESPYRA beginnt nicht im Bett, sondern dort, wo der Tag noch nachwirkt.'
         },
         {
-          num: '02',
-          title: 'Wärmende und beruhigende Rezeptur',
-          desc: 'Natürliche Aromen von Bourbon-Vanille und Tonka schaffen einen Moment der Geborgenheit.'
+          title: 'Ein Glas. Ein Schnitt.',
+          desc: 'Ein einfacher Handgriff, der aus Weiterlaufen einen bewussten Abendbeginn macht.'
         },
         {
-          num: '03',
-          title: 'Regenerieren statt Sedieren',
-          desc: 'Sanfte Unterstützung des körpereigenen Rhythmus – ganz ohne künstliche Hormone oder Hangover.'
+          title: 'Nicht alles muss mit.',
+          desc: 'Gedanken, Tempo, Aufgaben — der Abend darf leichter beginnen.'
         }
       ]
     : [
         {
-          num: '01',
-          title: 'Melt away day-to-day stress',
-          desc: 'Supports decompression of the overstimulated nervous system after busy days.'
+          title: 'Not for sleep. For the moment before.',
+          desc: 'HESPYRA does not begin in bed, but where the day still echoes.'
         },
         {
-          num: '02',
-          title: 'Warm and soothing formula',
-          desc: 'Natural notes of Bourbon vanilla and tonka create a comforting sensory shelter.'
+          title: 'One glass. One cut.',
+          desc: 'A simple gesture that turns moving forward into a conscious beginning of the evening.'
         },
         {
-          num: '03',
-          title: 'Relax, sleep & wake up refreshed',
-          desc: 'Gentle circadian support that aligns with your body without synthetic hormones or hangover.'
+          title: 'Not everything has to come along.',
+          desc: 'Thoughts, pace, tasks — the evening is allowed to begin more lightly.'
         }
       ];
 
   return (
-    <section id="philosophy" className="w-full bg-[#FAF8F5] py-20 lg:py-28 relative z-10">
+    <section id="philosophy" className="w-full bg-[#F5F2EB] py-20 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
-          {/* Left Column: Text Content & Numbered List */}
+          {/* Left Column: Text Content & Editorial List */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
             {/* Category Tag */}
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-4 block">
               {t('philosophy.tag')}
             </span>
             
             {/* Headline */}
-            <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] leading-[1.1] font-serif text-primary tracking-tight font-light mb-8">
+            <h2 className="text-3xl sm:text-5xl lg:text-[4rem] leading-[1.05] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-xl whitespace-pre-line">
               {t('philosophy.title')}
             </h2>
 
             {/* Narrative text */}
-            <div className="space-y-6 text-primary/70 text-base leading-relaxed font-light mb-12 max-w-xl">
+            <div className="space-y-6 text-primary/75 text-base leading-relaxed font-normal mb-12 max-w-xl">
               <p>{t('philosophy.text1')}</p>
               <p>{t('philosophy.text2')}</p>
+              <p>{t('philosophy.text3')}</p>
             </div>
 
-            {/* Numbered Benefits List */}
-            <div className="space-y-8 max-w-xl border-t border-border/80 pt-8">
+            {/* Editorial List without Icons */}
+            <div className="space-y-8 max-w-xl pt-2">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex gap-6 items-start">
-                  {/* Number identifier */}
-                  <span className="font-serif text-2xl text-accent font-light italic leading-none">
-                    {benefit.num}
-                  </span>
-                  
-                  {/* Text container */}
-                  <div className="flex flex-col text-left">
-                    <h4 className="font-sans text-xs tracking-[0.15em] font-bold uppercase text-primary mb-1.5">
-                      {benefit.title}
-                    </h4>
-                    <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light">
-                      {benefit.desc}
-                    </p>
-                  </div>
+                <div key={idx} className="flex flex-col text-left">
+                  <h4 className="font-sans text-[15px] sm:text-base font-semibold text-primary mb-1">
+                    {benefit.title}
+                  </h4>
+                  <p className="font-sans text-[13px] sm:text-sm leading-relaxed text-primary/60 font-normal">
+                    {benefit.desc}
+                  </p>
                 </div>
               ))}
             </div>

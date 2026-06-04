@@ -41,7 +41,7 @@ const Hero = () => {
       ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#F5F2EB] pt-36 pb-20 z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#EDE8DC] pt-36 pb-20 z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 

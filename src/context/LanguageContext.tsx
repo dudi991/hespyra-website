@@ -31,10 +31,11 @@ const translations: Record<Language, Record<string, string>> = {
     'benefits.desc3': 'Der Abend wird erreichbar.',
 
     // Philosophy / CustomerStory
-    'philosophy.tag': 'Die Philosophie',
-    'philosophy.title': 'Der Abend gehört wieder dir.',
-    'philosophy.text1': 'Zwischen Gesprächen, Entscheidungen und Gedanken, die noch nachlaufen, geht oft jener Moment verloren, in dem der Tag innerlich endet.',
-    'philosophy.text2': 'HESPYRA gibt diesem Übergang eine Form: ein stilles Abendritual für den Moment, in dem der Tag zurücktreten darf.',
+    'philosophy.tag': 'DER ÜBERGANG',
+    'philosophy.title': 'Der Abend ist da. \nNur noch nicht ganz erreichbar.',
+    'philosophy.text1': 'Manchmal endet der Tag äußerlich früher als innerlich. Der Raum wird ruhiger, das Licht weicher, die Aufgaben weniger sichtbar.',
+    'philosophy.text2': 'Und trotzdem bleibt etwas vom Tag im Kopf: Gespräche, Entscheidungen, Nachrichten, kleine offene Schleifen.',
+    'philosophy.text3': 'HESPYRA ist für diesen Moment gemacht — als warmes, trinkbares Ritual zwischen dem, was war, und dem, was jetzt beginnen darf.',
 
     // EditorialPause
     'pause.line1': 'Nicht alles muss mit',
@@ -192,10 +193,11 @@ const translations: Record<Language, Record<string, string>> = {
     'benefits.desc3': 'The evening becomes reachable.',
 
     // Philosophy / CustomerStory
-    'philosophy.tag': 'The Philosophy',
-    'philosophy.title': 'Reclaim your evening.',
-    'philosophy.text1': 'Between conversations, decisions, and thoughts that still linger, the moment in which the day ends internally is often lost.',
-    'philosophy.text2': 'HESPYRA gives this transition a form: a quiet evening ritual for the moment in which the day is allowed to step back.',
+    'philosophy.tag': 'THE TRANSITION',
+    'philosophy.title': 'Evening is here. \nJust not quite within reach yet.',
+    'philosophy.text1': 'Sometimes the day ends outwardly sooner than inwardly. The room grows quieter, the light softer, the tasks less visible.',
+    'philosophy.text2': 'And yet, something of the day lingers in your mind: conversations, decisions, messages, small open loops.',
+    'philosophy.text3': 'HESPYRA is made for this very moment — a warm, drinkable ritual between what was, and what is now allowed to begin.',
 
     // EditorialPause
     'pause.line1': 'Not everything has to come',
