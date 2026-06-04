@@ -29,7 +29,7 @@ function App() {
   const [isCalm, setIsCalm] = useState(false);
 
   return (
-    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-accent selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-[#FAF8F5] text-primary'}`}>
+    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-accent selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-background text-primary'}`}>
       <Preloader />
       
       <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />

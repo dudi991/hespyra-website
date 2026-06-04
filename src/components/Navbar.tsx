@@ -8,14 +8,14 @@ interface NavbarProps {
 }
 
 const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
     { label: language === 'de' ? 'Das Ritual' : 'The Ritual', href: '#ritual' },
     { label: language === 'de' ? 'Rezeptur' : 'Formula', href: '#exclusions' },
-    { label: language === 'de' ? 'Wissenschaft' : 'Science', href: '#ingredients' },
-    { label: language === 'de' ? 'Erfahrungen' : 'Stories', href: '#testimonials' },
+    { label: language === 'de' ? 'Erfahrungen' : 'Reviews', href: '#testimonials' },
+    { label: language === 'de' ? 'Preise' : 'Pricing', href: '#purchase' },
     { label: language === 'de' ? 'FAQ' : 'FAQ', href: '#faq' },
   ];
 
@@ -41,46 +41,48 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
           ))}
         </div>
 
-        {/* Right side: Language, Calm-Toggle, and CTA */}
+        {/* Right side: Language, Cart, and CTA */}
         <div className="hidden lg:flex items-center gap-6 font-sans text-xs tracking-[0.15em] font-semibold leading-none">
-          {/* Calm Mode Button */}
-          <button 
-            onClick={onToggleCalm}
-            className="transition-colors duration-300 focus:outline-none cursor-pointer text-primary/60 hover:text-primary uppercase text-[11px]"
-            title={isCalm ? "Tagesmodus" : "Abendmodus"}
-          >
-            {isCalm ? t('navbar.calm_active') : t('navbar.calm_inactive')}
-          </button>
-
-          <span className="text-primary/20">|</span>
-
           {/* Language Switcher */}
-          <div className="flex items-center gap-2 text-primary/60">
+          <div className="flex items-center gap-2 text-primary/50 text-[10px]">
             <button 
               onClick={() => setLanguage('de')} 
               className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-primary ${
-                language === 'de' ? 'text-primary font-bold underline underline-offset-4 decoration-primary/50' : ''
+                language === 'de' ? 'text-primary font-bold' : ''
               }`}
             >
               DE
             </button>
-            <span className="text-primary/30">/</span>
+            <span className="text-primary/20">/</span>
             <button 
               onClick={() => setLanguage('en')} 
               className={`transition-colors duration-300 focus:outline-none cursor-pointer hover:text-primary ${
-                language === 'en' ? 'text-primary font-bold underline underline-offset-4 decoration-primary/50' : ''
+                language === 'en' ? 'text-primary font-bold' : ''
               }`}
             >
               EN
             </button>
           </div>
 
-          {/* Solid CTA Button */}
+          <span className="text-primary/10">|</span>
+
+          {/* Cart with Orange-Brown Circle Badge */}
           <a 
             href="#purchase" 
-            className="bg-primary text-background hover:bg-accent hover:text-white px-5 py-2.5 rounded-sm transition-all duration-300 text-[10px] tracking-[0.2em] uppercase font-bold"
+            className="text-primary/80 hover:text-primary transition-colors flex items-center gap-2 uppercase font-bold text-[10px] tracking-[0.2em]"
           >
-            {language === 'de' ? 'BEITRETEN' : 'JOIN LIST'}
+            {language === 'de' ? 'Warenkorb' : 'Cart'}
+            <span className="bg-accent text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center font-sans tracking-normal">
+              0
+            </span>
+          </a>
+
+          {/* Solid Black Shop Button */}
+          <a 
+            href="#purchase" 
+            className="bg-primary text-background hover:bg-accent hover:text-white px-6 py-3.5 rounded-sm transition-all duration-300 text-[10px] tracking-[0.2em] uppercase font-bold"
+          >
+            {language === 'de' ? 'SHOPPEN' : 'SHOP'}
           </a>
         </div>
 
