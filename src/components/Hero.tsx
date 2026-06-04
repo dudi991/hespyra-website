@@ -29,15 +29,15 @@ const Hero = () => {
         "Melatoninfrei",
         "Vegan",
         "Ohne Eisen",
-        "Laborgeprüft",
-        "Warm oder kalt"
+        "Warm oder kalt",
+        "9 Inhaltsstoffe"
       ]
     : [
         "Melatonin-free",
         "Vegan",
         "Iron-free",
-        "Third-party tested",
-        "Warm or cold"
+        "Warm or cold",
+        "9 ingredients"
       ];
 
   return (
@@ -116,14 +116,17 @@ const Hero = () => {
               
               {/* Overlay card in bottom-left - overflows left */}
               <div className="absolute bottom-6 -left-6 bg-white p-5 max-w-[280px] rounded-sm shadow-xl border border-border/20 transition-transform duration-500 hover:translate-y-[-2px] z-20">
-                <h4 className="font-serif text-lg text-primary font-bold mb-1">
-                  The Evening Tin
+                <h4 className="font-serif text-[17px] text-primary font-bold mb-1.5 leading-tight">
+                  HESPYRA Evening Ritual
                 </h4>
                 <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide">
                   {language === 'de' 
-                    ? "30 Abende · Vanille & Tonka. $48 $58 im Abonnement."
-                    : "30 evenings · vanilla & tonka. $48 $58 on subscription."}
+                    ? "30 Abendrituale · Kakao · Vanille · Tonka"
+                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
                 </p>
+                <div className="mt-2 text-[11px] font-sans font-bold tracking-widest text-accent uppercase leading-none">
+                  {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
+                </div>
               </div>
             </div>
           </div>

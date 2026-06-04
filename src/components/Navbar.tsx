@@ -14,8 +14,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
   const menuItems = [
     { label: language === 'de' ? 'Das Ritual' : 'The Ritual', href: '#ritual' },
     { label: language === 'de' ? 'Rezeptur' : 'Formula', href: '#exclusions' },
-    { label: language === 'de' ? 'Erfahrungen' : 'Reviews', href: '#testimonials' },
-    { label: language === 'de' ? 'Preise' : 'Pricing', href: '#purchase' },
+    { label: language === 'de' ? 'Qualität' : 'Quality', href: '#ingredients' },
     { label: language === 'de' ? 'FAQ' : 'FAQ', href: '#faq' },
   ];
 
@@ -66,23 +65,20 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
           <span className="text-primary/20 text-sm font-light">|</span>
 
-          {/* Cart with Orange-Brown Circle Badge */}
+          {/* Waitlist Link */}
           <a 
-            href="#purchase" 
+            href="#waitlist" 
             className="text-primary/80 hover:text-accent transition-colors flex items-center gap-2 font-medium text-[13px] tracking-normal"
           >
-            {language === 'de' ? 'Warenkorb' : 'Cart'}
-            <span className="bg-accent text-white text-[9px] font-bold rounded-full w-5 h-5 flex items-center justify-center font-sans tracking-normal">
-              0
-            </span>
+            {language === 'de' ? 'Warteliste' : 'Waitlist'}
           </a>
 
-          {/* Solid Black Shop Button */}
+          {/* Solid Black Waitlist CTA Button */}
           <a 
-            href="#purchase" 
+            href="#waitlist" 
             className="bg-primary text-background hover:bg-accent hover:text-white px-6 py-3 rounded-sm transition-all duration-300 text-xs tracking-[0.15em] uppercase font-bold"
           >
-            {language === 'de' ? 'SHOPPEN' : 'SHOP'}
+            {language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION'}
           </a>
         </div>
 
@@ -116,7 +112,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
           <div className="flex flex-col gap-6 font-sans text-lg tracking-[0.2em] font-semibold text-primary uppercase">
             {menuItems.map((item) => (
               <a 
-                key={item.label} 
+                key={item.href} 
                 href={item.href} 
                 onClick={() => setIsOpen(false)}
                 className="hover:text-accent transition-colors duration-300 border-b border-primary/5 pb-2"
@@ -147,11 +143,11 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
             {/* Mobile CTA */}
             <a 
-              href="#purchase" 
+              href="#waitlist" 
               onClick={() => setIsOpen(false)}
               className="bg-primary text-background hover:bg-accent hover:text-white w-full py-4 text-center rounded-sm transition-all duration-300 text-xs tracking-[0.2em] uppercase font-bold"
             >
-              {language === 'de' ? 'BEITRETEN' : 'JOIN LIST'}
+              {language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION'}
             </a>
           </div>
         </div>
