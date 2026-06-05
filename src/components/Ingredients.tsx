@@ -1,169 +1,182 @@
 import { useLanguage } from '../context/LanguageContext';
 
 const Ingredients = () => {
-  const { language } = useLanguage();
-
-  const title = language === 'de' 
-    ? "Eine ruhige Komposition für den Abend." 
-    : "A quiet composition for the evening.";
-  
-  const desc = language === 'de'
-    ? "Pflanzenextrakte, Adaptogene und Nährstoffe — sorgfältig ausgewählt, um dein Abendritual zu unterstützen."
-    : "Botanicals, adaptogens and nutrients carefully selected to support your evening ritual.";
+  const { language, t } = useLanguage();
 
   const groups = language === 'de'
     ? [
         {
-          title: 'Restore',
-          tag: 'Regeneration',
-          desc: 'Unterstützung für die mentale Erholung nach einem fordernden Tag.',
+          num: '01',
+          title: 'Lösen',
+          desc: 'Für den Moment, in dem der Tag zurücktreten darf.',
           items: [
             {
-              name: 'Ashwagandha',
-              info: 'Traditionelle Wurzel zur Regulierung des Cortisolspiegels und Minderung von Alltagsstress.'
-            },
-            {
-              name: 'Kamille',
-              info: 'Ein bewährter Pflanzenstoff, der sanft die Gelassenheit und Entspannung fördert.'
+              name: 'Magnesium Bisglycinat & L-Threonat',
+              dose: '200 mg',
+              info: 'Zwei sanfte, gut aufnehmbare Formen — das ruhige Fundament der Rezeptur.'
             },
             {
               name: 'L-Theanin',
-              info: 'Aus grünem Tee. Begünstigt Alphawellen im Gehirn für mentale Ruhe ohne Benommenheit.'
+              dose: '200 mg',
+              info: 'Aus grünem Tee. Klar, mild, ruhig — ohne Sedierung.'
+            },
+            {
+              name: 'Apigenin',
+              dose: '50 mg',
+              info: 'Ein Pflanzenstoff aus der Kamille. Ruhig, vertraut, abendlich.'
             }
           ]
         },
         {
-          title: 'Calm',
-          tag: 'Beruhigung',
-          desc: 'Entlastung für ein überreiztes Nervensystem und müde Muskeln.',
+          num: '02',
+          title: 'Sammeln',
+          desc: 'Ausgewählte Pflanzenextrakte und Aminosäuren für mehr innere Sammlung.',
           items: [
             {
-              name: 'Magnesium',
-              info: 'Bioaktive Formen, gezielt ausgewählt für die Muskelentspannung und Beruhigung des vegetativen Nervensystems.'
+              name: 'Ashwagandha (KSM-66)',
+              dose: '300 mg',
+              info: 'Eine Wurzel mit langer Tradition — ruhig, erdig, zurückhaltend.'
             },
             {
-              name: 'Zitronenmelisse',
-              info: 'Fördert die seelische Balance und hilft, die Gedankenflut am Abend zu stoppen.'
+              name: 'Safran-Extrakt (affron®)',
+              dose: '28 mg',
+              info: 'Ein Extrakt mit warmer Tiefe und einer feinen Präsenz.'
             },
             {
-              name: 'Passionsblume',
-              info: 'Unterstützt das Abschalten bei mentaler Überforderung und innerer Unruhe.'
+              name: 'Phosphatidylserin',
+              dose: '100 mg',
+              info: 'Aus pflanzlichen Lecithinen gewonnen. Ein klarer Bestandteil der Komposition.'
             }
           ]
         },
         {
-          title: 'Sleep',
-          tag: 'Schlaf',
-          desc: 'Vorbereitung auf eine tiefe, erholsame Nachtruhe.',
+          num: '03',
+          title: 'Ankommen',
+          desc: 'Warme Noten und vertraute Zutaten, die die Zubereitung in ein Ankommen verwandeln.',
           items: [
             {
-              name: 'Baldrian',
-              info: 'Der klassische pflanzliche Helfer zur natürlichen Regulierung der Einschlafbereitschaft.'
+              name: 'Reishi',
+              dose: '500 mg',
+              info: 'Ein Pilz mit Tiefe. Traditionell geschätzt, warm im Charakter.'
             },
             {
-              name: 'Hopfen',
-              info: 'Wirkt synergistisch mit Baldrian und unterstützt das sanfte Abgleiten in den Tiefschlaf.'
+              name: 'Glycin',
+              dose: '1.000 mg',
+              info: 'Sanft, dezent süß, abgerundet — führt den Körper behutsam zur Ruhe.'
             },
             {
-              name: 'Sauerkirsche',
-              info: 'Liefert natürliche Pflanzenstoffe, die den körpereigenen Schlafzyklus ganz ohne künstliche Hormone harmonisieren.'
+              name: 'Vanille & Tonka',
+              dose: 'Aroma',
+              info: 'Warm, weich, rituell. Der Grund, warum es nach Abend schmeckt.'
             }
           ]
         }
       ]
     : [
         {
-          title: 'Restore',
-          tag: 'Recovery',
-          desc: 'Support for mental recovery and cognitive relief after demanding hours.',
+          num: '01',
+          title: 'Release',
+          desc: 'For the moment when the day is allowed to step back.',
           items: [
             {
-              name: 'Ashwagandha',
-              info: 'Traditional root that helps regulate cortisol levels and reduce daily environmental stress.'
-            },
-            {
-              name: 'Chamomile',
-              info: 'A time-tested botanical containing apigenin to gently soothe and relax the mind.'
+              name: 'Magnesium Bisglycinate & L-Threonate',
+              dose: '200 mg',
+              info: 'Two gentle, absorbable forms — the calm foundation of the formula.'
             },
             {
               name: 'L-Theanine',
-              info: 'Derived from green tea. Promotes alpha brain waves for tranquil focus without drowsiness.'
+              dose: '200 mg',
+              info: 'From green tea. Clear, mild, calm — without sedation.'
+            },
+            {
+              name: 'Apigenin',
+              dose: '50 mg',
+              info: 'A botanical compound from chamomile. Quiet, familiar, evening-like.'
             }
           ]
         },
         {
-          title: 'Calm',
-          tag: 'Tranquility',
-          desc: 'Ease for an overstimulated nervous system and physical tension.',
+          num: '02',
+          title: 'Gather',
+          desc: 'Selected plant extracts and amino acids for greater inner focus.',
           items: [
             {
-              name: 'Magnesium',
-              info: 'Bioactive forms selected to relax tense muscles and calm nervous pathways.'
+              name: 'Ashwagandha (KSM-66)',
+              dose: '300 mg',
+              info: 'A root with a long tradition — quiet, earthy, reserved.'
             },
             {
-              name: 'Lemon Balm',
-              info: 'Promotes emotional balance and aids in quieting racing thoughts as night approaches.'
+              name: 'Saffron Extract (affron®)',
+              dose: '28 mg',
+              info: 'An extract with warm depth and a delicate presence.'
             },
             {
-              name: 'Passionflower',
-              info: 'Helps silence mental chatter and transition away from high-alert daytime states.'
+              name: 'Phosphatidylserine',
+              dose: '100 mg',
+              info: 'Sourced from plant lecithins. A clear component of the composition.'
             }
           ]
         },
         {
-          title: 'Sleep',
-          tag: 'Rest',
-          desc: 'Preparation of your body cycles for deep, restorative sleep.',
+          num: '03',
+          title: 'Arrive',
+          desc: 'Warm notes and familiar ingredients that turn preparation into arrival.',
           items: [
             {
-              name: 'Valerian',
-              info: 'Classic botanical helper that naturally supports sleep latency and readiness.'
+              name: 'Reishi',
+              dose: '500 mg',
+              info: 'A mushroom with depth. Traditionally valued, warm in character.'
             },
             {
-              name: 'Hops',
-              info: 'Works synergistically with valerian to encourage deeper, less interrupted rest.'
+              name: 'Glycine',
+              dose: '1,000 mg',
+              info: 'Gentle, subtly sweet, well-rounded — eases the body toward rest.'
             },
             {
-              name: 'Tart Cherry',
-              info: 'Provides natural phytonutrients that harmonize your sleep-wake cycle without synthetic hormones.'
+              name: 'Vanilla & Tonka',
+              dose: 'flavour',
+              info: 'Warm, soft, ritualistic. The reason it tastes like an evening.'
             }
           ]
         }
       ];
 
   return (
-    <section id="ingredients" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="ingredients" className="w-full bg-[#F2EDE4] py-20 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
-          {language === 'de' ? 'DIE REZEPTUR' : 'THE INGREDIENTS'}
+        <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-primary/50 uppercase mb-6 block select-none">
+          {t('ingredients.tag')}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-6 max-w-3xl mx-auto">
-          {title}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-6 max-w-3xl mx-auto">
+          {t('ingredients.title')}
         </h2>
         
         {/* Description */}
-        <p className="font-sans text-sm sm:text-base text-primary/60 max-w-xl mx-auto leading-relaxed font-light mb-16 lg:mb-24">
-          {desc}
+        <p className="font-sans text-sm sm:text-base text-primary/60 max-w-3xl mx-auto leading-relaxed font-light mb-16 lg:mb-24">
+          {t('ingredients.desc')}
         </p>
 
         {/* 3-Column Ingredients Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 text-left max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-12 md:gap-0 text-left max-w-5xl mx-auto">
           {groups.map((group, gIdx) => (
-            <div key={gIdx} className="flex flex-col border-t border-border/80 pt-8">
+            <div 
+              key={gIdx} 
+              className={`flex flex-col ${gIdx === 0 ? 'md:pr-10 lg:pr-12 pb-8 md:pb-0' : gIdx === 1 ? 'md:px-10 lg:px-12 pb-8 md:pb-0' : 'md:pl-10 lg:pl-12'}`}
+            >
               
-              {/* Group Title (Restore, Calm, Sleep) */}
-              <div className="mb-8">
-                <span className="font-serif text-xs text-accent uppercase tracking-widest font-light mb-2 block">
-                  {group.tag}
+              {/* Group Title (Release, Gather, Arrive) */}
+              <div className="mb-10">
+                <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
+                  {group.num}
                 </span>
-                <h3 className="font-sans text-lg tracking-[0.2em] font-bold uppercase text-primary mb-3">
+                <h3 className="font-serif text-2xl lg:text-3xl font-normal text-primary mb-3">
                   {group.title}
                 </h3>
-                <p className="font-sans text-[12px] leading-relaxed text-primary/50 font-light">
+                <p className="font-sans text-[13px] sm:text-sm lg:text-[14px] leading-relaxed text-primary/60 font-light">
                   {group.desc}
                 </p>
               </div>
@@ -171,11 +184,16 @@ const Ingredients = () => {
               {/* Group Ingredients Items */}
               <div className="space-y-8">
                 {group.items.map((item, iIdx) => (
-                  <div key={iIdx} className="flex flex-col text-left border-l border-accent/20 pl-4 py-1">
-                    <h4 className="font-sans text-xs tracking-wider font-bold uppercase text-primary/90 mb-1.5">
-                      {item.name}
-                    </h4>
-                    <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light">
+                  <div key={iIdx} className="flex flex-col text-left">
+                    <div className="flex justify-between items-baseline mb-2">
+                      <h4 className="font-sans text-sm lg:text-[15px] font-semibold text-primary">
+                        {item.name}
+                      </h4>
+                      <span className="font-sans text-xs sm:text-sm font-semibold text-accent whitespace-nowrap ml-4">
+                        {item.dose}
+                      </span>
+                    </div>
+                    <p className="font-sans text-[13px] sm:text-sm leading-relaxed text-primary/60 font-light">
                       {item.info}
                     </p>
                   </div>
