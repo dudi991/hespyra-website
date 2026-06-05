@@ -57,9 +57,9 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.alt': 'HESPYRA Abendritual Zubereitung Schritt',
 
     // Ingredients
-    'ingredients.tag': 'DIE REZEPTUR · VOLLSTÄNDIG OFFENGELEGT',
+    'ingredients.tag': 'DIE REZEPTUR',
     'ingredients.title': 'Eine ruhige Komposition für den Abend.',
-    'ingredients.desc': 'Mineralstoffe, Aminosäuren, Pflanzenstoffe, funktionale Nährstoffe und warme Geschmacksnoten — ausgewählt für ein trinkbares Abendritual. Jede Dosierung transparent auf dem Etikett.',
+    'ingredients.desc': 'Mineralstoffe, Aminosäuren, Pflanzenstoffe, funktionale Nährstoffe und warme Geschmacksnoten — ausgewählt für ein trinkbares Abendritual.',
     'ingredients.list_label': 'Die Bestandteile der Komposition',
     
     // Ingredients Groups (German)
@@ -220,9 +220,9 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.alt': 'HESPYRA evening ritual preparation step',
 
     // Ingredients
-    'ingredients.tag': 'THE FORMULA · FULLY DISCLOSED',
+    'ingredients.tag': 'THE FORMULA',
     'ingredients.title': 'A quiet composition for the evening.',
-    'ingredients.desc': 'Minerals, amino acids, plant substances, functional nutrients and warm flavor notes — selected for a drinkable evening ritual. Every dosage transparent on the label.',
+    'ingredients.desc': 'Minerals, amino acids, plant substances, functional nutrients and warm flavor notes — selected for a drinkable evening ritual.',
     'ingredients.list_label': 'The components of the composition',
     
     // Ingredients Groups (English)

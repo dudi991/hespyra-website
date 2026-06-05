@@ -29,7 +29,7 @@ const Ingredients = () => {
             },
             {
               name: 'Magtein® Magnesium Threonate',
-              info: 'Eine patentierte Magnesiumform, ausgewählt für die besondere Abendlogik von HESPYRA.'
+              info: 'Eine patentierte Magnesiumform — ausgewählt für die Rezeptur hinter dem Abendritual.'
             },
             {
               name: 'Reishi Mushroom Extract',
@@ -40,7 +40,7 @@ const Ingredients = () => {
         {
           num: '02',
           title: 'Sammeln',
-          desc: 'Für den Moment, in dem die Gedanken wieder klarer werden dürfen.',
+          desc: 'Für den Moment, in dem der Kopf aus dem Tagesmodus findet.',
           items: [
             {
               name: 'Suntheanine® L-Theanine',
@@ -63,7 +63,7 @@ const Ingredients = () => {
           items: [
             {
               name: 'Affron® Saffron',
-              info: 'Ein hochwertiger Safran-Extrakt aus Spanien, sorgfältig angebaut und verarbeitet.'
+              info: 'Ein Safran-Extrakt aus Spanien — angebaut, geerntet und verarbeitet unter kontrollierten Standards.'
             },
             {
               name: 'Kakao',
@@ -88,7 +88,7 @@ const Ingredients = () => {
             },
             {
               name: 'Magtein® Magnesium Threonate',
-              info: 'A patented form of magnesium, selected for the unique evening logic of HESPYRA.'
+              info: 'A patented form of magnesium — selected for the recipe behind the evening ritual.'
             },
             {
               name: 'Reishi Mushroom Extract',
@@ -99,7 +99,7 @@ const Ingredients = () => {
         {
           num: '02',
           title: 'Gather',
-          desc: 'For the moment when thoughts are allowed to become clearer.',
+          desc: 'For the moment when the head finds its way out of daytime mode.',
           items: [
             {
               name: 'Suntheanine® L-Theanine',
@@ -122,7 +122,7 @@ const Ingredients = () => {
           items: [
             {
               name: 'Affron® Saffron',
-              info: 'A high-quality saffron extract from Spain, carefully grown and processed.'
+              info: 'A saffron extract from Spain — grown, harvested, and processed under controlled standards.'
             },
             {
               name: 'Kakao',
