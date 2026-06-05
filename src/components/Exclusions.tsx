@@ -1,89 +1,134 @@
-import { Check } from 'lucide-react';
+import { Check, Square, Clock, ChevronUp, Sparkle, Droplet } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Exclusions = () => {
   const { language } = useLanguage();
 
-  const titleGerman = (
-    <>
-      Nicht alles muss mit <span className="italic text-accent font-serif font-normal block md:inline">in den Abend.</span>
-    </>
-  );
+  const leftItems = language === 'de'
+    ? [
+        {
+          label: 'Warm',
+          icon: <Square className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Kakao, Vanille und Tonka.\nRund, erwachsen, zurückhaltend — nicht süß, nicht schwer.'
+        },
+        {
+          label: 'Rein',
+          icon: <Check className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Ohne Melatonin. Ohne Eisen.\n9 ausgewählte Inhaltsstoffe, offen benannt.'
+        },
+        {
+          label: 'Einfach',
+          icon: <Clock className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Ein Löffel. Ein Glas.\nEin ruhiger Anfang für deinen Abend.'
+        }
+      ]
+    : [
+        {
+          label: 'Warm',
+          icon: <Square className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Vanilla, tonka and a quiet depth. Reserved — not sweet, not heavy.'
+        },
+        {
+          label: 'Clean',
+          icon: <Check className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'No melatonin, no sugar, no synthetic colour. 14 ingredients you can pronounce.'
+        },
+        {
+          label: 'Simple',
+          icon: <Clock className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'One spoon. One glass. A quiet break in the day, in under a minute.'
+        }
+      ];
 
-  const titleEnglish = (
-    <>
-      Not everything has to come <span className="italic text-accent font-serif font-normal block md:inline">into the evening.</span>
-    </>
-  );
-
-  const leftList = language === 'de'
-    ? ['Melatoninfrei', 'Zuckerfrei', 'Milchproduktfrei', '100% Vegan', 'Gentechnikfrei']
-    : ['Melatonin-free', 'Sugar-free', 'Dairy-free', 'Vegan', 'Non-GMO'];
-
-  const rightList = language === 'de'
-    ? ['Ohne künstliche Aromen', 'Glutenfrei', 'Koffeinfrei', 'Nussfrei', 'Sojafrei']
-    : ['No artificial flavors', 'Gluten-free', 'Caffeine-free', 'Nut-free', 'Soy-free'];
+  const rightItems = language === 'de'
+    ? [
+        {
+          label: 'Magnesium',
+          icon: <ChevronUp className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Zwei Formen von Magnesium — bewusst gewählt für die Basis der Rezeptur.'
+        },
+        {
+          label: 'L-Theanin',
+          icon: <Sparkle className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Bekannt aus der Teepflanze — passend für ein ruhiges Abendritual.'
+        },
+        {
+          label: 'Safran',
+          icon: <Droplet className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Ein sorgfältig ausgewählter Pflanzenstoff mit langer Tradition.'
+        }
+      ]
+    : [
+        {
+          label: 'Magnesium',
+          icon: <ChevronUp className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Two highly absorbable forms — the calm foundation of the formula.'
+        },
+        {
+          label: 'L-Theanine',
+          icon: <Sparkle className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'From green tea. Clear, mild, calm focus without sedation.'
+        },
+        {
+          label: 'Saffron',
+          icon: <Droplet className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'A studied botanical for mood and warmth, at a meaningful dose.'
+        }
+      ];
 
   return (
-    <section id="exclusions" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        
-        {/* Section Tag */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
-          {language === 'de' ? 'DIE FORMEL' : 'THE FORMULA'}
-        </span>
-        
-        {/* Headline */}
-        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-16 lg:mb-24">
-          {language === 'de' ? titleGerman : titleEnglish}
-        </h2>
-
-        {/* 3-Part Layout: Left list, Center visual, Right list */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center max-w-5xl mx-auto">
+    <section id="exclusions" className="w-full bg-[#EDE8DC] py-20 lg:py-28 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:items-stretch max-w-[1300px] mx-auto">
           
-          {/* Left List Column */}
-          <div className="md:col-span-4 flex flex-col gap-6 md:gap-8 items-start text-left order-2 md:order-1">
-            {leftList.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <div className="w-6 h-6 rounded-full border border-accent/25 flex items-center justify-center text-accent bg-accent/3 flex-shrink-0">
-                  <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
+          {/* Left Column (right-aligned text on desktop) */}
+          <div className="lg:col-span-3 flex flex-col gap-10 lg:gap-0 lg:justify-between order-2 lg:order-1 text-left lg:text-right">
+            {leftItems.map((item, idx) => (
+              <div key={idx} className="flex flex-col">
+                <div className="flex items-center justify-start lg:justify-end gap-3 mb-2">
+                  <span className="font-sans text-xs lg:text-[13px] tracking-[0.25em] font-medium text-accent uppercase select-none">
+                    {item.label}
+                  </span>
+                  {item.icon}
                 </div>
-                <span className="font-sans text-sm sm:text-base font-medium tracking-wide text-primary/80">
-                  {item}
-                </span>
+                <p className="font-sans text-sm lg:text-[15px] leading-relaxed text-primary/60 font-light text-left lg:text-right max-w-sm lg:ml-auto whitespace-pre-line">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* Center Product Image Column */}
-          <div className="md:col-span-4 flex justify-center items-center order-1 md:order-2">
-            <div className="relative aspect-square w-full max-w-[280px] bg-cream-dark rounded-sm overflow-hidden shadow-md border border-border/40 analog-wrapper analog-grain">
+          {/* Center Column (Product Image) */}
+          <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-2">
+            <div className="relative aspect-[5/4] w-full max-w-[500px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
               <img 
                 src="images/HESPYRA_SCOOP.webp" 
                 alt="HESPYRA Formula Powder Scoop" 
-                className="absolute inset-0 w-full h-full object-cover object-center analog-image"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-103"
                 loading="lazy"
                 draggable="false"
               />
             </div>
           </div>
 
-          {/* Right List Column */}
-          <div className="md:col-span-4 flex flex-col gap-6 md:gap-8 items-start md:items-end text-left md:text-right order-3">
-            {rightList.map((item, idx) => (
-              <div key={idx} className="flex flex-row md:flex-row-reverse items-center gap-4">
-                <div className="w-6 h-6 rounded-full border border-accent/25 flex items-center justify-center text-accent bg-accent/3 flex-shrink-0">
-                  <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
+          {/* Right Column (left-aligned text) */}
+          <div className="lg:col-span-3 flex flex-col gap-10 lg:gap-0 lg:justify-between order-3 text-left">
+            {rightItems.map((item, idx) => (
+              <div key={idx} className="flex flex-col">
+                <div className="flex items-center justify-start gap-3 mb-2">
+                  {item.icon}
+                  <span className="font-sans text-xs lg:text-[13px] tracking-[0.25em] font-medium text-accent uppercase select-none">
+                    {item.label}
+                  </span>
                 </div>
-                <span className="font-sans text-sm sm:text-base font-medium tracking-wide text-primary/80">
-                  {item}
-                </span>
+                <p className="font-sans text-sm lg:text-[15px] leading-relaxed text-primary/60 font-light text-left max-w-sm lg:mr-auto whitespace-pre-line">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
 
         </div>
-
       </div>
     </section>
   );

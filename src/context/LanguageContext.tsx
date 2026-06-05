@@ -38,21 +38,22 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.text3': 'HESPYRA ist für diesen Moment gemacht — als warmes, trinkbares Ritual zwischen dem, was war, und dem, was jetzt beginnen darf.',
 
     // EditorialPause
-    'pause.line1': 'Nicht alles muss mit',
-    'pause.line2': 'in den Abend.',
+    'pause.part1': 'Nicht alles muss mit',
+    'pause.part2': 'in',
+    'pause.part3': 'den Abend.',
 
     // Ritual
-    'ritual.tag': 'Das Ritual',
-    'ritual.title': 'Ein kleiner Moment.',
-    'ritual.desc': 'Genug, um den Abend zu beginnen.\n\nWarm. Weich. Zurückhaltend.\nVanille, Tonka und eine ruhige Tiefe.\nNicht süß. Nicht schwer. Nicht laut.\n\nEin Löffel. Ein Glas.\nEin leiser Schnitt im Tag.\n\nNicht nebenbei.\nSondern als Anfang.',
+    'ritual.tag': 'DAS RITUAL · DREI SCHRITTE',
+    'ritual.title': 'Ein kleiner Moment, in drei Teilen.',
+    'ritual.desc': 'Genug, um den Abend zu beginnen. Warm, weich, zurückhaltend — nicht süß, nicht schwer, nicht laut.',
     'ritual.clarity_line1': 'Ein trinkbares Ritual in Pulverform.',
     'ritual.clarity_line2': 'Für den Moment, in dem der Tag zurücktreten darf.',
     'ritual.step1_tag': 'Lösen',
-    'ritual.step1_text': 'Ein Löffel ins Glas. Der Tag darf leiser werden.',
+    'ritual.step1_text': 'Ein Löffel ins Glas.\nWarmes Wasser oder Pflanzenmilch.\nDer Tag darf leiser werden.',
     'ritual.step2_tag': 'Sammeln',
-    'ritual.step2_text': 'Rühren. Atmen. Aufmerksamkeit kehrt zurück.',
+    'ritual.step2_text': 'Rühren. Atmen. Das Glas halten.\nDie Aufmerksamkeit kehrt zurück.\nDer Moment wird klarer.',
     'ritual.step3_tag': 'Ankommen',
-    'ritual.step3_text': 'Trink dein Ritual, bevor der Abend in die Nacht übergeht.',
+    'ritual.step3_text': 'Das Glas wird leerer.\nDer Tag tritt zurück.\nDu kommst im Abend an.',
     'ritual.alt': 'HESPYRA Abendritual Zubereitung Schritt',
 
     // Ingredients
@@ -200,21 +201,22 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.text3': 'HESPYRA is made for this very moment — a warm, drinkable ritual between what was, and what is now allowed to begin.',
 
     // EditorialPause
-    'pause.line1': 'Not everything has to come',
-    'pause.line2': 'into the evening.',
+    'pause.part1': 'Not everything has to come',
+    'pause.part2': 'into',
+    'pause.part3': 'the evening.',
 
     // Ritual
-    'ritual.tag': 'The Ritual',
-    'ritual.title': 'A small moment.',
-    'ritual.desc': 'Enough to begin the evening.\n\nWarm. Soft. Reserved.\nVanilla, tonka, and a quiet depth.\nNot sweet. Not heavy. Not loud.\n\nOne spoon. One glass.\nA quiet break in the day.\n\nNot in passing.\nBut as a beginning.',
+    'ritual.tag': 'THE RITUAL · THREE STEPS',
+    'ritual.title': 'A small moment, in three parts.',
+    'ritual.desc': 'Enough to begin the evening. Warm, soft, reserved — not sweet, not heavy, not loud.',
     'ritual.clarity_line1': 'A drinkable ritual in powder form.',
     'ritual.clarity_line2': 'For the moment when the day is allowed to step back.',
     'ritual.step1_tag': 'Release',
-    'ritual.step1_text': 'One spoon in your glass. The day is allowed to become quieter.',
+    'ritual.step1_text': 'One spoon in your glass.\nWarm water or plant milk.\nThe day is allowed to become quieter.',
     'ritual.step2_tag': 'Gather',
-    'ritual.step2_text': 'Stir. Breathe. Attention returns.',
+    'ritual.step2_text': 'Stir. Breathe. Hold the glass.\nAttention returns.\nThe moment becomes clearer.',
     'ritual.step3_tag': 'Arrive',
-    'ritual.step3_text': 'Drink your ritual before evening transitions into the night.',
+    'ritual.step3_text': 'The glass becomes emptier.\nThe day steps back.\nYou arrive in the evening.',
     'ritual.alt': 'HESPYRA evening ritual preparation step',
 
     // Ingredients

@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import LogoTicker from './components/LogoTicker';
 import CustomerStory from './components/CustomerStory';
-import BenefitStrip from './components/BenefitStrip';
+import EditorialPause from './components/EditorialPause';
+import Ritual from './components/Ritual';
 import Exclusions from './components/Exclusions';
 import Ingredients from './components/Ingredients';
 import WhyHespyra from './components/WhyHespyra';
@@ -43,7 +44,11 @@ function App() {
       </ScrollReveal>
       
       <ScrollReveal>
-        <BenefitStrip />
+        <Ritual />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <EditorialPause />
       </ScrollReveal>
       
       <ScrollReveal>

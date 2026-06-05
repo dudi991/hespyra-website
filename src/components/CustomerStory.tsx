@@ -41,12 +41,12 @@ const CustomerStory = () => {
       ];
 
   return (
-    <section id="philosophy" className="w-full bg-[#F5F2EB] py-20 lg:py-28 relative z-10">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+    <section id="philosophy" className="w-full bg-[#F2EDE4] py-20 lg:py-28 relative z-10">
+      <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* Left Column: Text Content & Editorial List */}
-          <div className="lg:col-span-7 flex flex-col justify-center py-4 text-left">
+          <div className="lg:col-span-6 flex flex-col justify-center py-4 text-left">
             {/* Category Tag */}
             <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-6 block">
               {t('philosophy.tag')}
@@ -64,8 +64,8 @@ const CustomerStory = () => {
               <p>{t('philosophy.text3')}</p>
             </div>
 
-            {/* Editorial List with Icons & elegant top border separator */}
-            <div className="space-y-6 max-w-xl pt-6 border-t border-primary/10">
+            {/* Editorial List with Icons */}
+            <div className="space-y-6 max-w-xl pt-2">
               {benefits.map((benefit, idx) => (
                 <div key={idx} className="flex gap-5 items-start">
                   {/* Icon */}
@@ -86,9 +86,9 @@ const CustomerStory = () => {
 
           </div>
 
-          {/* Right Column: Square Image on mobile, stretching to match height on desktop */}
-          <div className="lg:col-span-5 flex justify-center items-stretch w-full max-w-[550px] lg:max-w-none mx-auto">
-            <div className="relative aspect-square lg:aspect-auto w-full lg:h-full min-h-[350px] lg:min-h-[600px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
+          {/* Right Column: Exact match of Hero image layout/width */}
+          <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
+            <div className="relative w-full aspect-square bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
               <img 
                 src="images/philosophieHESPYRA.webp" 
                 alt="HESPYRA Philosophy Concept" 
