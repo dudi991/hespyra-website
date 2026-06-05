@@ -59,7 +59,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients
     'ingredients.tag': 'DIE REZEPTUR',
     'ingredients.title': 'Eine ruhige Komposition für den Abend.',
-    'ingredients.desc': 'Mineralstoffe, Aminosäuren, Pflanzenstoffe, funktionale Nährstoffe und warme Geschmacksnoten — ausgewählt für ein trinkbares Abendritual.',
+    'ingredients.desc': 'Mineralstoffe, Aminosäuren, Pflanzenstoffe und warme Geschmacksnoten — ausgewählt für ein trinkbares Abendritual.',
     'ingredients.list_label': 'Die Bestandteile der Komposition',
     
     // Ingredients Groups (German)
@@ -222,7 +222,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients
     'ingredients.tag': 'THE FORMULA',
     'ingredients.title': 'A quiet composition for the evening.',
-    'ingredients.desc': 'Minerals, amino acids, plant substances, functional nutrients and warm flavor notes — selected for a drinkable evening ritual.',
+    'ingredients.desc': 'Minerals, amino acids, plant substances and warm flavor notes — selected for a drinkable evening ritual.',
     'ingredients.list_label': 'The components of the composition',
     
     // Ingredients Groups (English)

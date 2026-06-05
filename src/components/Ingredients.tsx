@@ -24,11 +24,11 @@ const Ingredients = () => {
           desc: 'Für den Moment, in dem der Tag zurücktreten darf.',
           items: [
             {
-              name: 'Magnesium Bisglycinate',
+              name: 'Magnesium Bisglycinat',
               info: 'Eine gut verträgliche Magnesiumform — verbunden mit Glycine als Teil der Verbindung.'
             },
             {
-              name: 'Magtein® Magnesium Threonate',
+              name: 'Magtein® Magnesium L-Threonat',
               info: 'Eine patentierte Magnesiumform — ausgewählt für die Rezeptur hinter dem Abendritual.'
             },
             {
@@ -43,11 +43,11 @@ const Ingredients = () => {
           desc: 'Für den Moment, in dem der Kopf aus dem Tagesmodus findet.',
           items: [
             {
-              name: 'Suntheanine® L-Theanine',
+              name: 'Suntheanine® L-Theanin',
               info: 'Eine Aminosäure, bekannt aus der Teepflanze.'
             },
             {
-              name: 'SerinAid® Phosphatidylserine',
+              name: 'SerinAid® Phosphatidylserin',
               info: 'Ein funktionaler Nährstoff, der in modernen Formulierungen für mentale Präsenz eingesetzt wird.'
             },
             {
@@ -62,16 +62,16 @@ const Ingredients = () => {
           desc: 'Für den warmen, bewussten Einstieg in den Abend.',
           items: [
             {
-              name: 'Affron® Saffron',
-              info: 'Ein Safran-Extrakt aus Spanien — angebaut, geerntet und verarbeitet unter kontrollierten Standards.'
+              name: 'Affron® Safran',
+              info: 'Ein Safran-Extrakt aus Spanien — angebaut, geerntet und verarbeitet nach klaren Qualitätsstandards.'
             },
             {
               name: 'Kakao',
               info: 'Die warme Basis des Geschmacks — rund, erwachsen, nicht süß-kindlich.'
             },
             {
-              name: 'Vanilla & Tonka',
-              info: 'Weiche, vertraute Noten für ein ruhiges Geschmackserlebnis.'
+              name: 'Vanille & Tonka',
+              info: 'Weiche, vertraute Noten — warm, rund und zurückhaltend.'
             }
           ]
         }
@@ -122,7 +122,7 @@ const Ingredients = () => {
           items: [
             {
               name: 'Affron® Saffron',
-              info: 'A saffron extract from Spain — grown, harvested, and processed under controlled standards.'
+              info: 'A saffron extract from Spain — grown, harvested, and processed according to clear quality standards.'
             },
             {
               name: 'Kakao',
@@ -130,7 +130,7 @@ const Ingredients = () => {
             },
             {
               name: 'Vanilla & Tonka',
-              info: 'Soft, familiar notes for a quiet flavor experience.'
+              info: 'Soft, familiar notes — warm, round, and reserved.'
             }
           ]
         }
@@ -156,15 +156,15 @@ const Ingredients = () => {
         </p>
 
         {/* 3-Column Ingredients Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-12 md:gap-0 text-left max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-12 md:gap-0 text-left max-w-6xl mx-auto">
           {groups.map((group, gIdx) => (
             <div 
               key={gIdx} 
-              className={`flex flex-col ${gIdx === 0 ? 'md:pr-10 lg:pr-12 pb-8 md:pb-0' : gIdx === 1 ? 'md:px-10 lg:px-12 pb-8 md:pb-0' : 'md:pl-10 lg:pl-12'}`}
+              className={`flex flex-col ${gIdx === 0 ? 'md:pr-10 lg:pr-16 pb-8 md:pb-0' : gIdx === 1 ? 'md:px-10 lg:px-16 pb-8 md:pb-0' : 'md:pl-10 lg:pl-16'}`}
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-10">
+              <div className="mb-10 md:min-h-[150px] lg:min-h-[130px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
@@ -177,9 +177,9 @@ const Ingredients = () => {
               </div>
 
               {/* Group Ingredients Items */}
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {group.items.map((item, iIdx) => (
-                  <div key={iIdx} className="flex flex-col text-left">
+                  <div key={iIdx} className="flex flex-col text-left md:min-h-[130px] lg:min-h-[95px]">
                     <div className="flex justify-between items-baseline mb-2">
                       <h4 className="font-sans text-sm lg:text-[15px] font-semibold text-primary">
                         {item.name}
