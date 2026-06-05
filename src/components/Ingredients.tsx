@@ -1,9 +1,22 @@
 import { useLanguage } from '../context/LanguageContext';
 
+interface IngredientItem {
+  name: string;
+  dose?: string;
+  info: string;
+}
+
+interface IngredientGroup {
+  num: string;
+  title: string;
+  desc: string;
+  items: IngredientItem[];
+}
+
 const Ingredients = () => {
   const { language, t } = useLanguage();
 
-  const groups = language === 'de'
+  const groups: IngredientGroup[] = language === 'de'
     ? [
         {
           num: '01',
@@ -11,63 +24,54 @@ const Ingredients = () => {
           desc: 'Für den Moment, in dem der Tag zurücktreten darf.',
           items: [
             {
-              name: 'Magnesium Bisglycinat & L-Threonat',
-              dose: '200 mg',
-              info: 'Zwei sanfte, gut aufnehmbare Formen — das ruhige Fundament der Rezeptur.'
+              name: 'Magnesium Bisglycinate',
+              info: 'Eine gut verträgliche Magnesiumform — verbunden mit Glycine als Teil der Verbindung.'
             },
             {
-              name: 'L-Theanin',
-              dose: '200 mg',
-              info: 'Aus grünem Tee. Klar, mild, ruhig — ohne Sedierung.'
+              name: 'Magtein® Magnesium Threonate',
+              info: 'Eine patentierte Magnesiumform, ausgewählt für die besondere Abendlogik von HESPYRA.'
             },
             {
-              name: 'Apigenin',
-              dose: '50 mg',
-              info: 'Ein Pflanzenstoff aus der Kamille. Ruhig, vertraut, abendlich.'
+              name: 'Reishi Mushroom Extract',
+              info: 'Ein funktionaler Pilz mit langer Geschichte in asiatischen Ritual- und Pflanzenwelten.'
             }
           ]
         },
         {
           num: '02',
           title: 'Sammeln',
-          desc: 'Ausgewählte Pflanzenextrakte und Aminosäuren für mehr innere Sammlung.',
+          desc: 'Für den Moment, in dem die Gedanken wieder klarer werden dürfen.',
           items: [
             {
-              name: 'Ashwagandha (KSM-66)',
-              dose: '300 mg',
-              info: 'Eine Wurzel mit langer Tradition — ruhig, erdig, zurückhaltend.'
+              name: 'Suntheanine® L-Theanine',
+              info: 'Eine Aminosäure, bekannt aus der Teepflanze.'
             },
             {
-              name: 'Safran-Extrakt (affron®)',
-              dose: '28 mg',
-              info: 'Ein Extrakt mit warmer Tiefe und einer feinen Präsenz.'
+              name: 'SerinAid® Phosphatidylserine',
+              info: 'Ein funktionaler Nährstoff, der in modernen Formulierungen für mentale Präsenz eingesetzt wird.'
             },
             {
-              name: 'Phosphatidylserin',
-              dose: '100 mg',
-              info: 'Aus pflanzlichen Lecithinen gewonnen. Ein klarer Bestandteil der Komposition.'
+              name: 'Rhodiolife® Rhodiola Rosea',
+              info: 'Ein Pflanzenextrakt, bewusst gewählt als Alternative zu klassischen Abend-Adaptogenen.'
             }
           ]
         },
         {
           num: '03',
           title: 'Ankommen',
-          desc: 'Warme Noten und vertraute Zutaten, die die Zubereitung in ein Ankommen verwandeln.',
+          desc: 'Für den warmen, bewussten Einstieg in den Abend.',
           items: [
             {
-              name: 'Reishi',
-              dose: '500 mg',
-              info: 'Ein Pilz mit Tiefe. Traditionell geschätzt, warm im Charakter.'
+              name: 'Affron® Saffron',
+              info: 'Ein hochwertiger Safran-Extrakt aus Spanien, sorgfältig angebaut und verarbeitet.'
             },
             {
-              name: 'Glycin',
-              dose: '1.000 mg',
-              info: 'Sanft, dezent süß, abgerundet — führt den Körper behutsam zur Ruhe.'
+              name: 'Kakao',
+              info: 'Die warme Basis des Geschmacks — rund, erwachsen, nicht süß-kindlich.'
             },
             {
-              name: 'Vanille & Tonka',
-              dose: 'Aroma',
-              info: 'Warm, weich, rituell. Der Grund, warum es nach Abend schmeckt.'
+              name: 'Vanilla & Tonka',
+              info: 'Weiche, vertraute Noten für ein ruhiges Geschmackserlebnis.'
             }
           ]
         }
@@ -79,63 +83,54 @@ const Ingredients = () => {
           desc: 'For the moment when the day is allowed to step back.',
           items: [
             {
-              name: 'Magnesium Bisglycinate & L-Threonate',
-              dose: '200 mg',
-              info: 'Two gentle, absorbable forms — the calm foundation of the formula.'
+              name: 'Magnesium Bisglycinate',
+              info: 'A well-tolerated form of magnesium — bound with glycine as part of the compound.'
             },
             {
-              name: 'L-Theanine',
-              dose: '200 mg',
-              info: 'From green tea. Clear, mild, calm — without sedation.'
+              name: 'Magtein® Magnesium Threonate',
+              info: 'A patented form of magnesium, selected for the unique evening logic of HESPYRA.'
             },
             {
-              name: 'Apigenin',
-              dose: '50 mg',
-              info: 'A botanical compound from chamomile. Quiet, familiar, evening-like.'
+              name: 'Reishi Mushroom Extract',
+              info: 'A functional mushroom with a long history in Asian ritual and plant traditions.'
             }
           ]
         },
         {
           num: '02',
           title: 'Gather',
-          desc: 'Selected plant extracts and amino acids for greater inner focus.',
+          desc: 'For the moment when thoughts are allowed to become clearer.',
           items: [
             {
-              name: 'Ashwagandha (KSM-66)',
-              dose: '300 mg',
-              info: 'A root with a long tradition — quiet, earthy, reserved.'
+              name: 'Suntheanine® L-Theanine',
+              info: 'An amino acid, well-known from the tea plant.'
             },
             {
-              name: 'Saffron Extract (affron®)',
-              dose: '28 mg',
-              info: 'An extract with warm depth and a delicate presence.'
+              name: 'SerinAid® Phosphatidylserine',
+              info: 'A functional nutrient used in modern formulations for mental presence.'
             },
             {
-              name: 'Phosphatidylserine',
-              dose: '100 mg',
-              info: 'Sourced from plant lecithins. A clear component of the composition.'
+              name: 'Rhodiolife® Rhodiola Rosea',
+              info: 'A plant extract, deliberately chosen as an alternative to classic evening adaptogens.'
             }
           ]
         },
         {
           num: '03',
           title: 'Arrive',
-          desc: 'Warm notes and familiar ingredients that turn preparation into arrival.',
+          desc: 'For a warm, conscious entry into the evening.',
           items: [
             {
-              name: 'Reishi',
-              dose: '500 mg',
-              info: 'A mushroom with depth. Traditionally valued, warm in character.'
+              name: 'Affron® Saffron',
+              info: 'A high-quality saffron extract from Spain, carefully grown and processed.'
             },
             {
-              name: 'Glycine',
-              dose: '1,000 mg',
-              info: 'Gentle, subtly sweet, well-rounded — eases the body toward rest.'
+              name: 'Kakao',
+              info: 'The warm foundation of the flavor — round, mature, not sweet-childish.'
             },
             {
               name: 'Vanilla & Tonka',
-              dose: 'flavour',
-              info: 'Warm, soft, ritualistic. The reason it tastes like an evening.'
+              info: 'Soft, familiar notes for a quiet flavor experience.'
             }
           ]
         }
@@ -189,9 +184,11 @@ const Ingredients = () => {
                       <h4 className="font-sans text-sm lg:text-[15px] font-semibold text-primary">
                         {item.name}
                       </h4>
-                      <span className="font-sans text-xs sm:text-sm font-semibold text-accent whitespace-nowrap ml-4">
-                        {item.dose}
-                      </span>
+                      {item.dose && (
+                        <span className="font-sans text-xs sm:text-sm font-semibold text-accent whitespace-nowrap ml-4">
+                          {item.dose}
+                        </span>
+                      )}
                     </div>
                     <p className="font-sans text-[13px] sm:text-sm leading-relaxed text-primary/60 font-light">
                       {item.info}

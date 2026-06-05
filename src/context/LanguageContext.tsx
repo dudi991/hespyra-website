@@ -59,7 +59,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients
     'ingredients.tag': 'DIE REZEPTUR · VOLLSTÄNDIG OFFENGELEGT',
     'ingredients.title': 'Eine ruhige Komposition für den Abend.',
-    'ingredients.desc': 'Mineralstoffe, Pflanzenextrakte, Aminosäuren und warme Geschmacksnoten — ausgewählt für ein Ritual, das nicht laut wirken muss. Jede Dosierung auf dem Etikett.',
+    'ingredients.desc': 'Mineralstoffe, Aminosäuren, Pflanzenstoffe, funktionale Nährstoffe und warme Geschmacksnoten — ausgewählt für ein trinkbares Abendritual. Jede Dosierung transparent auf dem Etikett.',
     'ingredients.list_label': 'Die Bestandteile der Komposition',
     
     // Ingredients Groups (German)
@@ -222,7 +222,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients
     'ingredients.tag': 'THE FORMULA · FULLY DISCLOSED',
     'ingredients.title': 'A quiet composition for the evening.',
-    'ingredients.desc': 'Minerals, plant extracts, amino acids and warm flavour notes — selected for a ritual that doesn\'t need to seem loud. Every dose on the label.',
+    'ingredients.desc': 'Minerals, amino acids, plant substances, functional nutrients and warm flavor notes — selected for a drinkable evening ritual. Every dosage transparent on the label.',
     'ingredients.list_label': 'The components of the composition',
     
     // Ingredients Groups (English)
