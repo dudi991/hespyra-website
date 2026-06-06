@@ -39,41 +39,43 @@ const Exclusions = () => {
 
   const exclusionsTag = language === 'de' ? 'SO EINFACH GEHT’S' : 'SO SIMPLE';
   const exclusionsDesc = language === 'de' 
-    ? 'HESPYRA lässt sich mühelos in deinen Abend integrieren.\nWeniger als eine Minute — für einen ruhigen Anfang.'
-    : 'HESPYRA integrates effortlessly into your evening.\nLess than a minute — for a quiet beginning.';
+    ? 'HESPYRA lässt sich mühelos in\ndeinen Abend integrieren.\nWeniger als eine Minute – für mehr Ruhe, wenn du sie brauchst.'
+    : 'HESPYRA integrates effortlessly into\nyour evening.\nLess than a minute – for more calm, when you need it.';
+
+  const exclusionsFooter = language === 'de' ? 'DEIN ABENDRITUAL. GANZ EINFACH.' : 'YOUR EVENING RITUAL. SO SIMPLE.';
 
   const leftItems = language === 'de'
     ? [
         {
           label: 'WARM',
-          icon: <Coffee className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
-          desc: 'Vanille, Tonka und ruhige Tiefe.\nZurückhaltend — nicht süß, nicht schwer.'
+          icon: <Coffee className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
+          desc: 'Vanille, Tonka und eine ruhige Tiefe.\nZurückhaltend – nicht süß, nicht schwer.'
         },
         {
           label: 'REIN',
-          icon: <Leaf className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
+          icon: <Leaf className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Kein Melatonin, kein Zucker,\nkeine künstlichen Farbstoffe.'
         },
         {
           label: 'EINFACH',
-          icon: <SpoonIcon className="w-[17px] h-[17px] text-accent" />,
+          icon: <SpoonIcon className="w-[32px] h-[32px] text-accent" />,
           desc: 'Ein Löffel. Ein Glas.\nEine ruhige Pause im Tag.'
         }
       ]
     : [
         {
           label: 'WARM',
-          icon: <Coffee className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
-          desc: 'Vanilla, tonka and quiet depth.\nReserved — not sweet, not heavy.'
+          icon: <Coffee className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
+          desc: 'Vanilla, tonka and a quiet depth.\nReserved – not sweet, not heavy.'
         },
         {
           label: 'PURE',
-          icon: <Leaf className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
+          icon: <Leaf className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'No melatonin, no sugar,\nno artificial colorants.'
         },
         {
           label: 'SIMPLE',
-          icon: <SpoonIcon className="w-[17px] h-[17px] text-accent" />,
+          icon: <SpoonIcon className="w-[32px] h-[32px] text-accent" />,
           desc: 'One spoon. One glass.\nA quiet pause in your day.'
         }
       ];
@@ -82,49 +84,63 @@ const Exclusions = () => {
     ? [
         {
           label: 'WARM ODER KALT',
-          icon: <Waves className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
+          icon: <Waves className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Für Wasser oder Pflanzenmilch.\nDu entscheidest.'
         },
         {
           label: 'EIN LÖFFEL',
-          icon: <PortionIcon className="w-[17px] h-[17px] text-accent" />,
+          icon: <PortionIcon className="w-[32px] h-[32px] text-accent" />,
           desc: 'Eine Portion.\nKein Schlucken, kein Gummy.'
         },
         {
           label: 'JEDEN ABEND',
-          icon: <Moon className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
-          desc: 'Ein wiederkehrender Moment,\nder dem Abend Form gibt.'
+          icon: <Moon className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
+          desc: 'Ein wiederkehrender Moment,\nder dem Abend eine Form gibt.'
         }
       ]
     : [
         {
           label: 'WARM OR COLD',
-          icon: <Waves className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
+          icon: <Waves className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'For water or plant milk.\nYou decide.'
         },
         {
           label: 'ONE SPOON',
-          icon: <PortionIcon className="w-[17px] h-[17px] text-accent" />,
+          icon: <PortionIcon className="w-[32px] h-[32px] text-accent" />,
           desc: 'One serving.\nNo swallowing, no gummy.'
         },
         {
           label: 'EVERY EVENING',
-          icon: <Moon className="w-[17px] h-[17px] text-accent" strokeWidth={1.5} />,
+          icon: <Moon className="w-[32px] h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'A recurring moment\nthat gives shape to the evening.'
         }
       ];
 
+  const leftItemClasses = [
+    'lg:col-span-3 lg:col-start-1 lg:row-start-2',
+    'lg:col-span-3 lg:col-start-1 lg:row-start-3',
+    'lg:col-span-3 lg:col-start-1 lg:row-start-4'
+  ];
+
+  const rightItemClasses = [
+    'lg:col-span-3 lg:col-start-10 lg:row-start-2',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-3',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-4'
+  ];
+
   return (
-    <section id="exclusions" className="w-full bg-[#EDE8DC] py-12 lg:py-16 relative z-10">
+    <section id="exclusions" className="w-full bg-[#EDE8DC] pt-16 pb-12 lg:pt-20 lg:pb-16 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1300px] mx-auto items-stretch">
+        
+        {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1140px] mx-auto items-stretch">
           
-          {/* Header Block */}
-          <div className="col-span-12 lg:col-span-3 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-end pb-4 lg:pb-6">
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-3 block select-none">
+          {/* Header Block (Row 1, Column 1-3) */}
+          <div className="col-span-12 lg:col-span-3 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-start pb-4 lg:pb-6">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
               {exclusionsTag}
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal">
+            <h2 className="text-3xl sm:text-[36px] md:text-[40px] lg:text-[42px] leading-[1.25] font-serif text-primary tracking-tight font-normal">
               {language === 'de' ? (
                 <>
                   Ein Moment,<br />
@@ -143,11 +159,11 @@ const Exclusions = () => {
             </p>
           </div>
 
-          {/* Center Column (Product Image) - Visual Anchor */}
-          <div className="col-span-12 lg:col-span-6 lg:row-span-2 lg:col-start-4 order-2 lg:order-none flex justify-center items-center py-4 lg:py-0">
-            <div className="relative aspect-[3/4] w-full max-w-[420px] lg:max-w-[480px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-primary/5 analog-wrapper analog-grain group">
+          {/* Center Column (Product Image) (Row 1-4, Column 4-9) - Spans all 4 rows on desktop and fills container width */}
+          <div className="col-span-12 lg:col-span-6 lg:row-start-1 lg:row-span-4 lg:col-start-4 order-2 lg:order-none flex justify-center items-stretch py-4 lg:py-0">
+            <div className="relative aspect-[3/4] lg:aspect-auto w-full lg:h-full max-w-[480px] lg:max-w-none bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-primary/5 analog-wrapper analog-grain group">
               <img 
-                src="images/HESPYRA_SCOOP.webp" 
+                src="images/ritual.webp" 
                 alt="HESPYRA Evening Ritual Preparation" 
                 className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-103"
                 loading="lazy"
@@ -156,34 +172,48 @@ const Exclusions = () => {
             </div>
           </div>
 
-          {/* Left Column Items */}
-          <div className="col-span-12 lg:col-span-3 lg:row-start-2 lg:col-start-1 order-3 lg:order-none flex flex-col justify-start pt-4 lg:pt-8 space-y-8 lg:space-y-10">
+          {/* Left Column Items (Row 2-4, Column 1-3) */}
+          <div className="col-span-12 lg:contents order-3 lg:order-none">
             {leftItems.map((item, idx) => (
-              <div key={idx} className="flex flex-col">
-                <div className="flex items-center gap-2.5 mb-2">
+              <div 
+                key={idx} 
+                className={`flex flex-col ${leftItemClasses[idx]} ${
+                  idx === 2 
+                    ? 'pt-7 pb-0' 
+                    : 'py-7 border-b border-primary/5'
+                }`}
+              >
+                <div className="flex items-center gap-3.5 mb-2.5">
                   {item.icon}
-                  <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-primary uppercase select-none">
+                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
                     {item.label}
                   </span>
                 </div>
-                <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
+                <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Right Column Items */}
-          <div className="col-span-12 lg:col-span-3 lg:row-start-2 lg:col-start-10 order-4 lg:order-none flex flex-col justify-start pt-4 lg:pt-8 space-y-8 lg:space-y-10">
+          {/* Right Column Items (Row 2-4, Column 10-12) */}
+          <div className="col-span-12 lg:contents order-4 lg:order-none">
             {rightItems.map((item, idx) => (
-              <div key={idx} className="flex flex-col">
-                <div className="flex items-center gap-2.5 mb-2">
+              <div 
+                key={idx} 
+                className={`flex flex-col ${rightItemClasses[idx]} ${
+                  idx === 2 
+                    ? 'pt-7 pb-0' 
+                    : 'py-7 border-b border-primary/5'
+                }`}
+              >
+                <div className="flex items-center gap-3.5 mb-2.5">
                   {item.icon}
-                  <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-primary uppercase select-none">
+                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
                     {item.label}
                   </span>
                 </div>
-                <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
+                <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>
@@ -192,8 +222,13 @@ const Exclusions = () => {
 
         </div>
 
-        {/* Section Footer */}
-        <div className="w-12 h-[1px] bg-accent/30 mx-auto mt-16 lg:mt-20"></div>
+        {/* Section Footer (Bottom Center) */}
+        <div className="text-center mt-12 lg:mt-16 flex flex-col items-center">
+          <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase select-none">
+            {exclusionsFooter}
+          </span>
+          <div className="w-12 h-[1px] bg-accent/30 mt-3"></div>
+        </div>
 
       </div>
     </section>
@@ -201,3 +236,4 @@ const Exclusions = () => {
 };
 
 export default Exclusions;
+
