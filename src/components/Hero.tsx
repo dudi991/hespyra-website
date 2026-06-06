@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import heroProdukt from '../assets/heroProdukt.png';
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -106,7 +105,7 @@ const Hero = () => {
               {/* Rounded image wrapper */}
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
                 <img 
-                  src={heroProdukt} 
+                  src="/images/heroHESPYRA.webp" 
                   alt="HESPYRA Product Presentation" 
                   className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
                   loading="eager"
