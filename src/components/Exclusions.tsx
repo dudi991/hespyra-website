@@ -42,7 +42,6 @@ const Exclusions = () => {
     ? 'HESPYRA lässt sich mühelos in\ndeinen Abend integrieren.\nWeniger als eine Minute – für mehr Ruhe, wenn du sie brauchst.'
     : 'HESPYRA integrates effortlessly into\nyour evening.\nLess than a minute – for more calm, when you need it.';
 
-  const exclusionsFooter = language === 'de' ? 'DEIN ABENDRITUAL. GANZ EINFACH.' : 'YOUR EVENING RITUAL. SO SIMPLE.';
 
   const leftItems = language === 'de'
     ? [
@@ -222,13 +221,6 @@ const Exclusions = () => {
 
         </div>
 
-        {/* Section Footer (Bottom Center) */}
-        <div className="text-center mt-12 lg:mt-16 flex flex-col items-center">
-          <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase select-none">
-            {exclusionsFooter}
-          </span>
-          <div className="w-12 h-[1px] bg-accent/30 mt-3"></div>
-        </div>
 
       </div>
     </section>
