@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Rounded image wrapper */}
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
                 <img 
-                  src="/images/heroHESPYRA.webp" 
+                  src="images/heroHESPYRA.webp" 
                   alt="HESPYRA Product Presentation" 
                   className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out group-hover:scale-105"
                   style={{ filter: 'saturate(0.98) contrast(1.05) brightness(1.00)' }}
