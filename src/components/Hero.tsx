@@ -60,18 +60,20 @@ const Hero = () => {
                   draggable="false"
                 />
               </div>
-              
-              {/* Overlay card */}
-              <div className="absolute bottom-4 -left-4 sm:-left-6 bg-[#F4ECE1]/95 py-2.5 px-4 w-fit max-w-[220px] sm:max-w-[250px] rounded-sm shadow-[0_8px_24px_rgba(28,25,23,0.03)] border border-primary/5 z-20">
-                <h4 className="font-serif text-[13px] sm:text-[14px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
-                  HESPYRA Evening Ritual
-                </h4>
-                <p className="font-sans text-[10.5px] leading-tight text-primary/85 font-normal tracking-wide mb-1">
+            </div>
+            
+            {/* Caption card below the image on mobile to prevent obscuring image objects */}
+            <div className="mt-4 bg-[#F4ECE1]/95 py-3 px-4 rounded-sm shadow-md border border-primary/5">
+              <h4 className="font-serif text-[13.5px] sm:text-[14px] text-primary font-semibold mb-1 leading-tight tracking-wide">
+                HESPYRA Evening Ritual
+              </h4>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1.5">
+                <p className="font-sans text-[11px] sm:text-xs leading-tight text-primary/85 font-normal tracking-wide">
                   {language === 'de' 
                     ? "30 Abendrituale · Kakao · Vanille · Tonka"
                     : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
                 </p>
-                <div className="font-sans font-bold text-[8px] tracking-widest text-accent uppercase whitespace-nowrap">
+                <div className="font-sans font-bold text-[8.5px] tracking-widest text-accent uppercase">
                   {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
                 </div>
               </div>
