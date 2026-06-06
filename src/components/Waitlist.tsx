@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Truck, Leaf, Shield, Check } from 'lucide-react';
+import { Star, Mail, Gift, Check } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Waitlist = () => {
@@ -7,7 +7,7 @@ const Waitlist = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,62 +54,43 @@ const Waitlist = () => {
     }
   };
 
-  const title = language === 'de' ? "Die erste Edition von HESPYRA." : "The first edition of HESPYRA.";
-  const desc = language === 'de'
-    ? "Wir öffnen HESPYRA in kleinen Batches. Trag dich in die Warteliste ein, um bevorzugten Zugang zum nächsten Release zu erhalten."
-    : "We launch HESPYRA in limited quantities. Join the list to secure priority access to the first batch and exclusive updates.";
-
-  const usps = language === 'de'
-    ? [
-        {
-          icon: <Truck className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Kostenloser Versand",
-          desc: "Klimaneutrale Lieferung auf alle Abonnements."
-        },
-        {
-          icon: <Leaf className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Klimaneutral",
-          desc: "Wir kompensieren 100% unserer CO2-Emissionen."
-        },
-        {
-          icon: <Shield className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Geld-zurück-Garantie",
-          desc: "Risikofrei testen. Wenn es dir nicht gefällt, erstatten wir den Kaufpreis."
-        }
-      ]
-    : [
-        {
-          icon: <Truck className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Free shipping",
-          desc: "Climate-neutral delivery on all subscriptions."
-        },
-        {
-          icon: <Leaf className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Carbon neutral",
-          desc: "We offset 100% of our carbon footprint."
-        },
-        {
-          icon: <Shield className="w-5 h-5" strokeWidth={1.5} />,
-          title: "Money-back guarantee",
-          desc: "Love it or it's on us. 30-day money-back guarantee."
-        }
-      ];
+  const usps = [
+    {
+      icon: <Star className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      title: t('waitlist.benefit1_title'),
+      desc: t('waitlist.benefit1_desc')
+    },
+    {
+      icon: <Mail className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      title: t('waitlist.benefit2_title'),
+      desc: t('waitlist.benefit2_desc')
+    },
+    {
+      icon: <Gift className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      title: t('waitlist.benefit3_title'),
+      desc: t('waitlist.benefit3_desc')
+    }
+  ];
 
   return (
-    <section id="waitlist" className="w-full bg-[#FAF8F5] py-20 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="waitlist" className="w-full bg-[#EDE8DC] py-20 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-16 items-center max-w-6xl mx-auto">
           
           {/* Left Column - Headline, Desc, and Form */}
-          <div className="lg:col-span-7 text-left">
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-primary/60 uppercase mb-4 block">
-              {language === 'de' ? 'COMMUNITY / ANMELDUNG' : 'COMMUNITY / WAITLIST'}
+          <div className="lg:col-span-6 text-left">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-primary/45 uppercase mb-4 block select-none">
+              {t('waitlist.tag')}
             </span>
-            <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-primary tracking-tight font-light mb-6">
-              {title}
+            <h2 className="text-4xl sm:text-[46px] md:text-[50px] lg:text-[54px] leading-[1.1] font-serif text-primary tracking-normal font-normal mb-6">
+              {language === 'de' ? (
+                <>Die erste Edition von<br className="hidden sm:block" /> HESPYRA.</>
+              ) : (
+                <>The first edition of<br className="hidden sm:block" /> HESPYRA.</>
+              )}
             </h2>
-            <p className="font-sans text-sm sm:text-base text-primary/60 leading-relaxed font-light mb-8 max-w-lg">
-              {desc}
+            <p className="font-sans text-sm sm:text-[15px] text-primary/65 leading-relaxed font-light mb-8 max-w-[460px] whitespace-pre-line">
+              {t('waitlist.desc')}
             </p>
 
             {submitted ? (
@@ -118,29 +99,29 @@ const Waitlist = () => {
                   <Check className="w-3.5 h-3.5" strokeWidth={3} />
                 </div>
                 <span>
-                  {language === 'de' ? 'Danke. Wir melden uns leise bei dir.' : 'Thank you. We will reach out to you quietly.'}
+                  {t('waitlist.success')}
                 </span>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
                 <input 
                   type="email" 
-                  placeholder={language === 'de' ? 'E-Mail-Adresse' : 'Enter your email'} 
+                  placeholder={t('waitlist.placeholder')} 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className="flex-1 bg-white border border-border text-primary px-5 py-3.5 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
+                  className="flex-1 bg-white border border-primary/10 text-primary px-5 py-3.5 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
                   required
                   autoComplete="off"
                 />
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-primary text-background hover:bg-accent hover:text-white px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
+                  className="bg-[#1C1917] text-white hover:bg-accent px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting 
                     ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
-                    : (language === 'de' ? 'ANMELDEN' : 'JOIN THE LIST')}
+                    : t('waitlist.submit')}
                 </button>
               </form>
             )}
@@ -151,21 +132,19 @@ const Waitlist = () => {
             )}
           </div>
 
-          {/* Right Column - Brand USPs */}
-          <div className="lg:col-span-5 flex flex-col gap-8 text-left">
+          {/* Right Column - Brand USPs (Horizontal Grid on desktop) */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-4 lg:gap-6 text-center mt-12 lg:mt-0">
             {usps.map((usp, idx) => (
-              <div key={idx} className="flex gap-4 items-start border-l border-border/80 pl-4 py-1">
-                <div className="text-accent flex-shrink-0 mt-0.5">
+              <div key={idx} className="flex flex-col items-center">
+                <div className="text-accent mb-4 select-none">
                   {usp.icon}
                 </div>
-                <div className="flex flex-col text-left">
-                  <h4 className="font-sans text-xs tracking-wider font-bold uppercase text-primary">
-                    {usp.title}
-                  </h4>
-                  <p className="font-sans text-[13px] leading-relaxed text-primary/60 font-light mt-1">
-                    {usp.desc}
-                  </p>
-                </div>
+                <h4 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold uppercase text-primary">
+                  {usp.title}
+                </h4>
+                <p className="font-sans text-[12px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-2 max-w-[180px] mx-auto">
+                  {usp.desc}
+                </p>
               </div>
             ))}
           </div>
