@@ -1,109 +1,156 @@
-import { Check, Square, Clock, ChevronUp, Sparkle, Droplet } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Coffee, Leaf, Waves, Moon } from 'lucide-react';
 
 const Exclusions = () => {
   const { language } = useLanguage();
 
+  // Custom Spoon SVG Icon since lucide-react doesn't have it in this version
+  const SpoonIcon = () => (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className="w-4 h-4 text-accent"
+    >
+      <path d="M17.5 6.5c1.4-1.4 3.1-1 3.8-.3.7.7 1.1 2.4-.3 3.8-1.4 1.4-3.5 1.8-4.2 1.1-.7-.7-.3-2.8 1.1-4.2z" />
+      <path d="M12.5 11.5L4 20" />
+    </svg>
+  );
+
+  // Custom Portion/Slice SVG Icon representing "EIN LÖFFEL"
+  const PortionIcon = () => (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      className="w-4 h-4 text-accent"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2v10h10" />
+      <path d="M12 12l7 7" className="opacity-40" />
+    </svg>
+  );
+
+  const exclusionsTag = language === 'de' ? 'SO EINFACH GEHT’S' : 'SO SIMPLE';
+  const exclusionsDesc = language === 'de' 
+    ? 'HESPYRA lässt sich mühelos in deinen Abend integrieren.\nWeniger als eine Minute — für einen ruhigen Anfang, bevor der Abend weitergeht.'
+    : 'HESPYRA integrates effortlessly into your evening.\nLess than a minute — for a quiet beginning before the evening continues.';
+
+  const exclusionsFooter = language === 'de' ? 'DEIN ABENDRITUAL. GANZ EINFACH.' : 'YOUR EVENING RITUAL. SO SIMPLE.';
+
   const leftItems = language === 'de'
     ? [
         {
-          label: 'Warm',
-          icon: <Square className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Kakao, Vanille und Tonka.\nRund, erwachsen, zurückhaltend — nicht süß, nicht schwer.'
+          label: 'WARM',
+          icon: <Coffee className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Vanille, Tonka und eine ruhige Tiefe.\nZurückhaltend — nicht süß, nicht schwer.'
         },
         {
-          label: 'Rein',
-          icon: <Check className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Ohne Melatonin. Ohne Eisen.\n9 ausgewählte Inhaltsstoffe, offen benannt.'
+          label: 'REIN',
+          icon: <Leaf className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Kein Melatonin, kein Zucker,\nkeine künstlichen Farbstoffe.'
         },
         {
-          label: 'Einfach',
-          icon: <Clock className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Ein Löffel. Ein Glas.\nEin ruhiger Anfang für deinen Abend.'
+          label: 'EINFACH',
+          icon: <SpoonIcon />,
+          desc: 'Ein Löffel. Ein Glas.\nEine ruhige Pause im Tag.'
         }
       ]
     : [
         {
-          label: 'Warm',
-          icon: <Square className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Vanilla, tonka and a quiet depth. Reserved — not sweet, not heavy.'
+          label: 'WARM',
+          icon: <Coffee className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Vanilla, tonka and a quiet depth.\nReserved — not sweet, not heavy.'
         },
         {
-          label: 'Clean',
-          icon: <Check className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'No melatonin, no sugar, no synthetic colour. 14 ingredients you can pronounce.'
+          label: 'PURE',
+          icon: <Leaf className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'No melatonin, no sugar,\nno artificial colorants.'
         },
         {
-          label: 'Simple',
-          icon: <Clock className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'One spoon. One glass. A quiet break in the day, in under a minute.'
+          label: 'SIMPLE',
+          icon: <SpoonIcon />,
+          desc: 'One spoon. One glass.\nA quiet pause in your day.'
         }
       ];
 
   const rightItems = language === 'de'
     ? [
         {
-          label: 'Magnesium',
-          icon: <ChevronUp className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Zwei Formen von Magnesium — bewusst gewählt für die Basis der Rezeptur.'
+          label: 'WARM ODER KALT',
+          icon: <Waves className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Für Wasser oder Pflanzenmilch.\nDu entscheidest.'
         },
         {
-          label: 'L-Theanin',
-          icon: <Sparkle className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Bekannt aus der Teepflanze — passend für ein ruhiges Abendritual.'
+          label: 'EIN LÖFFEL',
+          icon: <PortionIcon />,
+          desc: 'Eine Portion.\nKein Schlucken, kein Gummy.'
         },
         {
-          label: 'Safran',
-          icon: <Droplet className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Ein sorgfältig ausgewählter Pflanzenstoff mit langer Tradition.'
+          label: 'JEDEN ABEND',
+          icon: <Moon className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'Ein wiederkehrender Moment,\nder dem Abend eine Form gibt.'
         }
       ]
     : [
         {
-          label: 'Magnesium',
-          icon: <ChevronUp className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'Two highly absorbable forms — the calm foundation of the formula.'
+          label: 'WARM OR COLD',
+          icon: <Waves className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'For water or plant milk.\nYou decide.'
         },
         {
-          label: 'L-Theanine',
-          icon: <Sparkle className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'From green tea. Clear, mild, calm focus without sedation.'
+          label: 'ONE SPOON',
+          icon: <PortionIcon />,
+          desc: 'One serving.\nNo swallowing, no gummy.'
         },
         {
-          label: 'Saffron',
-          icon: <Droplet className="w-4 h-4 text-accent" strokeWidth={1.5} />,
-          desc: 'A studied botanical for mood and warmth, at a meaningful dose.'
+          label: 'EVERY EVENING',
+          icon: <Moon className="w-4 h-4 text-accent" strokeWidth={1.5} />,
+          desc: 'A recurring moment\nthat gives shape to the evening.'
         }
       ];
 
   return (
     <section id="exclusions" className="w-full bg-[#EDE8DC] py-20 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:items-stretch max-w-[1300px] mx-auto">
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1300px] mx-auto items-stretch">
           
-          {/* Left Column (right-aligned text on desktop) */}
-          <div className="lg:col-span-3 flex flex-col gap-10 lg:gap-0 lg:justify-between order-2 lg:order-1 text-left lg:text-right">
-            {leftItems.map((item, idx) => (
-              <div key={idx} className="flex flex-col">
-                <div className="flex items-center justify-start lg:justify-end gap-3 mb-2">
-                  <span className="font-sans text-xs lg:text-[13px] tracking-[0.25em] font-medium text-accent uppercase select-none">
-                    {item.label}
-                  </span>
-                  {item.icon}
-                </div>
-                <p className="font-sans text-sm lg:text-[15px] leading-relaxed text-primary/60 font-light text-left lg:text-right max-w-sm lg:ml-auto whitespace-pre-line">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          {/* Header Block */}
+          <div className="col-span-12 lg:col-span-4 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-end pb-6 lg:pb-8">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
+              {exclusionsTag}
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal">
+              {language === 'de' ? (
+                <>
+                  Ein Moment,<br />
+                  der <span className="italic text-accent font-light">dir</span> gehört.
+                </>
+              ) : (
+                <>
+                  A moment<br />
+                  that is <span className="italic text-accent font-light">yours</span>.
+                </>
+              )}
+            </h2>
+            <div className="w-12 h-[1px] bg-accent/30 my-6"></div>
+            <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
+              {exclusionsDesc}
+            </p>
           </div>
 
           {/* Center Column (Product Image) */}
-          <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-2">
-            <div className="relative aspect-[5/4] w-full max-w-[500px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
+          <div className="col-span-12 lg:col-span-4 lg:row-span-2 lg:col-start-5 order-2 lg:order-none flex justify-center items-center py-6 lg:py-0">
+            <div className="relative aspect-[3/4] w-full max-w-[380px] sm:max-w-[420px] bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-primary/5 analog-wrapper analog-grain group">
               <img 
                 src="images/HESPYRA_SCOOP.webp" 
-                alt="HESPYRA Formula Powder Scoop" 
+                alt="HESPYRA Evening Ritual Preparation" 
                 className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-103"
                 loading="lazy"
                 draggable="false"
@@ -111,17 +158,44 @@ const Exclusions = () => {
             </div>
           </div>
 
-          {/* Right Column (left-aligned text) */}
-          <div className="lg:col-span-3 flex flex-col gap-10 lg:gap-0 lg:justify-between order-3 text-left">
-            {rightItems.map((item, idx) => (
-              <div key={idx} className="flex flex-col">
-                <div className="flex items-center justify-start gap-3 mb-2">
+          {/* Left Column Items */}
+          <div className="col-span-12 lg:col-span-4 lg:row-start-2 lg:col-start-1 order-3 lg:order-none flex flex-col">
+            {leftItems.map((item, idx) => (
+              <div 
+                key={idx} 
+                className={`py-6 flex flex-col ${
+                  idx === 0 ? 'border-t border-b border-primary/10' : 'border-b border-primary/10'
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
                   {item.icon}
-                  <span className="font-sans text-xs lg:text-[13px] tracking-[0.25em] font-medium text-accent uppercase select-none">
+                  <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-accent uppercase select-none">
                     {item.label}
                   </span>
                 </div>
-                <p className="font-sans text-sm lg:text-[15px] leading-relaxed text-primary/60 font-light text-left max-w-sm lg:mr-auto whitespace-pre-line">
+                <p className="font-sans text-[13px] sm:text-sm lg:text-[14.5px] leading-relaxed text-primary/70 font-light whitespace-pre-line">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column Items */}
+          <div className="col-span-12 lg:col-span-4 lg:row-start-2 lg:col-start-9 order-4 lg:order-none flex flex-col">
+            {rightItems.map((item, idx) => (
+              <div 
+                key={idx} 
+                className={`py-6 flex flex-col ${
+                  idx === 0 ? 'border-t border-b border-primary/10' : 'border-b border-primary/10'
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {item.icon}
+                  <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-accent uppercase select-none">
+                    {item.label}
+                  </span>
+                </div>
+                <p className="font-sans text-[13px] sm:text-sm lg:text-[14.5px] leading-relaxed text-primary/70 font-light whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>
@@ -129,6 +203,15 @@ const Exclusions = () => {
           </div>
 
         </div>
+
+        {/* Section Footer */}
+        <div className="text-center mt-16 lg:mt-20 flex flex-col items-center">
+          <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase select-none">
+            {exclusionsFooter}
+          </span>
+          <div className="w-12 h-[1px] bg-accent/30 mt-4"></div>
+        </div>
+
       </div>
     </section>
   );
