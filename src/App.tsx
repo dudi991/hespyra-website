@@ -44,11 +44,11 @@ function App() {
       </ScrollReveal>
       
       <ScrollReveal>
-        <Ritual />
+        <EditorialPause />
       </ScrollReveal>
       
       <ScrollReveal>
-        <EditorialPause />
+        <Ritual />
       </ScrollReveal>
       
       <ScrollReveal>
