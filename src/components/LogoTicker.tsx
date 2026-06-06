@@ -8,7 +8,7 @@ const LogoTicker = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F2EDE4] border-y border-primary/10 py-7 relative z-10">
+    <section className="w-full bg-[#FAF8F5] border-y border-border/40 py-7 relative z-10">
       <div className="max-w-[1600px] w-full px-6 sm:px-8 lg:px-12 mx-auto flex flex-col md:flex-row justify-between items-center gap-y-4 gap-x-6">
         
         {/* Left: Category Tag / As Seen In */}
