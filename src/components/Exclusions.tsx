@@ -129,11 +129,11 @@ const Exclusions = () => {
   ];
 
   return (
-    <section id="exclusions" className="w-full bg-[#EDE8DC] pt-16 pb-12 lg:pt-20 lg:pb-16 relative z-10">
+    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-16 pb-12 lg:pt-20 lg:pb-16 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
-        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1140px] mx-auto items-stretch">
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1200px] mx-auto items-stretch">
           
           {/* Header Block (Row 1, Column 1-3) */}
           <div className="col-span-12 lg:col-span-3 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-start pb-4 lg:pb-6">
