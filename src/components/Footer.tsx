@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { Camera, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface FooterProps {
@@ -10,106 +8,77 @@ interface FooterProps {
 }
 
 const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: FooterProps) => {
-  const { t, language } = useLanguage();
-  const [activeTooltip, setActiveTooltip] = useState<'instagram' | 'share' | null>(null);
-
-  const triggerTooltip = (type: 'instagram' | 'share') => {
-    setActiveTooltip(type);
-    const timer = setTimeout(() => {
-      setActiveTooltip(null);
-    }, 2000);
-    return () => clearTimeout(timer);
-  };
+  const { t } = useLanguage();
 
   return (
-    <footer className="w-full bg-[#FAF8F5] border-t border-border/40 py-8 lg:py-6 relative z-20">
+    <footer className="w-full bg-[#FAF8F5] border-t border-border/40 py-6 lg:py-5 relative z-20">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
           
-          {/* Left Column: Brand Logo & Celestial Hallmark */}
+          {/* Left Column: Brand Wordmark + Product Sub-label */}
           <div className="flex justify-center lg:justify-start items-center">
-            <span className="font-sans text-[26px] tracking-[0.2em] font-bold text-primary flex items-center select-none">
-              <span>HESPYRA</span>
-            </span>
+            <div className="flex items-center gap-2">
+              <a 
+                href="#" 
+                className="text-xl sm:text-2xl tracking-[0.15em] font-serif font-medium leading-none select-none text-primary hover:opacity-80 transition-opacity"
+              >
+                HESPYRA
+              </a>
+              <span className="text-[11px] sm:text-xs font-sans tracking-[0.1em] text-primary/75 font-normal uppercase select-none whitespace-nowrap pt-0.5">
+                · Evening Ritual
+              </span>
+            </div>
           </div>
 
           {/* Center Column: Legal Links */}
-          <div className="flex flex-row flex-wrap justify-center items-center gap-6 lg:gap-8">
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                onShowAbout?.();
-              }}
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
-            >
-              {t('footer.about')}
-            </button>
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                onShowContact?.();
-              }}
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
-            >
-              {t('footer.contact')}
-            </button>
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                onShowPrivacy?.();
-              }}
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
-            >
-              {t('footer.privacy')}
-            </button>
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                onShowImprint?.();
-              }}
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
-            >
-              {t('footer.imprint')}
-            </button>
-          </div>
-
-          {/* Right Column: Social / Share Icons with Interactive Tooltips */}
-          <div className="flex flex-row justify-center lg:justify-end items-center gap-6 relative">
-            
-            {/* Instagram Link Container */}
-            <div className="relative">
-              <a 
-                href="https://www.instagram.com/hespyra/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer flex items-center justify-center"
-              >
-                <Camera className="w-10 h-10" strokeWidth={1} />
-              </a>
-            </div>
-
-            {/* Share Link Container */}
-            <div className="relative">
-              {activeTooltip === 'share' && (
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[11px] font-sans tracking-wider py-1.5 px-3 rounded-sm whitespace-nowrap shadow-md animate-fade-in z-50">
-                  {language === 'de' ? 'Bald hier' : 'Coming soon'}
-                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
-                </div>
-              )}
+          <div className="flex justify-center items-center">
+            <div className="flex flex-row flex-wrap justify-center items-center gap-6 lg:gap-8">
               <button 
                 onClick={(e) => {
                   e.preventDefault();
-                  triggerTooltip('share');
+                  onShowAbout?.();
                 }}
-                aria-label="Share"
-                className="text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer flex items-center justify-center"
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
               >
-                <LinkIcon className="w-10 h-10" strokeWidth={1} />
+                {t('footer.about')}
+              </button>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  onShowContact?.();
+                }}
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+              >
+                {t('footer.contact')}
+              </button>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  onShowPrivacy?.();
+                }}
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+              >
+                {t('footer.privacy')}
+              </button>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  onShowImprint?.();
+                }}
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+              >
+                {t('footer.imprint')}
               </button>
             </div>
-
           </div>
+
+          {/* Right Column: Copyright Line */}
+          <div className="flex justify-center lg:justify-end items-center">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] text-primary/75 font-normal select-none whitespace-nowrap">
+              © 2026 HESPYRA
+            </span>
+          </div>
+
         </div>
       </div>
     </footer>

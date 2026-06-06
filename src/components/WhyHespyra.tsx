@@ -32,17 +32,17 @@ const WhyHespyra = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-medium text-primary/45 uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
           {language === 'de' ? 'WARUM HESPYRA' : 'WHY HESPYRA'}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-4 max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-4 max-w-2xl mx-auto">
           {title}
         </h2>
 
         {/* Subheadline */}
-        <p className="font-sans text-primary/70 text-base sm:text-lg max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed">
+        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
           {language === 'de' 
             ? "HESPYRA setzt nicht beim Einschlafen an, sondern beim Übergang in den Abend."
             : "HESPYRA does not start with falling asleep, but with the transition into the evening."}

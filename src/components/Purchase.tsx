@@ -83,17 +83,17 @@ const Purchase = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         
         {/* Section Tag */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-accent uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
           {tagText}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-white tracking-[0.02em] font-normal mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-white tracking-tight font-normal mb-6">
           {titleText}
         </h2>
 
         {/* Subline */}
-        <p className="text-white/90 font-sans font-light text-[17px] sm:text-[19px] leading-[1.7] max-w-2xl mx-auto mb-12">
+        <p className="font-sans text-sm sm:text-base text-white/75 leading-relaxed font-light max-w-2xl mx-auto mb-12">
           {language === 'de' ? sublineTextGerman : sublineTextEnglish}
         </p>
 

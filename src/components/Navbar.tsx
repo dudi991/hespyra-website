@@ -73,10 +73,10 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
             {language === 'de' ? 'Warteliste' : 'Waitlist'}
           </a>
 
-          {/* Solid Black Waitlist CTA Button */}
+          {/* Accent Colored Waitlist CTA Button */}
           <a 
             href="#waitlist" 
-            className="bg-primary text-background hover:bg-accent hover:text-white px-6 py-3 rounded-sm transition-all duration-300 text-xs tracking-[0.15em] uppercase font-bold"
+            className="bg-accent text-white hover:bg-accent-hover px-6 py-3 rounded-sm transition-all duration-300 text-xs tracking-[0.15em] uppercase font-bold"
           >
             {language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION'}
           </a>
@@ -145,7 +145,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
             <a 
               href="#waitlist" 
               onClick={() => setIsOpen(false)}
-              className="bg-primary text-background hover:bg-accent hover:text-white w-full py-4 text-center rounded-sm transition-all duration-300 text-xs tracking-[0.2em] uppercase font-bold"
+              className="bg-accent text-white hover:bg-accent-hover w-full py-4 text-center rounded-sm transition-all duration-300 text-xs tracking-[0.2em] uppercase font-bold"
             >
               {language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION'}
             </a>

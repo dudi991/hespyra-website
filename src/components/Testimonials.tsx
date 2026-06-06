@@ -60,17 +60,17 @@ const Testimonials = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-primary/45 uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
           {tag}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-[0.02em] font-normal mb-4 max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-4 max-w-3xl mx-auto">
           {title}
         </h2>
 
         {/* Subline */}
-        <p className="font-sans text-primary/70 text-base sm:text-lg max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed">
+        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
           {subline}
         </p>
 

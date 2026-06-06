@@ -79,17 +79,17 @@ const Waitlist = () => {
           
           {/* Left Column - Headline, Desc, and Form */}
           <div className="lg:col-span-6 text-left">
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-primary/45 uppercase mb-4 block select-none">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
               {t('waitlist.tag')}
             </span>
-            <h2 className="text-4xl sm:text-[46px] md:text-[50px] lg:text-[54px] leading-[1.1] font-serif text-primary tracking-normal font-normal mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6">
               {language === 'de' ? (
                 <>Die erste Edition von<br className="hidden sm:block" /> HESPYRA.</>
               ) : (
                 <>The first edition of<br className="hidden sm:block" /> HESPYRA.</>
               )}
             </h2>
-            <p className="font-sans text-sm sm:text-[15px] text-primary/65 leading-relaxed font-light mb-8 max-w-[460px] whitespace-pre-line">
+            <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light mb-8 max-w-[460px] whitespace-pre-line">
               {t('waitlist.desc')}
             </p>
 
@@ -117,7 +117,7 @@ const Waitlist = () => {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-[#1C1917] text-white hover:bg-accent px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
+                  className="bg-accent text-white hover:bg-accent-hover px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting 
                     ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 

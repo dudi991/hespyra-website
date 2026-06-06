@@ -25,12 +25,12 @@ const Faq = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-primary/45 uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
           {t('faq.tag')}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-[40px] md:text-[42px] lg:text-[48px] leading-[1.25] font-serif text-primary tracking-[0.01em] font-normal mb-16 lg:mb-20 max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-16 lg:mb-20 max-w-2xl mx-auto">
           {t('faq.title')}
         </h2>
 

@@ -33,9 +33,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Philosophy / CustomerStory
     'philosophy.tag': 'DER ÜBERGANG',
     'philosophy.title': 'Der Abend ist da.\nAber noch nicht ganz erreichbar.',
-    'philosophy.text1': 'Manchmal endet der Tag äußerlich früher als innerlich. Der Raum wird ruhiger, das Licht weicher, die Aufgaben weniger sichtbar.',
-    'philosophy.text2': 'Und trotzdem bleibt etwas vom Tag im Kopf: Gespräche, Entscheidungen, Nachrichten, offene Schleifen.',
-    'philosophy.text3': 'HESPYRA ist für diesen Moment gemacht — als warmes, trinkbares Ritual, das dem Abend einen Anfang gibt.',
+    'philosophy.text1': 'Manchmal endet der Tag äußerlich früher als innerlich.\nDer Raum wird ruhiger, das Licht weicher, die Aufgaben weniger sichtbar.',
+    'philosophy.text2': 'Und trotzdem bleibt etwas vom Tag im Kopf:\nGespräche, Entscheidungen, Nachrichten, offene Schleifen.',
+    'philosophy.text3': 'HESPYRA beginnt dort, wo der Tag noch nachwirkt.',
 
     // EditorialPause
     'pause.part1': 'Nicht alles muss mit',
@@ -203,9 +203,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Philosophy / CustomerStory
     'philosophy.tag': 'THE TRANSITION',
     'philosophy.title': 'Evening is here.\nBut not quite within reach yet.',
-    'philosophy.text1': 'Sometimes the day ends outwardly sooner than inwardly. The room grows quieter, the light softer, the tasks less visible.',
-    'philosophy.text2': 'And yet, something of the day lingers in your mind: conversations, decisions, messages, open loops.',
-    'philosophy.text3': 'HESPYRA is made for this moment — as a warm, drinkable ritual that gives the evening a beginning.',
+    'philosophy.text1': 'Sometimes the day ends outwardly sooner than inwardly.\nThe room grows quieter, the light softer, the tasks less visible.',
+    'philosophy.text2': 'And yet, something of the day lingers in your mind:\nconversations, decisions, messages, open loops.',
+    'philosophy.text3': 'HESPYRA begins where the day still echoes.',
 
     // EditorialPause
     'pause.part1': 'Not everything has to come',

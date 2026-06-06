@@ -52,15 +52,15 @@ const Hero = () => {
             
             {/* Top Group: Slogan, Title, Description */}
             <div className="space-y-6">
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase block">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] leading-[1.05] mb-8 font-serif text-primary tracking-[0.02em] font-normal max-w-[950px]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] leading-[1.05] font-serif text-primary tracking-tight font-normal mb-8 max-w-[950px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
-              <p className="text-primary/75 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
+              <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light max-w-xl">
                 {description}
               </p>
             </div>
@@ -70,7 +70,7 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6">
                 <a 
                   href="#purchase" 
-                  className="inline-block text-center bg-primary hover:bg-accent px-8 py-4 text-xs tracking-[0.22em] font-bold uppercase rounded-sm text-white transition-all duration-300 shadow-sm whitespace-nowrap"
+                  className="inline-block text-center bg-accent hover:bg-accent-hover px-8 py-4 text-xs tracking-[0.22em] font-bold uppercase rounded-sm text-white transition-all duration-300 shadow-sm whitespace-nowrap"
                 >
                   {ctaPrimary}
                 </a>
@@ -107,23 +107,24 @@ const Hero = () => {
                 <img 
                   src="/images/heroHESPYRA.webp" 
                   alt="HESPYRA Product Presentation" 
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out group-hover:scale-105"
+                  style={{ filter: 'saturate(0.98) contrast(1.05) brightness(1.00)' }}
                   loading="eager"
                   draggable="false"
                 />
               </div>
               
               {/* Overlay card in bottom-left - overflows left */}
-              <div className="absolute bottom-6 -left-6 sm:-left-10 lg:-left-12 bg-[#FAF6F0] p-5 w-fit max-w-[300px] sm:max-w-[320px] rounded-sm shadow-[0_10px_30px_rgba(28,25,23,0.05)] border border-border/20 transition-transform duration-500 hover:translate-y-[-2px] z-20">
-                <h4 className="font-serif text-[17px] text-primary font-bold mb-1.5 leading-tight">
+              <div className="absolute bottom-6 -left-6 sm:-left-8 lg:-left-10 bg-[#F4ECE1]/95 backdrop-blur-[2px] py-3.5 px-4 w-fit max-w-[280px] sm:max-w-[300px] rounded-sm shadow-[0_8px_24px_rgba(28,25,23,0.03)] border border-primary/5 transition-transform duration-500 hover:translate-y-[-2px] z-20">
+                <h4 className="font-serif text-[16px] text-primary font-semibold mb-1 leading-tight tracking-wide">
                   HESPYRA Evening Ritual
                 </h4>
-                <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide mb-1">
+                <p className="font-sans text-[12px] leading-[1.45] text-primary/85 font-normal tracking-wide mb-1.5">
                   {language === 'de' 
                     ? "30 Abendrituale · Kakao · Vanille · Tonka"
                     : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
                 </p>
-                <div className="font-sans font-bold text-[10px] tracking-widest text-accent uppercase whitespace-nowrap">
+                <div className="font-sans font-bold text-[9.5px] tracking-widest text-accent uppercase whitespace-nowrap">
                   {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
                 </div>
               </div>
