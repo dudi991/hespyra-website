@@ -46,34 +46,34 @@ const CustomerStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* Left Column: Text Content & Editorial List */}
-          <div className="lg:col-span-6 flex flex-col justify-center py-4 text-left">
+          <div className="lg:col-span-6 flex flex-col text-left max-w-2xl py-2">
             {/* Category Tag */}
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/50 uppercase mb-6 block">
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.22em] sm:tracking-[0.28em] font-semibold text-primary/45 uppercase mb-3 block select-none">
               {t('philosophy.tag')}
             </span>
             
             {/* Headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-8 max-w-2xl whitespace-pre-line">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.25rem] xl:text-[2.5rem] leading-[1.2] font-serif text-primary tracking-[0.02em] font-normal mb-4 max-w-xl whitespace-pre-line">
               {t('philosophy.title')}
             </h2>
 
             {/* Narrative text */}
-            <div className="space-y-5 text-primary/75 text-sm sm:text-base leading-relaxed font-normal mb-10 max-w-xl">
+            <div className="space-y-2 text-primary/75 text-sm sm:text-base leading-[1.6] font-normal mb-5 max-w-xl">
               <p>{t('philosophy.text1')}</p>
               <p>{t('philosophy.text2')}</p>
               <p>{t('philosophy.text3')}</p>
             </div>
 
             {/* Editorial List with Icons */}
-            <div className="space-y-6 max-w-xl pt-2">
+            <div className="space-y-3 max-w-xl mt-4">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex gap-5 items-start">
+                <div key={idx} className="flex gap-3 items-start">
                   {/* Icon */}
                   {benefit.icon}
                   
                   {/* Text container */}
                   <div className="flex flex-col text-left">
-                    <h4 className="font-sans text-[15px] sm:text-base font-semibold text-primary mb-1.5">
+                    <h4 className="font-sans text-[14px] sm:text-[15px] font-semibold text-primary mb-0.5">
                       {benefit.title}
                     </h4>
                     <p className="font-sans text-[13px] sm:text-sm leading-relaxed text-primary/60 font-normal">
@@ -86,13 +86,13 @@ const CustomerStory = () => {
 
           </div>
 
-          {/* Right Column: Exact match of Hero image layout/width */}
+          {/* Right Column: Balanced visual container matching left height and Hero width */}
           <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
-            <div className="relative w-full aspect-square bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-border/40 analog-wrapper analog-grain group">
+            <div className="relative lg:absolute lg:inset-0 w-full aspect-square lg:aspect-auto h-full bg-cream-dark rounded-sm overflow-hidden shadow-md border border-border/40 analog-wrapper analog-grain group">
               <img 
-                src="images/philosophieHESPYRA.webp" 
+                src="images/journey.webp" 
                 alt="HESPYRA Philosophy Concept" 
-                className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-103"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out analog-image group-hover:scale-103 opacity-[0.90] contrast-[0.95] saturate-[0.95]"
                 loading="lazy"
                 draggable="false"
               />

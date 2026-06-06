@@ -32,10 +32,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'DER ÜBERGANG',
-    'philosophy.title': 'Der Abend ist da. \nNur noch nicht ganz erreichbar.',
+    'philosophy.title': 'Der Abend ist da.\nAber noch nicht ganz erreichbar.',
     'philosophy.text1': 'Manchmal endet der Tag äußerlich früher als innerlich. Der Raum wird ruhiger, das Licht weicher, die Aufgaben weniger sichtbar.',
-    'philosophy.text2': 'Und trotzdem bleibt etwas vom Tag im Kopf: Gespräche, Entscheidungen, Nachrichten, kleine offene Schleifen.',
-    'philosophy.text3': 'HESPYRA ist für diesen Moment gemacht — als warmes, trinkbares Ritual zwischen dem, was war, und dem, was jetzt beginnen darf.',
+    'philosophy.text2': 'Und trotzdem bleibt etwas vom Tag im Kopf: Gespräche, Entscheidungen, Nachrichten, offene Schleifen.',
+    'philosophy.text3': 'HESPYRA ist für diesen Moment gemacht — als warmes, trinkbares Ritual, das dem Abend einen Anfang gibt.',
 
     // EditorialPause
     'pause.part1': 'Nicht alles muss mit',
@@ -195,10 +195,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'THE TRANSITION',
-    'philosophy.title': 'Evening is here. \nJust not quite within reach yet.',
+    'philosophy.title': 'Evening is here.\nBut not quite within reach yet.',
     'philosophy.text1': 'Sometimes the day ends outwardly sooner than inwardly. The room grows quieter, the light softer, the tasks less visible.',
-    'philosophy.text2': 'And yet, something of the day lingers in your mind: conversations, decisions, messages, small open loops.',
-    'philosophy.text3': 'HESPYRA is made for this very moment — a warm, drinkable ritual between what was, and what is now allowed to begin.',
+    'philosophy.text2': 'And yet, something of the day lingers in your mind: conversations, decisions, messages, open loops.',
+    'philosophy.text3': 'HESPYRA is made for this moment — as a warm, drinkable ritual that gives the evening a beginning.',
 
     // EditorialPause
     'pause.part1': 'Not everything has to come',

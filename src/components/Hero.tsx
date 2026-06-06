@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import heroProdukt from '../assets/heroProdukt.webp';
+import heroProdukt from '../assets/heroProdukt.png';
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -18,8 +18,8 @@ const Hero = () => {
   );
 
   const description = language === 'de' 
-    ? "Ein trinkbares Abendritual mit 9 gezielt ausgewählten Inhaltsstoffen — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
-    : "A drinkable evening ritual with 9 purposefully selected ingredients — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
+    ? "Ein trinkbares Abendritual mit ausgewählten Markenrohstoffen und warmen Geschmacksnoten — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
+    : "A drinkable evening ritual with selected branded ingredients and warm flavor notes — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
 
   const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SICHERN" : "SECURE THE FIRST EDITION";
 
@@ -30,14 +30,14 @@ const Hero = () => {
         "Vegan",
         "Ohne Eisen",
         "Warm oder kalt",
-        "9 Inhaltsstoffe"
+        "Markenrohstoffe"
       ]
     : [
         "Melatonin-free",
         "Vegan",
         "Iron-free",
         "Warm or cold",
-        "9 ingredients"
+        "Branded ingredients"
       ];
 
   return (
@@ -115,18 +115,18 @@ const Hero = () => {
               </div>
               
               {/* Overlay card in bottom-left - overflows left */}
-              <div className="absolute bottom-6 -left-6 bg-white p-5 max-w-[280px] rounded-sm shadow-xl border border-border/20 transition-transform duration-500 hover:translate-y-[-2px] z-20">
+              <div className="absolute bottom-6 -left-6 sm:-left-10 lg:-left-12 bg-[#FAF6F0] p-5 w-fit max-w-[300px] sm:max-w-[320px] rounded-sm shadow-[0_10px_30px_rgba(28,25,23,0.05)] border border-border/20 transition-transform duration-500 hover:translate-y-[-2px] z-20">
                 <h4 className="font-serif text-[17px] text-primary font-bold mb-1.5 leading-tight">
                   HESPYRA Evening Ritual
                 </h4>
-                <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide">
+                <p className="font-sans text-xs leading-relaxed text-primary/85 font-medium tracking-wide mb-1">
                   {language === 'de' 
-                    ? "30 Abendrituale · Kakao · Vanille · Tonka · "
-                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka · "}
-                  <span className="font-bold text-[10px] tracking-widest text-accent uppercase whitespace-nowrap">
-                    {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
-                  </span>
+                    ? "30 Abendrituale · Kakao · Vanille · Tonka"
+                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
                 </p>
+                <div className="font-sans font-bold text-[10px] tracking-widest text-accent uppercase whitespace-nowrap">
+                  {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
+                </div>
               </div>
             </div>
           </div>

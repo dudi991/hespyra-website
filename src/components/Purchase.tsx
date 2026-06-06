@@ -1,211 +1,159 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Check, Info } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const Purchase = () => {
   const { language } = useLanguage();
-  const [purchaseType, setPurchaseType] = useState<'one-time' | 'subscribe'>('subscribe');
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const title = language === 'de' ? "Beginne das Ritual." : "Begin the ritual.";
-  const subtitle = language === 'de' ? "SICHERE DIR DEINEN BLEND" : "GET YOURS TODAY";
+  const tagText = language === 'de' ? "DIE ERSTE EDITION" : "THE FIRST EDITION";
+  const titleText = language === 'de' ? "Sichere dir frühen Zugang." : "Secure early access.";
+  
+  const sublineTextGerman = (
+    <>
+      HESPYRA öffnet in kleinen Schritten.<br className="hidden sm:inline" />
+      Trage dich ein, wenn du die erste Edition begleiten möchtest.
+    </>
+  );
 
-  const toggleLabels = language === 'de'
-    ? { oneTime: "Einzelkauf", subscribe: "Abonnieren & Sparen" }
-    : { oneTime: "One-Time Purchase", subscribe: "Subscribe & Save" };
+  const sublineTextEnglish = (
+    <>
+      HESPYRA opens in small steps.<br className="hidden sm:inline" />
+      Sign up if you would like to accompany the first edition.
+    </>
+  );
 
-  const cards = language === 'de'
-    ? [
-        {
-          id: 'one-time',
-          title: "The Single Jar",
-          subtitle: "Einmalige Lieferung",
-          price: "48€",
-          period: "Einmalig",
-          desc: "Perfekt zum Ausprobieren und Kennenlernen.",
-          bullets: [
-            "1x HESPYRA Apothekerglas",
-            "30 Portionen (Abendritual-Pulver)",
-            "Einmaliger Kauf ohne Verpflichtung",
-            "Zzgl. Versandkosten"
-          ],
-          buttonText: "In den Warenkorb",
-          popular: false
+  const infoPoints = language === 'de'
+    ? ["Erste Edition", "Kleine erste Charge", "Früher Zugang"]
+    : ["First Edition", "Small first batch", "Early access"];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      if (import.meta.env.DEV) {
+        console.log('[Dev Mode] Simulating Waitlist API subscription for:', email.trim());
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        setSubmitted(true);
+        setEmail('');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        {
-          id: 'subscribe',
-          title: "The Evening Ritual",
-          subtitle: "Monatliches Abo (Flexibel)",
-          price: "38€",
-          period: "/ Monat",
-          desc: "Unser beliebtester Weg zu einer dauerhaften Abendroutine.",
-          bullets: [
-            "1x HESPYRA Apothekerglas (1. Monat)",
-            "Monatliches Refill im kompostierbaren Pouch",
-            "Kostenloser Versand direkt zu dir",
-            "Jederzeit pausierbar & kündbar",
-            "20% Ersparnis gegenüber Einzelkauf"
-          ],
-          buttonText: "Abonnieren",
-          popular: true
-        }
-      ]
-    : [
-        {
-          id: 'one-time',
-          title: "The Single Jar",
-          subtitle: "One-time shipment",
-          price: "48€",
-          period: "One-time",
-          desc: "Perfect for tasting and experiencing the ritual.",
-          bullets: [
-            "1x HESPYRA Apothecar glass jar",
-            "30 servings (Evening Blend powder)",
-            "One-time purchase, no commitments",
-            "Shipping calculated at checkout"
-          ],
-          buttonText: "Add to Cart",
-          popular: false
-        },
-        {
-          id: 'subscribe',
-          title: "The Evening Ritual",
-          subtitle: "Monthly subscription (Flexible)",
-          price: "38€",
-          period: "/ month",
-          desc: "Our most popular path to a consistent evening routine.",
-          bullets: [
-            "1x HESPYRA Apothecar glass jar (1st month)",
-            "Monthly eco-refill pouches",
-            "Free shipping directly to your door",
-            "Pause or cancel anytime in one click",
-            "20% savings compared to single jar"
-          ],
-          buttonText: "Subscribe & Save",
-          popular: true
-        }
-      ];
+        body: JSON.stringify({ email: email.trim(), consent: true }),
+      });
+
+      if (!response.ok) throw new Error('Subscription failed');
+
+      const data = await response.json();
+      if (data && data.success) {
+        setSubmitted(true);
+        setEmail('');
+      } else {
+        throw new Error('Subscription failed');
+      }
+    } catch (err) {
+      setError(
+        language === 'de'
+          ? 'Die Anmeldung konnte gerade nicht abgeschlossen werden. Bitte versuche es erneut.'
+          : 'The subscription could not be completed at this time. Please try again.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <section id="purchase" className="w-full bg-warm-dark py-20 lg:py-28 relative z-10 text-white overflow-hidden">
+    <section id="purchase" className="w-full bg-[#3F322A] py-24 lg:py-32 relative z-10 text-white overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         
         {/* Section Tag */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-bold text-white/50 uppercase mb-4 block">
-          {subtitle}
+        <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-accent uppercase mb-4 block select-none">
+          {tagText}
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-white tracking-tight font-light mb-12">
-          {title}
+        <h2 className="text-3xl sm:text-5xl leading-tight font-serif text-white tracking-[0.02em] font-normal mb-6">
+          {titleText}
         </h2>
 
-        {/* Toggle Switch */}
-        <div className="inline-flex bg-warm-dark-card p-1 rounded-full border border-white/10 mb-16 select-none font-sans text-xs tracking-wider font-semibold">
-          <button 
-            onClick={() => setPurchaseType('subscribe')}
-            className={`px-6 py-2.5 rounded-full transition-all duration-300 ${
-              purchaseType === 'subscribe' 
-                ? 'bg-accent text-white shadow-sm' 
-                : 'text-white/60 hover:text-white'
-            }`}
-          >
-            {toggleLabels.subscribe}
-          </button>
-          <button 
-            onClick={() => setPurchaseType('one-time')}
-            className={`px-6 py-2.5 rounded-full transition-all duration-300 ${
-              purchaseType === 'one-time' 
-                ? 'bg-accent text-white shadow-sm' 
-                : 'text-white/60 hover:text-white'
-            }`}
-          >
-            {toggleLabels.oneTime}
-          </button>
-        </div>
+        {/* Subline */}
+        <p className="text-white font-sans text-[17px] sm:text-[19px] leading-[1.7] max-w-2xl mx-auto mb-12">
+          {language === 'de' ? sublineTextGerman : sublineTextEnglish}
+        </p>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
-          {cards.map((card) => {
-            const isSelected = purchaseType === card.id;
-
-            return (
-              <div 
-                key={card.id} 
-                onClick={() => setPurchaseType(card.id as 'one-time' | 'subscribe')}
-                className={`relative flex flex-col justify-between text-left p-8 sm:p-10 rounded-sm border transition-all duration-500 cursor-pointer ${
-                  isSelected 
-                    ? 'bg-warm-dark-card border-accent shadow-xl scale-[1.01]' 
-                    : 'bg-warm-dark-card/40 border-white/5 opacity-80 hover:opacity-100 hover:border-white/10'
-                }`}
-              >
-                {/* Popular Badge */}
-                {card.popular && (
-                  <span className="absolute top-4 right-4 bg-accent text-[9px] font-sans tracking-[0.2em] font-bold px-2.5 py-1 rounded-sm uppercase text-white">
-                    {language === 'de' ? 'BELIEBT' : 'POPULAR'}
-                  </span>
-                )}
-
-                {/* Card Title & Price */}
-                <div>
-                  <span className="font-sans text-[10px] tracking-[0.2em] font-semibold text-accent uppercase mb-2 block">
-                    {card.subtitle}
-                  </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-white font-light mb-4">
-                    {card.title}
-                  </h3>
-                  
-                  {/* Price Block */}
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="font-serif text-4xl sm:text-5xl font-light text-white">
-                      {card.price}
-                    </span>
-                    <span className="font-sans text-xs tracking-wider text-white/50">
-                      {card.period}
-                    </span>
-                  </div>
-
-                  <p className="font-sans text-xs sm:text-[13px] leading-relaxed text-white/60 font-light mb-8 border-b border-white/5 pb-6">
-                    {card.desc}
-                  </p>
-
-                  {/* Bullet Highlights */}
-                  <div className="space-y-4 mb-10">
-                    {card.bullets.map((bullet, bIdx) => (
-                      <div key={bIdx} className="flex gap-3 items-start">
-                        <div className="w-5 h-5 rounded-full border border-accent/30 bg-accent/5 flex items-center justify-center flex-shrink-0 text-accent mt-0.5">
-                          <Check className="w-3 h-3" strokeWidth={2.5} />
-                        </div>
-                        <span className="font-sans text-xs sm:text-[13px] leading-normal text-white/80 font-light">
-                          {bullet}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <button 
-                  className={`w-full py-4 text-xs font-sans tracking-[0.2em] font-bold uppercase rounded-sm transition-all duration-300 ${
-                    isSelected 
-                      ? 'bg-accent text-white hover:bg-accent-hover' 
-                      : 'bg-white/5 text-white hover:bg-white/10'
-                  }`}
-                >
-                  {card.buttonText}
-                </button>
-
+        {/* Waitlist Form Area */}
+        <div className="max-w-md mx-auto mb-4">
+          {submitted ? (
+            <div className="bg-[#2D241E] border border-accent/20 px-6 py-5 rounded-sm shadow-md flex items-center justify-center gap-3 text-accent font-sans text-sm">
+              <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0">
+                <Check className="w-3.5 h-3.5" strokeWidth={3} />
               </div>
-            );
-          })}
+              <span>
+                {language === 'de' ? 'Danke. Wir melden uns leise bei dir.' : 'Thank you. We will reach out to you quietly.'}
+              </span>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full">
+              <input 
+                type="email" 
+                placeholder={language === 'de' ? 'E-Mail-Adresse' : 'Email address'} 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isSubmitting}
+                className="flex-1 bg-[#2D241E] border border-white/30 text-white px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-white/80 rounded-sm"
+                required
+                autoComplete="off"
+              />
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-accent text-white hover:bg-accent-hover px-8 py-4 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer shadow-sm"
+              >
+                {isSubmitting 
+                  ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
+                  : (language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION')}
+              </button>
+            </form>
+          )}
+          
+          {error && (
+            <p className="text-[11px] font-sans text-red-400 mt-2 tracking-wide text-left">
+              {error}
+            </p>
+          )}
         </div>
 
-        {/* Small Satisfaction/Quality Info Banner */}
-        <div className="mt-12 flex items-center justify-center gap-2 text-white/40 font-sans text-[11px] tracking-wider uppercase font-semibold">
-          <Info className="w-4.5 h-4.5" />
-          <span>{language === 'de' ? "100% Zufriedenheitsgarantie. Jederzeit kündbar." : "100% satisfaction guarantee. Cancel anytime."}</span>
+        {/* Microcopy */}
+        <p className="font-sans text-[13px] sm:text-[14px] text-white/75 tracking-wide mb-16 select-none">
+          {language === 'de' 
+            ? "Kein Spam. Nur relevante Updates. Jederzeit abmeldbar."
+            : "No spam. Relevant updates only. Unsubscribe anytime."}
+        </p>
+
+        {/* Trust Info Points */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-white/80 font-sans text-[14px] sm:text-[15px] tracking-wider uppercase font-medium mt-20">
+          {infoPoints.map((point, idx) => (
+            <div key={idx} className="flex items-center gap-2">
+              <span className="text-accent text-[11px] font-bold select-none">✓</span>
+              <span>{point}</span>
+            </div>
+          ))}
         </div>
 
       </div>
