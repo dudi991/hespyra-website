@@ -47,6 +47,37 @@ const Hero = () => {
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
+          {/* MOBILE-ONLY: Product Image first */}
+          <div className="lg:hidden w-full mb-8">
+            <div className="relative w-full h-[38vh] sm:h-[42vh] bg-white rounded-sm shadow-lg border border-border/40 overflow-hidden group">
+              <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
+                <img 
+                  src="images/heroHESPYRA.webp" 
+                  alt="HESPYRA Product Presentation" 
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  style={{ filter: 'saturate(0.98) contrast(1.05) brightness(1.00)' }}
+                  loading="eager"
+                  draggable="false"
+                />
+              </div>
+              
+              {/* Overlay card */}
+              <div className="absolute bottom-4 -left-4 sm:-left-6 bg-[#F4ECE1]/95 py-2.5 px-4 w-fit max-w-[220px] sm:max-w-[250px] rounded-sm shadow-[0_8px_24px_rgba(28,25,23,0.03)] border border-primary/5 z-20">
+                <h4 className="font-serif text-[13px] sm:text-[14px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
+                  HESPYRA Evening Ritual
+                </h4>
+                <p className="font-sans text-[10.5px] leading-tight text-primary/85 font-normal tracking-wide mb-1">
+                  {language === 'de' 
+                    ? "30 Abendrituale · Kakao · Vanille · Tonka"
+                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
+                </p>
+                <div className="font-sans font-bold text-[8px] tracking-widest text-accent uppercase whitespace-nowrap">
+                  {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Left Column: Wording & CTAs (Stretched to match image height on desktop) */}
           <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
             
@@ -99,8 +130,8 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Column: Image and Overlay Card (Block layout to prevent aspect-ratio collapse) */}
-          <div className="lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
+          {/* DESKTOP-ONLY: Right Column: Image and Overlay Card (Block layout to prevent aspect-ratio collapse) */}
+          <div className="hidden lg:block lg:col-span-6 w-full max-w-[500px] lg:max-w-none mx-auto relative">
             <div className="relative w-full aspect-square bg-white rounded-sm shadow-lg border border-border/40 group">
               {/* Rounded image wrapper */}
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
