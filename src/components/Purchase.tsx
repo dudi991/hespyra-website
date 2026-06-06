@@ -93,7 +93,7 @@ const Purchase = () => {
         </h2>
 
         {/* Subline */}
-        <p className="text-white font-sans text-[17px] sm:text-[19px] leading-[1.7] max-w-2xl mx-auto mb-12">
+        <p className="text-white/90 font-sans font-light text-[17px] sm:text-[19px] leading-[1.7] max-w-2xl mx-auto mb-12">
           {language === 'de' ? sublineTextGerman : sublineTextEnglish}
         </p>
 
@@ -140,14 +140,14 @@ const Purchase = () => {
         </div>
 
         {/* Microcopy */}
-        <p className="font-sans text-[13px] sm:text-[14px] text-white/75 tracking-wide mb-16 select-none">
+        <p className="font-sans text-[13px] sm:text-[14px] text-white/65 tracking-wide mb-10 select-none">
           {language === 'de' 
             ? "Kein Spam. Nur relevante Updates. Jederzeit abmeldbar."
             : "No spam. Relevant updates only. Unsubscribe anytime."}
         </p>
 
         {/* Trust Info Points */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-white/80 font-sans text-[14px] sm:text-[15px] tracking-wider uppercase font-medium mt-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-white/80 font-sans text-[14px] sm:text-[15px] tracking-wider uppercase font-medium mt-10">
           {infoPoints.map((point, idx) => (
             <div key={idx} className="flex items-center gap-2">
               <span className="text-accent text-[11px] font-bold select-none">✓</span>
