@@ -17,8 +17,8 @@ const Hero = () => {
   );
 
   const description = language === 'de' 
-    ? "Ein trinkbares Abendritual mit ausgewählten Markenrohstoffen und warmen Geschmacksnoten — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
-    : "A drinkable evening ritual with selected branded ingredients and warm flavor notes — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
+    ? "Ein trinkbares Abendritual mit ausgewählten Premium-Rohstoffen und warmen Geschmacksnoten — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
+    : "A drinkable evening ritual with selected premium ingredients and warm flavor notes — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
 
   const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SICHERN" : "SECURE THE FIRST EDITION";
 
@@ -29,14 +29,14 @@ const Hero = () => {
         "Vegan",
         "Ohne Eisen",
         "Warm oder kalt",
-        "Markenrohstoffe"
+        "Premium-Rohstoffe"
       ]
     : [
         "Melatonin-free",
         "Vegan",
         "Iron-free",
         "Warm or cold",
-        "Branded ingredients"
+        "Premium ingredients"
       ];
 
   return (

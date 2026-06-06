@@ -63,15 +63,6 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
             </button>
           </div>
 
-          <span className="text-primary/20 text-sm font-light">|</span>
-
-          {/* Waitlist Link */}
-          <a 
-            href="#waitlist" 
-            className="text-primary/80 hover:text-accent transition-colors flex items-center gap-2 font-medium text-[13px] tracking-normal"
-          >
-            {language === 'de' ? 'Warteliste' : 'Waitlist'}
-          </a>
 
           {/* Accent Colored Waitlist CTA Button */}
           <a 
