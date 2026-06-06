@@ -37,7 +37,7 @@ const WhyHespyra = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-4 max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-2xl mx-auto">
           {title}
         </h2>
 

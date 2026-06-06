@@ -9,15 +9,15 @@ const Ritual = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Header Block */}
-        <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-primary/50 uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
           {t('ritual.tag')}
         </span>
         
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-[0.02em] font-normal mb-6 max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
           {t('ritual.title')}
         </h2>
         
-        <p className="text-sm sm:text-base text-primary/60 leading-relaxed font-normal max-w-2xl mx-auto mb-16 select-none">
+        <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light max-w-2xl mx-auto mb-16 select-none">
           {t('ritual.desc')}
         </p>
 
