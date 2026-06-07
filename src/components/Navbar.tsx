@@ -87,13 +87,13 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col h-full justify-between p-8 pt-24">
-          <div className="flex flex-col gap-6 font-sans text-lg tracking-[0.2em] font-semibold text-primary uppercase">
+          <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl font-normal text-primary">
             {menuItems.map((item) => (
               <a 
                 key={item.href} 
                 href={item.href} 
                 onClick={() => setIsOpen(false)}
-                className="hover:text-accent transition-colors duration-300 border-b border-primary/10 pb-2"
+                className="hover:text-accent transition-colors duration-200 border-b border-primary/5 pb-3 block text-left"
               >
                 {item.label}
               </a>
