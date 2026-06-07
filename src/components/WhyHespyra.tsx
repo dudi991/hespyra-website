@@ -28,7 +28,7 @@ const WhyHespyra = () => {
       ];
 
   return (
-    <section id="comparison" className="w-full bg-[#EDE8DC] py-20 lg:py-28 relative z-10">
+    <section id="comparison" className="w-full bg-[#EDE8DC] py-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -37,19 +37,53 @@ const WhyHespyra = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-2xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-2xl mx-auto">
           {title}
         </h2>
 
         {/* Subheadline */}
-        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+        <p className="font-sans text-[13px] sm:text-base text-primary/75 max-w-xl mx-auto mb-8 lg:mb-16 leading-relaxed font-light">
           {language === 'de' 
             ? "HESPYRA setzt nicht beim Einschlafen an, sondern beim Übergang in den Abend."
             : "HESPYRA does not start with falling asleep, but with the transition into the evening."}
         </p>
 
-        {/* Comparison Table Card */}
-        <div className="max-w-3xl mx-auto bg-white rounded-sm overflow-hidden shadow-[0_8px_30px_rgba(28,25,23,0.03)] border border-primary/10">
+        {/* Mobile Comparison Layout (stacked cards) */}
+        <div className="block md:hidden space-y-3 max-w-md mx-auto">
+          {tableData.map((row, idx) => (
+            <div key={idx} className="bg-white rounded-sm border border-primary/10 p-3.5 text-left shadow-[0_4px_15px_rgba(28,25,23,0.02)]">
+              {/* Category / Label */}
+              <div className="font-sans text-[10.5px] tracking-[0.15em] font-semibold text-accent uppercase mb-2 select-none">
+                {row.label}
+              </div>
+              
+              <div className="grid grid-cols-2 gap-2.5 items-stretch mt-1">
+                {/* HESPYRA Column */}
+                <div className="bg-[#FAF6F0] p-2 rounded-sm border border-primary/5 flex flex-col justify-start">
+                  <span className="font-serif text-[10px] tracking-[0.1em] font-medium text-primary mb-1 select-none">
+                    {columnHeaders[0]}
+                  </span>
+                  <span className="font-sans text-[12px] text-primary leading-normal font-light">
+                    {row.hespyra}
+                  </span>
+                </div>
+                
+                {/* Classic Sleep Products Column */}
+                <div className="bg-white p-2 rounded-sm border border-primary/5 flex flex-col justify-start">
+                  <span className="font-sans text-[9px] tracking-[0.12em] font-medium text-primary/45 mb-1 select-none text-wrap">
+                    {columnHeaders[1]}
+                  </span>
+                  <span className="font-sans text-[12px] text-primary/75 leading-normal font-light">
+                    {row.others}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Table Card (Desktop only) */}
+        <div className="hidden md:block max-w-3xl mx-auto bg-white rounded-sm overflow-hidden shadow-[0_8px_30px_rgba(28,25,23,0.03)] border border-primary/10">
           
           {/* Table Header Row */}
           <div className="grid grid-cols-12 border-b border-primary/10 items-stretch">
@@ -61,7 +95,7 @@ const WhyHespyra = () => {
               {columnHeaders[1]}
             </div>
           </div>
-
+ 
           {/* Table Body Rows */}
           <div className="divide-y divide-primary/10">
             {tableData.map((row, idx) => (
@@ -71,21 +105,21 @@ const WhyHespyra = () => {
                 <div className="col-span-4 text-left px-4 sm:px-6 py-4 sm:py-5 font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide text-primary/80 bg-white flex items-center">
                   {row.label}
                 </div>
-
+ 
                 {/* HESPYRA Column */}
                 <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.hespyra}
                 </div>
-
+ 
                 {/* MELATONIN GUMMIES Column */}
                 <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary/75 bg-white flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.others}
                 </div>
-
+ 
               </div>
             ))}
           </div>
-
+ 
         </div>
 
       </div>
