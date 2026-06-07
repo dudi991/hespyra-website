@@ -40,7 +40,7 @@ const Hero = () => {
       ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#EDE8DC] pt-36 pb-20 z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#EDE8DC] pt-24 sm:pt-28 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
@@ -48,7 +48,14 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* MOBILE-ONLY: Product Image first */}
-          <div className="lg:hidden w-full mb-8">
+          <div className="lg:hidden w-full mb-5">
+            {/* MOBILE-ONLY Eyebrow */}
+            <div className="w-full text-left mb-2.5">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase block select-none">
+                {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
+              </span>
+            </div>
+            
             <div className="relative w-full h-[38vh] sm:h-[42vh] bg-white rounded-sm shadow-lg border border-border/40 overflow-hidden group">
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
                 <img 
@@ -63,7 +70,7 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-4 bg-[#F4ECE1]/95 py-3 px-4 rounded-sm shadow-md border border-primary/5">
+            <div className="mt-3 bg-[#F4ECE1]/95 py-3 px-4 rounded-sm shadow-md border border-primary/5">
               <h4 className="font-serif text-[13.5px] sm:text-[14px] text-primary font-semibold mb-1 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
@@ -84,12 +91,12 @@ const Hero = () => {
           <div className="lg:col-span-6 flex flex-col justify-between text-left max-w-2xl py-2">
             
             {/* Top Group: Slogan, Title, Description */}
-            <div className="space-y-6">
-              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
+            <div className="space-y-4 lg:space-y-6">
+              <span className="hidden lg:block font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 select-none">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] leading-[1.05] font-serif text-primary tracking-tight font-normal mb-8 max-w-[950px]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem] leading-[1.05] font-serif text-primary tracking-tight font-normal mb-4 lg:mb-8 max-w-[950px]">
                 {language === 'de' ? titleGerman : titleEnglish}
               </h1>
 
@@ -99,7 +106,7 @@ const Hero = () => {
             </div>
 
             {/* Middle Group: CTA Buttons */}
-            <div className="space-y-6 my-8">
+            <div className="space-y-6 my-5 lg:my-8">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6">
                 <a 
                   href="#purchase" 
