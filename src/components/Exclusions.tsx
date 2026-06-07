@@ -132,7 +132,7 @@ const Exclusions = () => {
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
-        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-12 lg:gap-y-0 max-w-[1320px] mx-auto items-stretch">
+        <div className="grid grid-cols-12 gap-y-10 lg:gap-x-16 lg:gap-y-0 max-w-[1500px] mx-auto items-stretch">
           
           {/* Header Block (Row 1, Column 1-3) */}
           <div className="col-span-12 lg:col-span-3 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-start pb-4 lg:pb-6">
