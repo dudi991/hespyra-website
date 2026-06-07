@@ -73,7 +73,7 @@ const Waitlist = () => {
   ];
 
   return (
-    <section id="waitlist" className="w-full bg-[#EDE8DC] py-16 lg:py-20 relative z-10">
+    <section id="waitlist" className="w-full bg-[#EDE8DC] py-12 lg:py-20 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-10 items-center max-w-6xl mx-auto">
           
@@ -82,14 +82,14 @@ const Waitlist = () => {
             <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
               {t('waitlist.tag')}
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6">
+            <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6">
               {language === 'de' ? (
                 <>Die erste Edition von<br className="hidden sm:block" /> HESPYRA.</>
               ) : (
                 <>The first edition of<br className="hidden sm:block" /> HESPYRA.</>
               )}
             </h2>
-            <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light mb-8 max-w-[460px] whitespace-pre-line">
+            <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light mb-6 max-w-[460px] whitespace-pre-line">
               {t('waitlist.desc')}
             </p>
 
@@ -133,16 +133,16 @@ const Waitlist = () => {
           </div>
 
           {/* Right Column - Brand USPs (Horizontal Grid on desktop) */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 lg:gap-5 text-center mt-10 lg:mt-0">
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-4 lg:gap-5 text-center mt-6 lg:mt-0">
             {usps.map((usp, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <div className="text-accent mb-3 select-none h-6 flex items-center justify-center">
+                <div className="text-accent mb-2 md:mb-3 select-none h-6 flex items-center justify-center">
                   {usp.icon}
                 </div>
                 <h4 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold uppercase text-primary">
                   {usp.title}
                 </h4>
-                <p className="font-sans text-[12px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-1.5 max-w-[180px] mx-auto">
+                <p className="font-sans text-[11.5px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-1 md:mt-1.5 max-w-[180px] mx-auto">
                   {usp.desc}
                 </p>
               </div>

@@ -21,7 +21,7 @@ const Faq = () => {
   ];
 
   return (
-    <section id="faq" className="w-full bg-[#F2EDE4] py-20 lg:py-28 relative z-10">
+    <section id="faq" className="w-full bg-[#F2EDE4] py-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -30,7 +30,7 @@ const Faq = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-16 lg:mb-20 max-w-2xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-8 md:mb-16 lg:mb-20 max-w-2xl mx-auto">
           {t('faq.title')}
         </h2>
 
@@ -45,9 +45,9 @@ const Faq = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between text-left py-6 sm:py-7 focus:outline-none cursor-pointer group"
+                  className="w-full flex items-center justify-between text-left py-4.5 sm:py-7 focus:outline-none cursor-pointer group"
                 >
-                  <span className="font-sans text-[15px] sm:text-[17px] font-semibold tracking-wide text-primary/85 group-hover:text-primary transition-colors duration-200">
+                  <span className="font-sans text-[14px] sm:text-[17px] font-semibold tracking-wide text-primary/85 group-hover:text-primary transition-colors duration-200">
                     {faq.q}
                   </span>
                   
@@ -60,10 +60,10 @@ const Faq = () => {
                 {/* Accordion Content */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[500px] opacity-100 pb-6 sm:pb-7 mt-1' : 'max-h-0 opacity-0'
+                    isOpen ? 'max-h-[500px] opacity-100 pb-4 sm:pb-7 mt-1' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="font-sans text-sm sm:text-[15px] text-primary/75 leading-relaxed font-light whitespace-pre-line text-left">
+                  <p className="font-sans text-[13px] sm:text-[15px] text-primary/75 leading-relaxed font-light whitespace-pre-line text-left">
                     {faq.a}
                   </p>
                 </div>

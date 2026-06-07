@@ -76,7 +76,7 @@ const Purchase = () => {
   };
 
   return (
-    <section id="purchase" className="w-full bg-[#181412] py-24 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
+    <section id="purchase" className="w-full bg-[#181412] py-16 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
@@ -88,12 +88,12 @@ const Purchase = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-[#FAF6F0] tracking-tight font-normal mb-6">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-[#FAF6F0] tracking-tight font-normal mb-6">
           {titleText}
         </h2>
 
         {/* Subline */}
-        <p className="font-sans text-sm sm:text-base text-[#FAF6F0]/85 leading-relaxed font-light max-w-2xl mx-auto mb-12">
+        <p className="font-sans text-[13px] sm:text-base text-[#FAF6F0]/85 leading-relaxed font-light max-w-2xl mx-auto mb-8">
           {language === 'de' ? sublineTextGerman : sublineTextEnglish}
         </p>
 
@@ -140,14 +140,14 @@ const Purchase = () => {
         </div>
 
         {/* Microcopy */}
-        <p className="font-sans text-[13px] sm:text-[14px] text-[#FAF6F0]/70 tracking-wide mb-10 select-none">
+        <p className="font-sans text-[13px] sm:text-[14px] text-[#FAF6F0]/70 tracking-wide mb-6 md:mb-10 select-none">
           {language === 'de' 
             ? "Kein Spam. Nur relevante Updates. Jederzeit abmeldbar."
             : "No spam. Relevant updates only. Unsubscribe anytime."}
         </p>
 
         {/* Trust Info Points */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-[#EDE8DC]/65 font-sans text-[13px] sm:text-[14px] tracking-widest uppercase font-normal mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-[#EDE8DC]/65 font-sans text-[13px] sm:text-[14px] tracking-widest uppercase font-normal mt-6 md:mt-10">
           {infoPoints.map((point, idx) => (
             <div key={idx} className="flex items-center gap-2">
               <span className="text-accent/80 text-[10px] font-bold select-none">✓</span>

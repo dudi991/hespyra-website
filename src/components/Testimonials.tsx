@@ -56,7 +56,7 @@ const Testimonials = () => {
       ];
 
   return (
-    <section id="usecases" className="w-full bg-[#F2EDE4] py-20 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="usecases" className="w-full bg-[#F2EDE4] py-14 lg:py-28 border-t border-border/40 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -65,12 +65,12 @@ const Testimonials = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
           {title}
         </h2>
 
         {/* Subline */}
-        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-xl mx-auto mb-12 lg:mb-16 leading-relaxed font-light">
+        <p className="font-sans text-[13px] sm:text-base text-primary/75 max-w-xl mx-auto mb-8 lg:mb-16 leading-relaxed font-light">
           {subline}
         </p>
 
@@ -79,18 +79,18 @@ const Testimonials = () => {
           {cases.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-[#FAF6F0] p-8 sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
+              className="bg-[#FAF6F0] p-5 sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
             >
               {/* Numbering */}
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-5 block select-none">
+              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-3 md:mb-5 block select-none">
                 {item.num}
               </span>
               {/* Title */}
-              <h3 className="font-serif text-2xl sm:text-[26px] lg:text-[28px] text-primary font-normal mb-4 leading-snug">
+              <h3 className="font-serif text-[19px] sm:text-[26px] lg:text-[28px] text-primary font-normal mb-2 md:mb-4 leading-snug">
                 {item.title}
               </h3>
               {/* Body Text */}
-              <p className="font-serif text-base sm:text-[17px] lg:text-[18px] leading-[1.8] text-primary/75 font-normal">
+              <p className="font-serif text-[14px] sm:text-[17px] lg:text-[18px] leading-[1.8] text-primary/75 font-normal">
                 {item.text}
               </p>
             </div>
