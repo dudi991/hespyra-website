@@ -14,14 +14,16 @@ const Purchase = () => {
   
   const sublineTextGerman = (
     <>
-      HESPYRA öffnet in kleinen Schritten.<br className="hidden sm:inline" />
+      HESPYRA öffnet in kleinen Schritten.{" "}
+      <br className="hidden sm:inline" />
       Trage dich ein, wenn du die erste Edition begleiten möchtest.
     </>
   );
 
   const sublineTextEnglish = (
     <>
-      HESPYRA opens in small steps.<br className="hidden sm:inline" />
+      HESPYRA opens in small steps.{" "}
+      <br className="hidden sm:inline" />
       Sign up if you would like to accompany the first edition.
     </>
   );
@@ -76,7 +78,7 @@ const Purchase = () => {
   };
 
   return (
-    <section id="purchase" className="w-full bg-[#181412] py-16 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
+    <section id="purchase" className="w-full bg-[#181412] py-12 sm:py-16 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
@@ -147,10 +149,10 @@ const Purchase = () => {
         </p>
 
         {/* Trust Info Points */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-12 sm:gap-x-16 text-[#EDE8DC]/65 font-sans text-[13px] sm:text-[14px] tracking-widest uppercase font-normal mt-6 md:mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-2 sm:gap-y-4 gap-x-12 sm:gap-x-16 text-[#EDE8DC]/50 sm:text-[#EDE8DC]/65 font-sans text-[11.5px] sm:text-[14px] tracking-widest uppercase font-normal mt-4 md:mt-10">
           {infoPoints.map((point, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <span className="text-accent/80 text-[10px] font-bold select-none">✓</span>
+              <span className="text-accent/80 text-[9px] sm:text-[10px] font-bold select-none">✓</span>
               <span>{point}</span>
             </div>
           ))}
