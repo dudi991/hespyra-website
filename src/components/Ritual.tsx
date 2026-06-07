@@ -5,7 +5,7 @@ const Ritual = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ritual" className="w-full bg-[#F2EDE4] pt-20 pb-12 overflow-hidden relative z-10">
+    <section id="ritual" className="w-full bg-[#F2EDE4] pt-12 lg:pt-20 pb-12 overflow-hidden relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Header Block */}
@@ -13,11 +13,11 @@ const Ritual = () => {
           {t('ritual.tag')}
         </span>
         
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
+        <h2 className="text-[25px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
           {t('ritual.title')}
         </h2>
         
-        <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light max-w-2xl mx-auto mb-16 select-none">
+        <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light max-w-2xl mx-auto mb-10 lg:mb-16 select-none">
           {t('ritual.desc')}
         </p>
 
