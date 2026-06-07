@@ -122,13 +122,13 @@ const Exclusions = () => {
   ];
 
   const rightItemClasses = [
-    'lg:col-span-3 lg:col-start-10 lg:row-start-2 lg:ml-8',
-    'lg:col-span-3 lg:col-start-10 lg:row-start-3 lg:ml-8',
-    'lg:col-span-3 lg:col-start-10 lg:row-start-4 lg:ml-8'
+    'lg:col-span-3 lg:col-start-10 lg:row-start-2',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-3',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-4'
   ];
 
   return (
-    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-10 pb-8 lg:pt-12 lg:pb-10 relative z-10">
+    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-16 pb-8 lg:pt-24 lg:pb-10 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
@@ -160,7 +160,7 @@ const Exclusions = () => {
 
           {/* Center Column (Product Image) (Row 1-4, Column 4-9) - Spans all 4 rows on desktop and fills container width */}
           <div className="col-span-12 lg:col-span-6 lg:row-start-1 lg:row-span-4 lg:col-start-4 order-2 lg:order-none flex justify-center items-stretch py-2 lg:py-0">
-            <div className="relative aspect-[3/4] lg:aspect-auto w-full lg:h-full max-w-[480px] lg:max-w-none bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-primary/5 analog-wrapper analog-grain group">
+            <div className="relative aspect-[3/4] lg:aspect-auto w-full lg:h-full max-w-[480px] lg:max-w-none bg-cream-dark rounded-sm overflow-hidden shadow-[0_20px_50px_rgba(28,25,23,0.05)] border border-primary/5 analog-wrapper analog-grain group">
               <img 
                 src="images/ritual.webp" 
                 alt="HESPYRA Evening Ritual Preparation" 
