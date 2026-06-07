@@ -10,22 +10,32 @@ interface ImprintModalProps {
 const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
   const { language } = useLanguage();
 
-  // Prevent background scroll when modal is open
+  // Prevent background scroll and handle Escape key close when modal is open
   useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleEscape);
     } else {
       document.body.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-white overflow-y-auto overflow-x-hidden animate-fade-in">
+    <div 
+      className="fixed inset-0 z-[9999] bg-white overflow-y-auto overflow-x-hidden animate-fade-in"
+      role="dialog"
+      aria-modal="true"
+    >
       {/* Top Navigation / Close Bar */}
       <div className="w-full px-6 sm:px-8 py-6 sm:py-8 flex justify-between items-center fixed top-0 left-0 bg-white/95 backdrop-blur-sm z-[10000] border-b border-primary/5">
         <span className="font-sans text-xl tracking-[0.15em] font-bold text-primary">

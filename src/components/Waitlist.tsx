@@ -44,6 +44,7 @@ const Waitlist = () => {
         throw new Error('Subscription failed');
       }
     } catch (err) {
+      console.error('Waitlist bottom subscription error:', err);
       setError(
         language === 'de'
           ? 'Die Anmeldung konnte gerade nicht abgeschlossen werden. Bitte versuche es erneut.'

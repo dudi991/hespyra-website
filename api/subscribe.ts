@@ -9,10 +9,10 @@ interface SubscribeRequest extends IncomingMessage {
 
 interface SubscribeResponse extends ServerResponse {
   status: (statusCode: number) => SubscribeResponse;
-  json: (body: any) => SubscribeResponse;
+  json: (body: unknown) => SubscribeResponse;
 }
 
-export default async function handler(req: any, res: any) {
+export default async function handler(req: SubscribeRequest, res: SubscribeResponse) {
   // Only allow POST requests
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);

@@ -1,44 +1,43 @@
 import { useLanguage } from '../context/LanguageContext';
 import { Coffee, Leaf, Waves, Moon } from 'lucide-react';
 
+// Custom Spoon SVG Icon since lucide-react doesn't have it in this version
+const SpoonIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="1.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M17.5 6.5c1.4-1.4 3.1-1 3.8-.3.7.7 1.1 2.4-.3 3.8-1.4 1.4-3.5 1.8-4.2 1.1-.7-.7-.3-2.8 1.1-4.2z" />
+    <path d="M12.5 11.5L4 20" />
+  </svg>
+);
+
+// Custom Portion/Slice SVG Icon representing "EIN LÖFFEL"
+const PortionIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="1.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 2v10h10" />
+    <path d="M12 12l7 7" className="opacity-40" />
+  </svg>
+);
+
 const Exclusions = () => {
   const { language } = useLanguage();
-
-  // Custom Spoon SVG Icon since lucide-react doesn't have it in this version
-  const SpoonIcon = ({ className }: { className?: string }) => (
-    <svg 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.5" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      className={className}
-    >
-      <path d="M17.5 6.5c1.4-1.4 3.1-1 3.8-.3.7.7 1.1 2.4-.3 3.8-1.4 1.4-3.5 1.8-4.2 1.1-.7-.7-.3-2.8 1.1-4.2z" />
-      <path d="M12.5 11.5L4 20" />
-    </svg>
-  );
-
-  // Custom Portion/Slice SVG Icon representing "EIN LÖFFEL"
-  const PortionIcon = ({ className }: { className?: string }) => (
-    <svg 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.5" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      className={className}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2v10h10" />
-      <path d="M12 12l7 7" className="opacity-40" />
-    </svg>
-  );
-
   const exclusionsTag = language === 'de' ? 'SO EINFACH GEHT’S' : 'SO SIMPLE';
-  const exclusionsDesc = language === 'de' 
+  const exclusionsDesc = language === 'de'
     ? 'HESPYRA lässt sich mühelos in\ndeinen Abend integrieren.\nWeniger als eine Minute – für mehr Ruhe, wenn du sie brauchst.'
     : 'HESPYRA integrates effortlessly into\nyour evening.\nLess than a minute – for more calm, when you need it.';
 
