@@ -49,7 +49,7 @@ const WhyHespyra = () => {
         </p>
 
         {/* Comparison Table Card */}
-        <div className="max-w-3xl mx-auto bg-white rounded-sm overflow-hidden shadow-sm border border-primary/10">
+        <div className="max-w-3xl mx-auto bg-white rounded-sm overflow-hidden shadow-[0_8px_30px_rgba(28,25,23,0.03)] border border-primary/10">
           
           {/* Table Header Row */}
           <div className="grid grid-cols-12 border-b border-primary/10 items-stretch">
@@ -57,7 +57,7 @@ const WhyHespyra = () => {
             <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
               {columnHeaders[0]}
             </div>
-            <div className="col-span-4 text-center py-5 sm:py-6 text-primary/45 bg-white flex items-center justify-center font-sans text-[9px] sm:text-[10px] tracking-[0.2em] font-medium uppercase">
+            <div className="col-span-4 text-center py-5 sm:py-6 text-primary/45 bg-white flex items-center justify-center font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-medium uppercase">
               {columnHeaders[1]}
             </div>
           </div>
@@ -68,17 +68,17 @@ const WhyHespyra = () => {
               <div key={idx} className="grid grid-cols-12 items-stretch">
                 
                 {/* Criteria Label */}
-                <div className="col-span-4 text-left px-4 sm:px-6 py-4 sm:py-5 font-sans text-[11px] sm:text-xs md:text-sm font-normal tracking-wide text-primary/80 bg-white flex items-center">
+                <div className="col-span-4 text-left px-4 sm:px-6 py-4 sm:py-5 font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide text-primary/80 bg-white flex items-center">
                   {row.label}
                 </div>
 
                 {/* HESPYRA Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-sans text-[11px] sm:text-xs md:text-sm font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.hespyra}
                 </div>
 
                 {/* MELATONIN GUMMIES Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary/75 bg-white flex items-center justify-center font-sans text-[11px] sm:text-xs md:text-sm font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary/75 bg-white flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.others}
                 </div>
 
