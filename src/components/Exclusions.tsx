@@ -178,7 +178,7 @@ const Exclusions = () => {
                 key={idx} 
                 className={`flex flex-col ${leftItemClasses[idx]} ${
                   idx === 2 
-                    ? 'pt-7 pb-0' 
+                    ? 'pt-7 pb-7 border-b border-primary/5 lg:border-b-0 lg:pb-0' 
                     : 'py-7 border-b border-primary/5'
                 }`}
               >
