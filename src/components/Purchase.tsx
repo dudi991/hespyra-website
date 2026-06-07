@@ -116,7 +116,7 @@ const Purchase = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isSubmitting}
-                className="flex-1 bg-[#120F0E] border border-[#FAF6F0]/15 text-[#FAF6F0]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#EDE8DC]/45 rounded-sm"
+                className="flex-1 bg-[#120F0E] border border-[#FAF6F0]/15 text-[#FAF6F0]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#EDE8DC]/60 rounded-sm"
                 required
                 autoComplete="off"
               />
@@ -140,7 +140,7 @@ const Purchase = () => {
         </div>
 
         {/* Microcopy */}
-        <p className="font-sans text-[13px] sm:text-[14px] text-[#EDE8DC]/60 tracking-wide mb-10 select-none">
+        <p className="font-sans text-[13px] sm:text-[14px] text-[#FAF6F0]/70 tracking-wide mb-10 select-none">
           {language === 'de' 
             ? "Kein Spam. Nur relevante Updates. Jederzeit abmeldbar."
             : "No spam. Relevant updates only. Unsubscribe anytime."}
