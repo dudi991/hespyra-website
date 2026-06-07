@@ -11,7 +11,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
   const { t } = useLanguage();
 
   return (
-    <footer className="w-full bg-[#EDE8DC] border-t border-border/40 py-6 lg:py-5 relative z-20">
+    <footer className="w-full bg-[#E2DCCE] border-t border-border/40 py-6 lg:py-5 relative z-20">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
           
