@@ -133,16 +133,16 @@ const Waitlist = () => {
           </div>
 
           {/* Right Column - Brand USPs (Horizontal Grid on desktop) */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-4 lg:gap-5 text-center mt-6 lg:mt-0">
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 text-center mt-5 lg:mt-0">
             {usps.map((usp, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <div className="text-accent mb-2 md:mb-3 select-none h-6 flex items-center justify-center">
+                <div className="text-accent mb-1 sm:mb-2 md:mb-3 select-none h-6 flex items-center justify-center">
                   {usp.icon}
                 </div>
                 <h4 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold uppercase text-primary">
                   {usp.title}
                 </h4>
-                <p className="font-sans text-[11.5px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-1 md:mt-1.5 max-w-[180px] mx-auto">
+                <p className="font-sans text-[11.5px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-0.5 sm:mt-1 md:mt-1.5 max-w-[180px] mx-auto">
                   {usp.desc}
                 </p>
               </div>

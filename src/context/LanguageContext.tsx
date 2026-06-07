@@ -115,7 +115,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Waitlist
     'waitlist.tag': 'ABENDKULTUR, NEU GEDACHT',
     'waitlist.title': 'Die erste Edition von HESPYRA.',
-    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, wenn du die erste Edition begleiten möchtest —\nmit frühen Einblicken, Abendnotizen und einem ersten Blick auf das Ritual.',
+    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, wenn du die erste Edition begleiten möchtest –\nmit frühen Einblicken, Abendnotizen und einem ersten Blick auf das Ritual.',
     'waitlist.placeholder': 'E-Mail-Adresse',
     'waitlist.submit': 'DABEI SEIN',
     'waitlist.success': 'Danke. Wir melden uns leise.',
@@ -286,7 +286,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Waitlist
     'waitlist.tag': 'EVENING CULTURE, REIMAGINED',
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to follow the first edition —\nwith early insights, evening notes, and a first look at the ritual.',
+    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to follow the first edition –\nwith early insights, evening notes, and a first look at the ritual.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'JOIN IN',
     'waitlist.success': 'Thank you. We will reach out quietly.',
