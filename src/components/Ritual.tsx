@@ -22,9 +22,7 @@ const Ritual = () => {
         </p>
 
         {/* 3-Column Grid with separators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto relative">
-          {/* Custom top line that aligns with the text bounds on desktop */}
-          <div className="absolute top-0 left-2 sm:left-2 lg:left-3 right-2 sm:right-2 lg:right-[140px] h-[1px] bg-primary/10"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto">
           
           {/* Card 01 - Release */}
           <div className="flex flex-col justify-between pt-10 pb-8 px-6 sm:px-8 lg:px-12 text-left min-h-[280px] md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
