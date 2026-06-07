@@ -27,13 +27,12 @@ function App() {
   const [showContact, setShowContact] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
-  const [isCalm, setIsCalm] = useState(false);
 
   return (
-    <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-accent selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-background text-primary'}`}>
+    <div className="min-h-screen font-sans overflow-x-hidden selection:bg-accent selection:text-white bg-background text-primary">
       <Preloader />
       
-      <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />
+      <Navbar />
       
       <Hero />
       

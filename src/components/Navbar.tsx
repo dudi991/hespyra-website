@@ -2,12 +2,7 @@ import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Menu, X } from 'lucide-react';
 
-interface NavbarProps {
-  isCalm: boolean;
-  onToggleCalm: () => void;
-}
-
-const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
+const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +15,7 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
   return (
     <nav className="w-full bg-transparent absolute top-0 left-0 z-50 border-b border-border/40">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between relative">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 py-6 flex items-center justify-between relative z-50">
         
         {/* Brand Logo */}
         <a href="#" className="flex items-center text-xl sm:text-2xl tracking-[0.15em] font-serif font-medium leading-none select-none text-primary hover:opacity-80 transition-opacity">
@@ -75,14 +70,6 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
 
         {/* Mobile Hamburger Button */}
         <div className="flex items-center gap-4 lg:hidden">
-          {/* Mobile Calm Button */}
-          <button 
-            onClick={onToggleCalm}
-            className="text-[10px] tracking-widest font-semibold text-primary/60 hover:text-primary uppercase"
-          >
-            {isCalm ? 'DAY' : 'EVE'}
-          </button>
-          
           <button 
             onClick={() => setIsOpen(!isOpen)} 
             className="text-primary focus:outline-none"
