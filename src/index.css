@@ -65,6 +65,12 @@
     }
   }
   
+  .bg-light {
+    background-color: #F2EDE4 !important;
+  }
+  .bg-muted {
+    background-color: #EDE8DC !important;
+  }
 
   /* Calm Mode CSS Transitions & Overrides */
   .calm-mode .bg-white,

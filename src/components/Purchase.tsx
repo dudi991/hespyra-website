@@ -78,7 +78,7 @@ const Purchase = () => {
   };
 
   return (
-    <section id="purchase" className="w-full bg-[#443B36] py-12 sm:py-16 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
+    <section id="purchase" className="w-full bg-[#5B4F47] py-12 sm:py-16 lg:py-32 relative z-10 text-[#FAF6F0] overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
@@ -102,7 +102,7 @@ const Purchase = () => {
         {/* Waitlist Form Area */}
         <div className="max-w-md mx-auto mb-4">
           {submitted ? (
-            <div className="bg-[#322B27] border border-accent/20 px-6 py-5 rounded-sm shadow-md flex items-center justify-center gap-3 text-accent font-sans text-sm">
+            <div className="bg-[#443B36] border border-accent/20 px-6 py-5 rounded-sm shadow-md flex items-center justify-center gap-3 text-accent font-sans text-sm">
               <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0">
                 <Check className="w-3.5 h-3.5" strokeWidth={3} />
               </div>
@@ -118,7 +118,7 @@ const Purchase = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isSubmitting}
-                className="flex-1 bg-[#322B27] border border-[#FAF6F0]/10 text-[#FAF6F0]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#EDE8DC]/45 rounded-sm"
+                className="flex-1 bg-[#443B36] border border-[#FAF6F0]/10 text-[#FAF6F0]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#EDE8DC]/45 rounded-sm"
                 required
                 autoComplete="off"
               />
