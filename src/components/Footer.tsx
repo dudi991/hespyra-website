@@ -24,12 +24,12 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
               >
                 HESPYRA
               </a>
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.1em] text-primary/75 font-normal uppercase select-none whitespace-nowrap pt-0.5">
+              <span className="text-[11px] sm:text-xs font-sans tracking-[0.1em] text-primary/90 font-normal uppercase select-none whitespace-nowrap pt-0.5">
                 · Evening Ritual
               </span>
             </div>
           </div>
-
+ 
           {/* Center Column: Legal Links */}
           <div className="flex justify-center items-center">
             <div className="flex flex-row flex-wrap justify-center items-center gap-6 lg:gap-8">
@@ -38,7 +38,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
                   e.preventDefault();
                   onShowAbout?.();
                 }}
-                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.08em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
               >
                 {t('footer.about')}
               </button>
@@ -47,7 +47,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
                   e.preventDefault();
                   onShowContact?.();
                 }}
-                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.08em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
               >
                 {t('footer.contact')}
               </button>
@@ -56,7 +56,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
                   e.preventDefault();
                   onShowPrivacy?.();
                 }}
-                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.08em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
               >
                 {t('footer.privacy')}
               </button>
@@ -65,7 +65,7 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
                   e.preventDefault();
                   onShowImprint?.();
                 }}
-                className="font-sans text-[10px] sm:text-[11px] tracking-[0.12em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
+                className="font-sans text-[10px] sm:text-[11px] tracking-[0.08em] font-medium uppercase text-primary/80 hover:text-accent transition-colors duration-200 focus:outline-none cursor-pointer"
               >
                 {t('footer.imprint')}
               </button>
