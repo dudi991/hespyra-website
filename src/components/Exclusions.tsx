@@ -128,7 +128,7 @@ const Exclusions = () => {
   ];
 
   return (
-    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-16 pb-12 lg:pt-20 lg:pb-16 relative z-10">
+    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-10 pb-8 lg:pt-12 lg:pb-10 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
@@ -159,7 +159,7 @@ const Exclusions = () => {
           </div>
 
           {/* Center Column (Product Image) (Row 1-4, Column 4-9) - Spans all 4 rows on desktop and fills container width */}
-          <div className="col-span-12 lg:col-span-6 lg:row-start-1 lg:row-span-4 lg:col-start-4 order-2 lg:order-none flex justify-center items-stretch py-4 lg:py-0">
+          <div className="col-span-12 lg:col-span-6 lg:row-start-1 lg:row-span-4 lg:col-start-4 order-2 lg:order-none flex justify-center items-stretch py-2 lg:py-0">
             <div className="relative aspect-[3/4] lg:aspect-auto w-full lg:h-full max-w-[480px] lg:max-w-none bg-cream-dark rounded-sm overflow-hidden shadow-lg border border-primary/5 analog-wrapper analog-grain group">
               <img 
                 src="images/ritual.webp" 
