@@ -137,7 +137,7 @@ const Ingredients = () => {
       ];
 
   return (
-    <section id="ingredients" className="w-full bg-[#F2EDE4] py-14 lg:py-28 relative z-10">
+    <section id="ingredients" className="w-full bg-[#F2EDE4] py-10 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -146,17 +146,17 @@ const Ingredients = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-[25px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
           {t('ingredients.title')}
         </h2>
         
         {/* Description */}
-        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-3xl mx-auto leading-relaxed font-light mb-10 lg:mb-24">
+        <p className="font-sans text-[13px] sm:text-base text-primary/75 max-w-3xl mx-auto leading-relaxed font-light mb-8 lg:mb-24">
           {t('ingredients.desc')}
         </p>
 
         {/* 3-Column Ingredients Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-10 md:gap-0 text-left max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-8 md:gap-0 text-left max-w-6xl mx-auto">
           {groups.map((group, gIdx) => (
             <div 
               key={gIdx} 
@@ -164,24 +164,24 @@ const Ingredients = () => {
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-6 md:min-h-[180px] lg:min-h-[140px]">
+              <div className="mb-5 md:min-h-[180px] lg:min-h-[140px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
                 <h3 className="font-serif text-2xl lg:text-3xl font-normal text-primary mb-3">
                   {group.title}
                 </h3>
-                <p className="font-sans text-[13px] sm:text-sm lg:text-[14px] leading-relaxed text-primary/60 font-light">
+                <p className="font-sans text-[12.5px] sm:text-sm lg:text-[14px] leading-relaxed text-primary/60 font-light">
                   {group.desc}
                 </p>
               </div>
 
               {/* Group Ingredients Items */}
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {group.items.map((item, iIdx) => (
                   <div key={iIdx} className="flex flex-col text-left md:min-h-[140px] lg:min-h-[110px]">
-                    <div className="flex justify-between items-baseline mb-2.5">
-                      <h4 className="font-sans text-[14.5px] lg:text-[16px] font-semibold tracking-wide text-primary">
+                    <div className="flex justify-between items-baseline mb-1.5 md:mb-2.5">
+                      <h4 className="font-sans text-[13.5px] lg:text-[16px] font-semibold tracking-wide text-primary">
                         {item.name}
                       </h4>
                       {item.dose && (
@@ -190,7 +190,7 @@ const Ingredients = () => {
                         </span>
                       )}
                     </div>
-                    <p className="font-sans text-[13.5px] sm:text-[14.5px] leading-[1.7] text-primary/72 font-light">
+                    <p className="font-sans text-[12.5px] sm:text-[14.5px] leading-[1.7] text-primary/72 font-light">
                       {item.info}
                     </p>
                   </div>

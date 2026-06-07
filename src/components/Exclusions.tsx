@@ -47,34 +47,34 @@ const Exclusions = () => {
     ? [
         {
           label: 'WARM',
-          icon: <Coffee className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Coffee className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Vanille, Tonka und eine ruhige Tiefe.\nZurückhaltend – nicht süß, nicht schwer.'
         },
         {
           label: 'REIN',
-          icon: <Leaf className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Leaf className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Kein Melatonin, kein Zucker,\nkeine künstlichen Farbstoffe.'
         },
         {
           label: 'EINFACH',
-          icon: <SpoonIcon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" />,
+          icon: <SpoonIcon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" />,
           desc: 'Ein Löffel. Ein Glas.\nEine ruhige Pause im Tag.'
         }
       ]
     : [
         {
           label: 'WARM',
-          icon: <Coffee className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Coffee className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Vanilla, tonka and a quiet depth.\nReserved – not sweet, not heavy.'
         },
         {
           label: 'PURE',
-          icon: <Leaf className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Leaf className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'No melatonin, no sugar,\nno artificial colorants.'
         },
         {
           label: 'SIMPLE',
-          icon: <SpoonIcon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" />,
+          icon: <SpoonIcon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" />,
           desc: 'One spoon. One glass.\nA quiet pause in your day.'
         }
       ];
@@ -83,34 +83,34 @@ const Exclusions = () => {
     ? [
         {
           label: 'WARM ODER KALT',
-          icon: <Waves className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Waves className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Für Wasser oder Pflanzenmilch.\nDu entscheidest.'
         },
         {
           label: 'EIN LÖFFEL',
-          icon: <PortionIcon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" />,
+          icon: <PortionIcon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" />,
           desc: 'Eine Portion.\nKein Schlucken, kein Gummy.'
         },
         {
           label: 'JEDEN ABEND',
-          icon: <Moon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Moon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'Ein wiederkehrender Moment,\nder dem Abend eine Form gibt.'
         }
       ]
     : [
         {
           label: 'WARM OR COLD',
-          icon: <Waves className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Waves className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'For water or plant milk.\nYou decide.'
         },
         {
           label: 'ONE SPOON',
-          icon: <PortionIcon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" />,
+          icon: <PortionIcon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" />,
           desc: 'One serving.\nNo swallowing, no gummy.'
         },
         {
           label: 'EVERY EVENING',
-          icon: <Moon className="w-[26px] h-[26px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
+          icon: <Moon className="w-[22px] h-[22px] lg:w-[32px] lg:h-[32px] text-accent" strokeWidth={1.5} />,
           desc: 'A recurring moment\nthat gives shape to the evening.'
         }
       ];
@@ -128,18 +128,18 @@ const Exclusions = () => {
   ];
 
   return (
-    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-10 pb-6 lg:pt-24 lg:pb-10 relative z-10">
+    <section id="exclusions" className="w-full bg-[#F4ECE1] pt-8 pb-5 lg:pt-24 lg:pb-10 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-x-16 lg:gap-y-0 w-full mx-auto items-stretch">
+        <div className="grid grid-cols-12 gap-y-5 lg:gap-x-16 lg:gap-y-0 w-full mx-auto items-stretch">
           
           {/* Header Block (Row 1, Column 1-3) */}
           <div className="col-span-12 lg:col-span-3 lg:row-start-1 lg:col-start-1 order-1 lg:order-none flex flex-col justify-start pb-4 lg:pb-6">
             <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
               {exclusionsTag}
             </span>
-            <h2 className="text-3xl sm:text-[36px] md:text-[40px] lg:text-[42px] leading-[1.25] font-serif text-primary tracking-tight font-normal">
+            <h2 className="text-[23px] sm:text-[36px] md:text-[40px] lg:text-[42px] leading-[1.25] font-serif text-primary tracking-tight font-normal">
               {language === 'de' ? (
                 <>
                   Ein Moment,<br />
@@ -153,7 +153,7 @@ const Exclusions = () => {
               )}
             </h2>
             <div className="w-12 h-[1px] bg-accent/30 my-5"></div>
-            <p className="font-sans text-sm sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
+            <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
               {exclusionsDesc}
             </p>
           </div>
@@ -178,17 +178,17 @@ const Exclusions = () => {
                 key={idx} 
                 className={`flex flex-col ${leftItemClasses[idx]} ${
                   idx === 2 
-                    ? 'pt-4 pb-4 border-b border-primary/5 lg:border-b-0 lg:pt-7 lg:pb-0' 
-                    : 'py-4 lg:py-7 border-b border-primary/5'
+                    ? 'pt-3 pb-3 border-b border-primary/5 lg:border-b-0 lg:pt-7 lg:pb-0' 
+                    : 'py-3 lg:py-7 border-b border-primary/5'
                 }`}
               >
-                <div className="flex items-center gap-3.5 mb-2.5">
+                <div className="flex items-center gap-2.5 mb-2 md:gap-3.5 md:mb-2.5">
                   {item.icon}
-                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
+                  <span className="font-sans text-[10.5px] sm:text-xs tracking-[0.18em] lg:tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
                     {item.label}
                   </span>
                 </div>
-                <p className="font-sans text-[13.5px] sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
+                <p className="font-sans text-[12.5px] sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>
@@ -202,17 +202,17 @@ const Exclusions = () => {
                 key={idx} 
                 className={`flex flex-col ${rightItemClasses[idx]} ${
                   idx === 2 
-                    ? 'pt-4 pb-0 lg:pt-7' 
-                    : 'py-4 lg:py-7 border-b border-primary/5'
+                    ? 'pt-3 pb-0 lg:pt-7' 
+                    : 'py-3 lg:py-7 border-b border-primary/5'
                 }`}
               >
-                <div className="flex items-center gap-3.5 mb-2.5">
+                <div className="flex items-center gap-2.5 mb-2 md:gap-3.5 md:mb-2.5">
                   {item.icon}
-                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
+                  <span className="font-sans text-[10.5px] sm:text-xs tracking-[0.18em] lg:tracking-[0.2em] font-semibold text-primary uppercase select-none whitespace-nowrap">
                     {item.label}
                   </span>
                 </div>
-                <p className="font-sans text-[13.5px] sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
+                <p className="font-sans text-[12.5px] sm:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                   {item.desc}
                 </p>
               </div>

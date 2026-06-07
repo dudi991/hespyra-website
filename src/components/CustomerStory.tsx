@@ -4,7 +4,7 @@ const CustomerStory = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="philosophy" className="w-full bg-[#F2EDE4] py-14 lg:py-28 relative z-10">
+    <section id="philosophy" className="w-full bg-[#F2EDE4] py-11 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Category Tag */}
@@ -13,15 +13,15 @@ const CustomerStory = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-[25px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal max-w-3xl mx-auto whitespace-pre-line">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal max-w-3xl mx-auto whitespace-pre-line">
           {t('philosophy.title')}
         </h2>
 
         {/* Subtle Accent Divider */}
-        <div className="w-12 h-[1px] bg-accent/20 mx-auto my-5 lg:my-8"></div>
+        <div className="w-12 h-[1px] bg-accent/20 mx-auto my-4 lg:my-8"></div>
 
         {/* Narrative text */}
-        <div className="space-y-5 lg:space-y-8 text-primary/75 text-[13.5px] sm:text-base leading-relaxed font-light max-w-2xl mx-auto">
+        <div className="space-y-4 lg:space-y-8 text-primary/75 text-[13px] sm:text-base leading-relaxed font-light max-w-2xl mx-auto">
           <p className="whitespace-pre-line">
             {t('philosophy.text1')}
           </p>
@@ -30,7 +30,7 @@ const CustomerStory = () => {
             {t('philosophy.text2')}
           </p>
           
-          <p className="font-sans text-[14px] sm:text-[17px] text-primary/90 font-normal mt-5 lg:mt-8">
+          <p className="font-sans text-[13px] sm:text-[17px] text-primary/90 font-normal mt-4 lg:mt-8">
             {t('philosophy.text3')}
           </p>
         </div>
