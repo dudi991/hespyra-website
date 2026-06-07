@@ -33,7 +33,7 @@ const Testimonials = () => {
         },
         {
           num: "03",
-          title: "Nach zu viel Bildschirmzeit",
+          title: "Nach zu viel Input",
           text: "Wenn der Abend da ist, aber der Kopf noch nicht nachkommt."
         }
       ]
@@ -50,7 +50,7 @@ const Testimonials = () => {
         },
         {
           num: "03",
-          title: "After too much screen time",
+          title: "After too much input",
           text: "When the evening has arrived, but your mind has not yet caught up."
         }
       ];
