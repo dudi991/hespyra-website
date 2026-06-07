@@ -8,8 +8,8 @@ const WhyHespyra = () => {
     : "The difference begins before sleep.";
 
   const columnHeaders = language === 'de'
-    ? ['HESPYRA', 'MELATONIN-GUMMIES']
-    : ['HESPYRA', 'MELATONIN GUMMIES'];
+    ? ['HESPYRA', 'KLASSISCHE SCHLAFPRODUKTE']
+    : ['HESPYRA', 'CLASSIC SLEEP PRODUCTS'];
 
   const tableData = language === 'de'
     ? [
