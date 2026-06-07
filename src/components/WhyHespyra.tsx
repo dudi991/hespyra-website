@@ -53,27 +53,27 @@ const WhyHespyra = () => {
           {tableData.map((row, idx) => (
             <div key={idx} className="bg-white rounded-sm border border-primary/10 p-3.5 text-left shadow-[0_4px_15px_rgba(28,25,23,0.02)]">
               {/* Category / Label */}
-              <div className="font-sans text-[10.5px] tracking-[0.15em] font-semibold text-accent uppercase mb-2 select-none">
+              <div className="font-sans text-[10.5px] tracking-[0.15em] font-semibold text-accent uppercase mb-2.5 select-none">
                 {row.label}
               </div>
               
-              <div className="grid grid-cols-2 gap-2.5 items-stretch mt-1">
+              <div className="flex flex-col gap-2 mt-1">
                 {/* HESPYRA Column */}
-                <div className="bg-[#FAF6F0] p-2 rounded-sm border border-primary/5 flex flex-col justify-start">
-                  <span className="font-serif text-[10px] tracking-[0.1em] font-medium text-primary mb-1 select-none">
+                <div className="bg-[#FAF6F0] p-2.5 rounded-sm border border-primary/5 flex flex-col justify-start">
+                  <span className="font-serif text-[10px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
                     {columnHeaders[0]}
                   </span>
-                  <span className="font-sans text-[12px] text-primary leading-normal font-light">
+                  <span className="font-sans text-[12.5px] text-primary leading-relaxed font-light">
                     {row.hespyra}
                   </span>
                 </div>
                 
                 {/* Classic Sleep Products Column */}
-                <div className="bg-white p-2 rounded-sm border border-primary/5 flex flex-col justify-start">
-                  <span className="font-sans text-[9px] tracking-[0.12em] font-medium text-primary/45 mb-1 select-none text-wrap">
-                    {columnHeaders[1]}
+                <div className="bg-white p-2.5 rounded-sm border border-primary/5 flex flex-col justify-start">
+                  <span className="font-sans text-[9px] tracking-[0.12em] font-semibold text-primary/40 mb-0.5 select-none uppercase">
+                    {language === 'de' ? 'Schlafprodukte' : 'Sleep Products'}
                   </span>
-                  <span className="font-sans text-[12px] text-primary/75 leading-normal font-light">
+                  <span className="font-sans text-[12.5px] text-primary/75 leading-relaxed font-light">
                     {row.others}
                   </span>
                 </div>

@@ -75,22 +75,22 @@ const Testimonials = () => {
         </p>
 
         {/* 3-Column Use Cases Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] md:gap-6 lg:gap-8 max-w-5xl mx-auto items-stretch">
           {cases.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-[#FAF6F0] p-5 sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
+              className="bg-[#FAF6F0] p-[18px] sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
             >
               {/* Numbering */}
               <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-3 md:mb-5 block select-none">
                 {item.num}
               </span>
               {/* Title */}
-              <h3 className="font-serif text-[19px] sm:text-[26px] lg:text-[28px] text-primary font-normal mb-2 md:mb-4 leading-snug">
+              <h3 className="font-serif text-[18px] sm:text-[26px] lg:text-[28px] text-primary font-normal mb-2 md:mb-4 leading-snug">
                 {item.title}
               </h3>
               {/* Body Text */}
-              <p className="font-serif text-[14px] sm:text-[17px] lg:text-[18px] leading-[1.8] text-primary/75 font-normal">
+              <p className="font-serif text-[13px] sm:text-[17px] lg:text-[18px] leading-[1.8] text-primary/75 font-normal">
                 {item.text}
               </p>
             </div>
