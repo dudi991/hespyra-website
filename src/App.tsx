@@ -1,7 +1,7 @@
 import { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import LogoTicker from './components/LogoTicker';
+// import LogoTicker from './components/LogoTicker';
 import CustomerStory from './components/CustomerStory';
 import EditorialPause from './components/EditorialPause';
 import Ritual from './components/Ritual';
@@ -37,7 +37,7 @@ function App() {
       
       <Hero />
       
-      <LogoTicker />
+      {/* <LogoTicker /> */}
       
       <ScrollReveal>
         <CustomerStory />

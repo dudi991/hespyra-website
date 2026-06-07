@@ -20,8 +20,8 @@ const Ingredients = () => {
     ? [
         {
           num: '01',
-          title: 'Lösen',
-          desc: 'Für den Moment, in dem der Tag zurücktreten darf.',
+          title: 'Körper',
+          desc: 'Mineralstoffe und Pflanzenstoffe für mehr körperliche Ruhe am Abend.',
           items: [
             {
               name: 'Magnesium Bisglycinat',
@@ -39,8 +39,8 @@ const Ingredients = () => {
         },
         {
           num: '02',
-          title: 'Sammeln',
-          desc: 'Für den Moment, in dem der Kopf aus dem Tagesmodus findet.',
+          title: 'Kopf',
+          desc: 'Ausgewählte Nährstoffe für den Übergang aus Gedanken, Tempo und Tagesmodus.',
           items: [
             {
               name: 'Suntheanine® L-Theanin',
@@ -58,8 +58,8 @@ const Ingredients = () => {
         },
         {
           num: '03',
-          title: 'Ankommen',
-          desc: 'Für den warmen, bewussten Einstieg in den Abend.',
+          title: 'Geschmack',
+          desc: 'Warme Noten aus Kakao, Vanille und Tonka — weich, erwachsen und zurückhaltend.',
           items: [
             {
               name: 'Affron® Safran',
@@ -79,8 +79,8 @@ const Ingredients = () => {
     : [
         {
           num: '01',
-          title: 'Release',
-          desc: 'For the moment when the day is allowed to step back.',
+          title: 'Body',
+          desc: 'Minerals and botanicals for more physical calm in the evening.',
           items: [
             {
               name: 'Magnesium Bisglycinate',
@@ -98,8 +98,8 @@ const Ingredients = () => {
         },
         {
           num: '02',
-          title: 'Gather',
-          desc: 'For the moment when the head finds its way out of daytime mode.',
+          title: 'Mind',
+          desc: 'Selected nutrients for the transition from thoughts, pace, and daytime mode.',
           items: [
             {
               name: 'Suntheanine® L-Theanine',
@@ -117,8 +117,8 @@ const Ingredients = () => {
         },
         {
           num: '03',
-          title: 'Arrive',
-          desc: 'For a warm, conscious entry into the evening.',
+          title: 'Taste',
+          desc: 'Warm notes of cocoa, vanilla, and tonka — soft, mature, and reserved.',
           items: [
             {
               name: 'Affron® Saffron',
@@ -164,7 +164,7 @@ const Ingredients = () => {
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-10 md:min-h-[150px] lg:min-h-[130px]">
+              <div className="mb-10 md:min-h-[180px] lg:min-h-[140px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
@@ -179,9 +179,9 @@ const Ingredients = () => {
               {/* Group Ingredients Items */}
               <div className="space-y-6">
                 {group.items.map((item, iIdx) => (
-                  <div key={iIdx} className="flex flex-col text-left md:min-h-[130px] lg:min-h-[95px]">
-                    <div className="flex justify-between items-baseline mb-2">
-                      <h4 className="font-sans text-sm lg:text-[15px] font-semibold text-primary">
+                  <div key={iIdx} className="flex flex-col text-left md:min-h-[140px] lg:min-h-[110px]">
+                    <div className="flex justify-between items-baseline mb-2.5">
+                      <h4 className="font-sans text-[14.5px] lg:text-[16px] font-semibold tracking-wide text-primary">
                         {item.name}
                       </h4>
                       {item.dose && (
@@ -190,7 +190,7 @@ const Ingredients = () => {
                         </span>
                       )}
                     </div>
-                    <p className="font-sans text-[13px] sm:text-sm leading-relaxed text-primary/60 font-light">
+                    <p className="font-sans text-[13.5px] sm:text-[14.5px] leading-[1.7] text-primary/72 font-light">
                       {item.info}
                     </p>
                   </div>
