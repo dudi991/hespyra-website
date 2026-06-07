@@ -45,10 +45,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 xl:gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* MOBILE-ONLY: Product Image first */}
-          <div className="lg:hidden w-full mb-5">
+          <div className="lg:hidden w-full mb-2">
             {/* MOBILE-ONLY Eyebrow */}
             <div className="w-full text-left mb-2.5">
               <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase block select-none">
