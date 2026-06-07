@@ -122,9 +122,9 @@ const Exclusions = () => {
   ];
 
   const rightItemClasses = [
-    'lg:col-span-3 lg:col-start-10 lg:row-start-2',
-    'lg:col-span-3 lg:col-start-10 lg:row-start-3',
-    'lg:col-span-3 lg:col-start-10 lg:row-start-4'
+    'lg:col-span-3 lg:col-start-10 lg:row-start-2 lg:ml-8',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-3 lg:ml-8',
+    'lg:col-span-3 lg:col-start-10 lg:row-start-4 lg:ml-8'
   ];
 
   return (
