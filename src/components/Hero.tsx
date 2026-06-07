@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="lg:hidden w-full mb-1">
             {/* MOBILE-ONLY Eyebrow */}
             <div className="w-full text-left mb-2">
-              <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.22em] font-medium text-accent/80 uppercase block select-none">
+              <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.16em] font-medium text-accent/80 uppercase block select-none">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
             </div>
@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-2 bg-[#F4ECE1]/95 py-2 px-3.5 rounded-sm shadow-md border border-primary/5">
+            <div className="mt-2 bg-[#F4ECE1]/95 py-1.5 px-3.5 rounded-sm shadow-md border border-primary/5">
               <h4 className="font-serif text-[12.5px] sm:text-[13px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
@@ -128,10 +128,10 @@ const Hero = () => {
             </div>
 
             {/* Bottom Group: Capsule claims */}
-            <div className="flex flex-wrap items-center gap-2 lg:gap-3 font-sans text-[11px] lg:text-xs tracking-wider">
+            <div className="flex flex-wrap items-center gap-1.5 lg:gap-3 font-sans text-[9.5px] lg:text-xs tracking-wider">
               {claims.map((claim, idx) => (
-                <div key={idx} className="flex items-center gap-1.5 lg:gap-2 bg-white/60 border border-border/50 px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
-                  <span className="text-accent text-[9.5px] lg:text-[11px] font-bold">✓</span>
+                <div key={idx} className="flex items-center gap-1 lg:gap-2 bg-white/60 border border-border/50 px-2.5 py-1 lg:px-4 lg:py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
+                  <span className="text-accent text-[8.5px] lg:text-[11px] font-bold">✓</span>
                   <span>{claim}</span>
                 </div>
               ))}
