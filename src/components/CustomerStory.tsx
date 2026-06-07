@@ -4,7 +4,7 @@ const CustomerStory = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="philosophy" className="w-full bg-[#F2EDE4] py-11 lg:py-28 relative z-10">
+    <section id="philosophy" className="w-full bg-muted py-11 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Category Tag */}

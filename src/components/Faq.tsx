@@ -21,7 +21,7 @@ const Faq = () => {
   ];
 
   return (
-    <section id="faq" className="w-full bg-[#F2EDE4] pt-12 pb-14 lg:py-28 relative z-10">
+    <section id="faq" className="w-full bg-light pt-12 pb-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

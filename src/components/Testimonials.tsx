@@ -56,7 +56,7 @@ const Testimonials = () => {
       ];
 
   return (
-    <section id="usecases" className="w-full bg-[#F2EDE4] py-14 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="usecases" className="w-full bg-muted py-14 lg:py-28 border-t border-border/40 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

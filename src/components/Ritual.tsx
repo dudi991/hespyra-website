@@ -5,7 +5,7 @@ const Ritual = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ritual" className="w-full bg-[#F2EDE4] pt-9 lg:pt-20 pb-6 lg:pb-12 overflow-hidden relative z-10">
+    <section id="ritual" className="w-full bg-muted pt-9 lg:pt-20 pb-6 lg:pb-12 overflow-hidden relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Header Block */}

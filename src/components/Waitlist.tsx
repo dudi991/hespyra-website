@@ -73,7 +73,7 @@ const Waitlist = () => {
   ];
 
   return (
-    <section id="waitlist" className="w-full bg-[#EDE8DC] py-12 lg:py-20 relative z-10">
+    <section id="waitlist" className="w-full bg-muted py-12 lg:py-20 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-10 items-center max-w-6xl mx-auto">
           
