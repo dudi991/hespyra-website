@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Menu */}
       <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-background/98 backdrop-blur-md transform transition-transform duration-500 ease-in-out ${
+        className={`lg:hidden fixed inset-0 z-40 bg-[#FAF6F0] transform transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -93,7 +93,7 @@ const Navbar = () => {
                 key={item.href} 
                 href={item.href} 
                 onClick={() => setIsOpen(false)}
-                className="hover:text-accent transition-colors duration-300 border-b border-primary/5 pb-2"
+                className="hover:text-accent transition-colors duration-300 border-b border-primary/10 pb-2"
               >
                 {item.label}
               </a>
@@ -103,17 +103,17 @@ const Navbar = () => {
           <div className="flex flex-col gap-6 font-sans">
             {/* Language switcher in drawer */}
             <div className="flex items-center gap-4 text-sm tracking-widest">
-              <span className="text-primary/40">LANGUAGE:</span>
+              <span className="text-primary/60">LANGUAGE:</span>
               <button 
                 onClick={() => { setLanguage('de'); setIsOpen(false); }} 
-                className={`cursor-pointer ${language === 'de' ? 'text-accent font-bold underline' : 'text-primary/60'}`}
+                className={`cursor-pointer ${language === 'de' ? 'text-accent font-bold underline' : 'text-primary/80'}`}
               >
                 DEUTSCH
               </button>
-              <span className="text-primary/20">|</span>
+              <span className="text-primary/30">|</span>
               <button 
                 onClick={() => { setLanguage('en'); setIsOpen(false); }} 
-                className={`cursor-pointer ${language === 'en' ? 'text-accent font-bold underline' : 'text-primary/60'}`}
+                className={`cursor-pointer ${language === 'en' ? 'text-accent font-bold underline' : 'text-primary/80'}`}
               >
                 ENGLISH
               </button>
