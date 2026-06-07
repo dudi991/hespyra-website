@@ -137,7 +137,7 @@ const Ingredients = () => {
       ];
 
   return (
-    <section id="ingredients" className="w-full bg-[#F2EDE4] py-20 lg:py-28 relative z-10">
+    <section id="ingredients" className="w-full bg-[#F2EDE4] py-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -146,17 +146,17 @@ const Ingredients = () => {
         </span>
         
         {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
+        <h2 className="text-[25px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-3xl mx-auto">
           {t('ingredients.title')}
         </h2>
         
         {/* Description */}
-        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-3xl mx-auto leading-relaxed font-light mb-16 lg:mb-24">
+        <p className="font-sans text-sm sm:text-base text-primary/75 max-w-3xl mx-auto leading-relaxed font-light mb-10 lg:mb-24">
           {t('ingredients.desc')}
         </p>
 
         {/* 3-Column Ingredients Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-12 md:gap-0 text-left max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-10 md:gap-0 text-left max-w-6xl mx-auto">
           {groups.map((group, gIdx) => (
             <div 
               key={gIdx} 
@@ -164,7 +164,7 @@ const Ingredients = () => {
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-10 md:min-h-[180px] lg:min-h-[140px]">
+              <div className="mb-6 md:min-h-[180px] lg:min-h-[140px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
