@@ -21,7 +21,7 @@ const Faq = () => {
   ];
 
   return (
-    <section id="faq" className="w-full bg-[#F2EDE4] py-14 lg:py-28 relative z-10">
+    <section id="faq" className="w-full bg-[#F2EDE4] pt-12 pb-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -45,14 +45,14 @@ const Faq = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between text-left py-4.5 sm:py-7 focus:outline-none cursor-pointer group"
+                  className="w-full flex items-start justify-between text-left pt-[18px] pb-[14px] sm:py-7 focus:outline-none cursor-pointer group"
                 >
-                  <span className="font-sans text-[14px] sm:text-[17px] font-semibold tracking-wide text-primary/85 group-hover:text-primary transition-colors duration-200">
+                  <span className="font-sans text-[13px] sm:text-[17px] font-medium sm:font-semibold tracking-wide text-primary/85 group-hover:text-primary transition-colors duration-200">
                     {faq.q}
                   </span>
                   
                   {/* Plus / Minus Indicator */}
-                  <span className="text-accent text-[20px] sm:text-[22px] font-light leading-none select-none ml-4 transition-colors duration-200">
+                  <span className="text-accent text-[18px] sm:text-[22px] font-light leading-none select-none ml-4 mt-0.5 sm:mt-1 transition-colors duration-200">
                     {isOpen ? '—' : '+'}
                   </span>
                 </button>
@@ -60,10 +60,10 @@ const Faq = () => {
                 {/* Accordion Content */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[500px] opacity-100 pb-4 sm:pb-7 mt-1' : 'max-h-0 opacity-0'
+                    isOpen ? 'max-h-[500px] opacity-100 pb-5 sm:pb-7 pt-1 sm:mt-1' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="font-sans text-[13px] sm:text-[15px] text-primary/75 leading-relaxed font-light whitespace-pre-line text-left">
+                  <p className="font-sans text-[12.5px] sm:text-[15px] text-primary/70 leading-relaxed font-light whitespace-pre-line text-left">
                     {faq.a}
                   </p>
                 </div>
