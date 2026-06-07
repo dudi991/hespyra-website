@@ -40,23 +40,23 @@ const Hero = () => {
       ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#EDE8DC] pt-24 sm:pt-28 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#EDE8DC] pt-20 sm:pt-24 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-4 xl:gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-4 lg:gap-4 xl:gap-6 items-stretch">
           
           {/* MOBILE-ONLY: Product Image first */}
-          <div className="lg:hidden w-full mb-2">
+          <div className="lg:hidden w-full mb-1">
             {/* MOBILE-ONLY Eyebrow */}
-            <div className="w-full text-left mb-2.5">
-              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase block select-none">
+            <div className="w-full text-left mb-2">
+              <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.22em] font-medium text-accent/80 uppercase block select-none">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
             </div>
             
-            <div className="relative w-full h-[38vh] sm:h-[42vh] bg-white rounded-sm shadow-lg border border-border/40 overflow-hidden group">
+            <div className="relative w-full h-[28vh] sm:h-[32vh] bg-white rounded-sm shadow-lg border border-border/40 overflow-hidden group">
               <div className="absolute inset-0 overflow-hidden rounded-sm analog-grain bg-white">
                 <img 
                   src="images/heroHESPYRA.webp" 
@@ -70,17 +70,17 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-3 bg-[#F4ECE1]/95 py-3 px-4 rounded-sm shadow-md border border-primary/5">
-              <h4 className="font-serif text-[13.5px] sm:text-[14px] text-primary font-semibold mb-1 leading-tight tracking-wide">
+            <div className="mt-2 bg-[#F4ECE1]/95 py-2 px-3.5 rounded-sm shadow-md border border-primary/5">
+              <h4 className="font-serif text-[12.5px] sm:text-[13px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1.5">
-                <p className="font-sans text-[11px] sm:text-xs leading-tight text-primary/85 font-normal tracking-wide">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                <p className="font-sans text-[10px] sm:text-[11px] leading-tight text-primary/85 font-normal tracking-wide">
                   {language === 'de' 
                     ? "30 Abendrituale · Kakao · Vanille · Tonka"
                     : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
                 </p>
-                <div className="font-sans font-bold text-[8.5px] tracking-widest text-accent uppercase">
+                <div className="font-sans font-bold text-[8px] tracking-widest text-accent uppercase">
                   {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
                 </div>
               </div>
@@ -128,10 +128,10 @@ const Hero = () => {
             </div>
 
             {/* Bottom Group: Capsule claims */}
-            <div className="flex flex-wrap items-center gap-3 font-sans text-xs tracking-wider">
+            <div className="flex flex-wrap items-center gap-2 lg:gap-3 font-sans text-[11px] lg:text-xs tracking-wider">
               {claims.map((claim, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-white/60 border border-border/50 px-4 py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
-                  <span className="text-accent text-[11px] font-bold">✓</span>
+                <div key={idx} className="flex items-center gap-1.5 lg:gap-2 bg-white/60 border border-border/50 px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-primary/80 font-medium shadow-sm transition-colors hover:bg-white/95">
+                  <span className="text-accent text-[9.5px] lg:text-[11px] font-bold">✓</span>
                   <span>{claim}</span>
                 </div>
               ))}
