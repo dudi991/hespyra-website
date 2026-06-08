@@ -28,54 +28,54 @@ const WhyHespyra = () => {
       ];
 
   return (
-    <section id="comparison" className="w-full bg-light py-14 lg:py-28 relative z-10">
+    <section id="comparison" className="w-full bg-light py-10 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-2 md:mb-4 block select-none">
           {language === 'de' ? 'WARUM HESPYRA' : 'WHY HESPYRA'}
         </span>
         
         {/* Headline */}
-        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 max-w-2xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-4 md:mb-6 max-w-2xl mx-auto">
           {title}
         </h2>
-
+ 
         {/* Subheadline */}
-        <p className="font-sans text-[13px] sm:text-base text-primary/75 max-w-xl mx-auto mb-8 lg:mb-16 leading-relaxed font-light">
+        <p className="font-sans text-[13px] sm:text-base text-primary/75 max-w-xl mx-auto mb-6 lg:mb-16 leading-relaxed font-light">
           {language === 'de' 
             ? "HESPYRA setzt nicht beim Einschlafen an, sondern beim Übergang in den Abend."
             : "HESPYRA does not start with falling asleep, but with the transition into the evening."}
         </p>
-
+ 
         {/* Mobile Comparison Layout (stacked cards) */}
         <div className="block md:hidden space-y-3 max-w-md mx-auto">
           {tableData.map((row, idx) => (
-            <div key={idx} className="bg-white rounded-sm border border-primary/10 p-3.5 text-left shadow-[0_4px_15px_rgba(28,25,23,0.02)]">
+            <div key={idx} className="bg-white rounded-sm border border-primary/10 overflow-hidden shadow-[0_4px_15px_rgba(28,25,23,0.02)] text-left">
               {/* Category / Label */}
-              <div className="font-sans text-[10.5px] tracking-[0.15em] font-semibold text-accent uppercase mb-2.5 select-none">
+              <div className="bg-primary/5 px-3.5 py-1.5 border-b border-primary/10 font-sans text-[10.5px] tracking-[0.15em] font-semibold text-primary/80 uppercase select-none">
                 {row.label}
               </div>
               
-              <div className="flex flex-col gap-2 mt-1">
+              <div className="divide-y divide-primary/5">
                 {/* HESPYRA Column */}
-                <div className="bg-[#FAF6F0] p-2.5 rounded-sm border border-primary/5 flex flex-col justify-start">
-                  <span className="font-serif text-[10px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
+                <div className="bg-[#FAF6F0]/50 px-3.5 py-2.5">
+                  <div className="font-serif text-[11px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
                     {columnHeaders[0]}
-                  </span>
-                  <span className="font-sans text-[12.5px] text-primary leading-relaxed font-light">
+                  </div>
+                  <div className="font-sans text-[13px] text-primary leading-relaxed font-light">
                     {row.hespyra}
-                  </span>
+                  </div>
                 </div>
                 
                 {/* Classic Sleep Products Column */}
-                <div className="bg-white p-2.5 rounded-sm border border-primary/5 flex flex-col justify-start">
-                  <span className="font-sans text-[9px] tracking-[0.12em] font-semibold text-primary/40 mb-0.5 select-none uppercase">
+                <div className="bg-white px-3.5 py-2.5">
+                  <div className="font-sans text-[10px] tracking-[0.12em] font-semibold text-primary/45 mb-0.5 select-none uppercase">
                     {language === 'de' ? 'Schlafprodukte' : 'Sleep Products'}
-                  </span>
-                  <span className="font-sans text-[12.5px] text-primary/75 leading-relaxed font-light">
+                  </div>
+                  <div className="font-sans text-[13px] text-primary/75 leading-relaxed font-light">
                     {row.others}
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

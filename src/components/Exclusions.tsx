@@ -125,9 +125,8 @@ const Exclusions = () => {
     'lg:col-span-3 lg:col-start-10 lg:row-start-3',
     'lg:col-span-3 lg:col-start-10 lg:row-start-4'
   ];
-
   return (
-    <section id="exclusions" className="w-full bg-light pt-8 pb-5 lg:pt-24 lg:pb-10 relative z-10">
+    <section id="exclusions" className="w-full bg-light pt-14 lg:pt-28 pb-10 lg:pb-16 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
@@ -151,7 +150,7 @@ const Exclusions = () => {
                 </>
               )}
             </h2>
-            <div className="w-12 h-[1px] bg-accent/30 my-5"></div>
+            <div className="w-12 h-[1px] bg-accent/20 my-5"></div>
             <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light whitespace-pre-line">
               {exclusionsDesc}
             </p>

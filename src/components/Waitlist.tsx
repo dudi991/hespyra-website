@@ -57,40 +57,39 @@ const Waitlist = () => {
 
   const usps = [
     {
-      icon: <Star className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      icon: <Star className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit1_title'),
       desc: t('waitlist.benefit1_desc')
     },
     {
-      icon: <Mail className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      icon: <Mail className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit2_title'),
       desc: t('waitlist.benefit2_desc')
     },
     {
-      icon: <Gift className="w-[18px] h-[18px] mx-auto text-accent" strokeWidth={1.2} />,
+      icon: <Gift className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit3_title'),
       desc: t('waitlist.benefit3_desc')
     }
   ];
-
   return (
-    <section id="waitlist" className="w-full bg-muted py-12 lg:py-20 relative z-10">
+    <section id="waitlist" className="w-full bg-muted py-10 lg:py-24 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-10 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 xl:gap-10 items-center max-w-6xl mx-auto">
           
           {/* Left Column - Headline, Desc, and Form */}
           <div className="lg:col-span-6 text-left">
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-2 md:mb-4 block select-none">
               {t('waitlist.tag')}
             </span>
-            <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6">
+            <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-4 md:mb-6">
               {language === 'de' ? (
                 <>Die erste Edition von<br className="hidden sm:block" /> HESPYRA.</>
               ) : (
                 <>The first edition of<br className="hidden sm:block" /> HESPYRA.</>
               )}
             </h2>
-            <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light mb-6 max-w-[460px] whitespace-pre-line">
+            <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light mb-4 md:mb-6 max-w-[460px] whitespace-pre-line">
               {t('waitlist.desc')}
             </p>
 
@@ -111,14 +110,14 @@ const Waitlist = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className="flex-1 bg-white border border-primary/10 text-primary px-5 py-3.5 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
+                  className="flex-1 bg-white border border-primary/10 text-primary px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
                   required
                   autoComplete="off"
                 />
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-[#C88C65] text-white hover:bg-[#B67A53] px-8 py-3.5 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer"
+                  className="bg-accent text-white hover:bg-accent-hover px-8 py-4 text-xs font-sans tracking-[0.2em] font-bold uppercase transition-all duration-300 rounded-sm disabled:opacity-50 cursor-pointer shadow-sm"
                 >
                   {isSubmitting 
                     ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
@@ -134,10 +133,10 @@ const Waitlist = () => {
           </div>
 
           {/* Right Column - Brand USPs (Horizontal Grid on desktop) */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 text-center mt-5 lg:mt-0">
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 text-center mt-4 lg:mt-0">
             {usps.map((usp, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <div className="text-accent mb-1 sm:mb-2 md:mb-3 select-none h-6 flex items-center justify-center">
+                <div className="text-accent mb-1 sm:mb-2 md:mb-3 lg:mb-2 select-none h-6 lg:h-7 flex items-center justify-center">
                   {usp.icon}
                 </div>
                 <h4 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold uppercase text-primary">

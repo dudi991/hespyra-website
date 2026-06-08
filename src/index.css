@@ -336,4 +336,14 @@
   .analog-image:hover {
     filter: saturate(0.96) contrast(0.99) brightness(1.01) blur(0.1px) sepia(0.01);
   }
+
+  /* Custom Waitlist USP Icon Styling for Desktop/Mobile */
+  .waitlist-usp-icon {
+    stroke-width: 1.2px !important;
+  }
+  @media (min-width: 1024px) {
+    .waitlist-usp-icon {
+      stroke-width: 1.4px !important;
+    }
+  }
 }

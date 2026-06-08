@@ -137,7 +137,7 @@ const Ingredients = () => {
       ];
 
   return (
-    <section id="ingredients" className="w-full bg-muted py-8 lg:py-28 relative z-10">
+    <section id="ingredients" className="w-full bg-muted py-14 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

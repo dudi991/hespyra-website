@@ -54,9 +54,8 @@ const Testimonials = () => {
           text: "When the evening has arrived, but your mind has not yet caught up."
         }
       ];
-
   return (
-    <section id="usecases" className="w-full bg-muted py-14 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="usecases" className="w-full bg-muted py-12 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
@@ -79,14 +78,14 @@ const Testimonials = () => {
           {cases.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-[#FAF6F0] p-[18px] sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
+              className="bg-[#FAF6F0] p-[15px] sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
             >
               {/* Numbering */}
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-3 md:mb-5 block select-none">
+              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-2 md:mb-5 block select-none">
                 {item.num}
               </span>
               {/* Title */}
-              <h3 className="font-serif text-[18px] sm:text-[26px] lg:text-[28px] text-primary font-normal mb-2 md:mb-4 leading-snug">
+              <h3 className="font-serif text-[18px] sm:text-[26px] lg:text-[28px] text-primary font-normal mb-1.5 md:mb-4 leading-snug">
                 {item.title}
               </h3>
               {/* Body Text */}

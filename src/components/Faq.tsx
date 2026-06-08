@@ -19,18 +19,17 @@ const Faq = () => {
     { q: t('faq.q7'), a: t('faq.a7') },
     { q: t('faq.q8'), a: t('faq.a8') },
   ];
-
   return (
-    <section id="faq" className="w-full bg-light pt-12 pb-14 lg:py-28 relative z-10">
+    <section id="faq" className="w-full bg-light py-10 lg:py-28 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase mb-2 md:mb-4 block select-none">
           {t('faq.tag')}
         </span>
         
         {/* Headline */}
-        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-8 md:mb-16 lg:mb-20 max-w-2xl mx-auto">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-primary tracking-tight font-normal mb-6 md:mb-16 lg:mb-20 max-w-2xl mx-auto">
           {t('faq.title')}
         </h2>
 
@@ -45,7 +44,7 @@ const Faq = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-start justify-between text-left pt-[18px] pb-[14px] sm:py-7 focus:outline-none cursor-pointer group"
+                  className="w-full flex items-start justify-between text-left pt-[12px] pb-[10px] sm:py-7 focus:outline-none cursor-pointer group"
                 >
                   <span className="font-sans text-[13px] sm:text-[17px] font-medium sm:font-semibold tracking-wide text-primary/85 group-hover:text-primary transition-colors duration-200">
                     {faq.q}
@@ -60,7 +59,7 @@ const Faq = () => {
                 {/* Accordion Content */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[500px] opacity-100 pb-5 sm:pb-7 pt-1 sm:mt-1' : 'max-h-0 opacity-0'
+                    isOpen ? 'max-h-[500px] opacity-100 pb-3 sm:pb-7 pt-0.5 sm:mt-1' : 'max-h-0 opacity-0'
                   }`}
                 >
                   <p className="font-sans text-[12.5px] sm:text-[15px] text-primary/70 leading-relaxed font-light whitespace-pre-line text-left">

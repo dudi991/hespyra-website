@@ -12,13 +12,13 @@ const Hero = () => {
 
   const titleEnglish = (
     <>
-      Evening starts<br />in your <span className="italic text-accent font-serif font-normal">mind.</span>
+      Evening begins<br />in the <span className="italic text-accent font-serif font-normal">mind.</span>
     </>
   );
 
   const description = language === 'de' 
     ? "Ein trinkbares Abendritual mit ausgewählten Premium-Rohstoffen und warmen Geschmacksnoten — für den Übergang vom Tagesmodus in einen ruhigeren Abend. Ohne Melatonin. Als Drink statt Kapsel."
-    : "A drinkable evening ritual with selected premium ingredients and warm flavor notes — for the transition from daytime mode to a calmer evening. Melatonin-free. As a drink instead of capsules.";
+    : "A drinkable evening ritual with selected premium ingredients and warm flavor notes — for the transition from the day's pace to a quieter evening. Melatonin-free. A drink instead of capsules.";
 
   const ctaPrimary = language === 'de' ? "DIE ERSTE EDITION SICHERN" : "SECURE THE FIRST EDITION";
 
@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="lg:hidden w-full mb-1">
             {/* MOBILE-ONLY Eyebrow */}
             <div className="w-full text-left mb-2">
-              <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.16em] font-medium text-accent/80 uppercase block select-none">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-accent uppercase block select-none">
                 {language === 'de' ? 'NICHT FÜR DEN SCHLAF. FÜR DEN MOMENT DAVOR.' : 'NOT FOR SLEEP. FOR THE MOMENT BEFORE.'}
               </span>
             </div>

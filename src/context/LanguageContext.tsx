@@ -185,8 +185,8 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Hero
     'hero.slogan': 'NOT FOR SLEEP.\nFOR THE MOMENT BEFORE.',
-    'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'HESPYRA is a drinkable evening ritual.\nFor the moment when the day becomes quieter.',
+    'hero.title': 'Evening begins in the mind.',
+    'hero.desc': 'HESPYRA is a drinkable evening ritual.\nFor the moment when the day grows quiet.',
     'hero.cta': 'RECEIVE INVITATION',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',
@@ -203,10 +203,11 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'THE TRANSITION',
-    'philosophy.title': 'Evening is here.\nBut not quite within reach yet.',
-    'philosophy.text1': 'Sometimes the day ends outwardly sooner than inwardly.\nThe room grows quieter, the light softer, the tasks less visible.',
-    'philosophy.text2': 'And yet, something of the day lingers in your mind:\nconversations, decisions, messages, open loops.',
+    'philosophy.title': 'The evening is here.\nBut not yet within reach.',
+    'philosophy.text1': 'Sometimes the day ends outwardly sooner than it does within.\nThe room grows quieter, the light softer, the tasks less visible.',
+    'philosophy.text2': 'And yet, the day lingers in the mind:\nconversations, decisions, messages, open loops.',
     'philosophy.text3': 'HESPYRA begins where the day still echoes.',
+
 
     // EditorialPause
     'pause.part1': 'Not everything has to come',
@@ -216,21 +217,22 @@ const translations: Record<Language, Record<string, string>> = {
     // Ritual
     'ritual.tag': 'THE RITUAL · THREE STEPS',
     'ritual.title': 'A small moment, in three parts.',
-    'ritual.desc': 'Enough to begin the evening. Warm, soft, reserved — not sweet, not heavy, not loud.',
+    'ritual.desc': 'Enough to begin the evening. Warm, soft, understated — not sweet, not heavy, not loud.',
     'ritual.clarity_line1': 'A drinkable ritual in powder form.',
     'ritual.clarity_line2': 'For the moment when the day is allowed to step back.',
     'ritual.step1_tag': 'Release',
-    'ritual.step1_text': 'One spoon in your glass.\nWarm water or plant milk.\nThe day is allowed to become quieter.',
+    'ritual.step1_text': 'One spoon in your glass.\nWarm water or plant milk.\nThe day is allowed to grow quiet.',
     'ritual.step2_tag': 'Gather',
-    'ritual.step2_text': 'Stir. Breathe. Hold the glass.\nThoughts gather.\nThe moment becomes clearer.',
+    'ritual.step2_text': 'Stir. Breathe. Hold the glass.\nThoughts settle.\nThe moment becomes clearer.',
     'ritual.step3_tag': 'Arrive',
-    'ritual.step3_text': 'The glass becomes emptier.\nThe day steps back.\nYou arrive in the evening.',
+    'ritual.step3_text': 'The glass empties.\nThe day steps back.\nYou arrive in the evening.',
     'ritual.alt': 'HESPYRA evening ritual preparation step',
+
 
     // Ingredients
     'ingredients.tag': 'THE FORMULA',
     'ingredients.title': 'A quiet composition for the evening.',
-    'ingredients.desc': 'Minerals, amino acids, plant substances and warm flavor notes — selected for a drinkable evening ritual.',
+    'ingredients.desc': 'Minerals, amino acids, plant extracts, and warm flavor notes — selected for a drinkable evening ritual.',
     'ingredients.list_label': 'The components of the composition',
     
     // Ingredients Groups (English)
@@ -299,8 +301,8 @@ const translations: Record<Language, Record<string, string>> = {
     'waitlist.benefit3_desc': 'A first glance at the product and composition.',
 
     // Why Hespyra & Trust (English)
-    'why.tag': 'COMPARISON',
-    'why.title': 'Why HESPYRA?',
+    'why.tag': 'THE DIFFERENCE',
+    'why.title': 'Why HESPYRA.',
     'why.table_criteria': 'Criteria',
     'why.table_others': 'Other Aids',
     'why.badge1_title': 'MADE IN GERMANY',
@@ -311,34 +313,34 @@ const translations: Record<Language, Record<string, string>> = {
     'why.badge3_desc': 'No dependency risk',
     'why.badge4_title': 'SYNERGISTIC',
     'why.badge4_desc': 'Bioavailable ingredients',
-    'why.row1_label': 'Effect mechanism',
-    'why.row1_hespyra': 'Gently promotes natural relaxation and mental clarity.',
-    'why.row1_others': 'Forces drowsiness through hormones (melatonin) or sedatives.',
+    'why.row1_label': 'Mechanism',
+    'why.row1_hespyra': 'Gently supports natural relaxation and mental clarity.',
+    'why.row1_others': 'Induces drowsiness through hormones or sedatives.',
     'why.row2_label': 'The morning after',
-    'why.row2_hespyra': 'Clear head and full energy without grogginess.',
-    'why.row2_others': 'Frequent grogginess and morning sluggishness.',
+    'why.row2_hespyra': 'A clear mind and natural energy the next morning.',
+    'why.row2_others': 'Risk of morning grogginess and sluggishness.',
     'why.row3_label': 'Dependency risk',
-    'why.row3_hespyra': 'None. Perfectly suitable for a daily evening routine.',
+    'why.row3_hespyra': 'None. Designed for a daily evening routine.',
     'why.row3_others': 'High risk of tolerance build-up and dependency.',
     'why.row4_label': 'Ingredients',
-    'why.row4_hespyra': 'Pure plant extracts, amino acids, and bioactive magnesium.',
-    'why.row4_others': 'Synthetic fillers, artificial flavors, or hormones.',
+    'why.row4_hespyra': 'Selected plant extracts, amino acids, and bioactive magnesium.',
+    'why.row4_others': 'Often contains artificial additives, synthetic fillers, or hormones.',
 
     // FAQ (English)
     'faq.tag': 'FREQUENTLY ASKED QUESTIONS',
     'faq.title': 'Questions, answered.',
     'faq.q1': 'Is HESPYRA a sleeping aid?',
-    'faq.a1': 'No. HESPYRA is not a sleeping aid. It is a drinkable evening ritual for the moment before sleep — the transition from day mode to a calmer evening.',
+    'faq.a1': 'No. HESPYRA is not a sleeping aid. It is a drinkable evening ritual for the moment before sleep — the transition from the day\'s pace to a quieter evening.',
     'faq.q2': 'Does it contain melatonin?',
-    'faq.a2': 'No. HESPYRA is melatonin-free. The formulation is not designed to artificially induce sleep, but to let the evening begin consciously.',
+    'faq.a2': 'No. HESPYRA is melatonin-free. The formulation is not designed to artificially induce sleep, but to let the evening begin mindfully.',
     'faq.q3': 'What makes HESPYRA different from capsules or gummies?',
-    'faq.a3': 'HESPYRA is a drink. Stir it, drink it, sit down for a moment. This makes intake not just functional, but part of your evening routine.',
+    'faq.a3': 'HESPYRA is a drink. Stir it, hold the glass, rest for a moment. This turns preparation into a quiet evening routine rather than just a function.',
     'faq.q4': 'What does HESPYRA taste like?',
-    'faq.a4': 'Warm, round, and mature — with cocoa, vanilla, and tonka. Not sweet and childish, not heavy, not medicinal.',
+    'faq.a4': 'Warm, balanced, and refined — with cocoa, vanilla, and tonka. Not sweet, not heavy, not medicinal.',
     'faq.q5': 'How is HESPYRA prepared?',
     'faq.a5': 'One portion is stirred into water or plant-based milk. HESPYRA can be enjoyed warm or cold.',
     'faq.q6': 'When should I drink HESPYRA?',
-    'faq.a6': 'When you want to consciously pause the day and start your evening — for example, after work, after dinner, or as quiet slowly settles in at home.',
+    'faq.a6': 'When you wish to consciously pause the day and begin your evening — after work, after dinner, or as quiet slowly settles in at home.',
     'faq.q7': 'When will the first edition be available?',
     'faq.a7': 'HESPYRA is currently being developed in small steps. Sign up for the waitlist to receive early access to the first edition.',
     'faq.q8': 'Is HESPYRA vegan?',
