@@ -87,23 +87,23 @@ const Navbar = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full justify-between p-8 pt-24">
-          <div className="flex flex-col gap-8 font-serif text-3xl sm:text-4xl font-normal text-primary">
+        <div className="flex flex-col h-full justify-between px-8 pt-20 pb-10">
+          <div className="flex flex-col gap-7 font-serif text-[32px] sm:text-[38px] font-normal tracking-wide text-primary">
             {menuItems.map((item) => (
               <a 
                 key={item.href} 
                 href={item.href} 
                 onClick={() => setIsOpen(false)}
-                className="hover:text-accent transition-colors duration-200 border-b border-primary/5 pb-3 block text-left"
+                className="hover:text-accent transition-colors duration-200 border-b border-primary/5 pb-2.5 block text-left"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <div className="flex flex-col gap-6 font-sans">
+          <div className="border-t border-primary/5 pt-5 flex flex-col gap-4 font-sans">
             {/* Language switcher in drawer */}
-            <div className="flex items-center gap-4 text-sm tracking-widest">
+            <div className="flex items-center gap-4 text-[13px] tracking-widest">
               <span className="text-primary/60">LANGUAGE:</span>
               <button 
                 onClick={() => { setLanguage('de'); setIsOpen(false); }} 
