@@ -1,0 +1,15 @@
+# Ignore unused raw PNG source images to prevent Vercel upload errors
+public/images/*.png
+
+# Ignore standard development files
+.env
+.env.local
+.env.*.local
+node_modules
+dist
+.git
+.github
+*.log
+implementation_plan.md
+task.md
+walkthrough.md
