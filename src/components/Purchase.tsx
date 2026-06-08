@@ -78,24 +78,24 @@ const Purchase = () => {
     }
   };
   return (
-    <section id="purchase" className="w-full bg-[#333230] py-12 sm:py-16 lg:py-32 relative z-10 text-[#FAF8F2] overflow-hidden">
+    <section id="purchase" className="w-full bg-[#333230] py-12 sm:py-16 lg:py-32 relative z-10 text-[#F7F4EE] overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         
         {/* Section Tag */}
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-[#C58A61] uppercase mb-4 block select-none">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] font-medium text-[#C69063] uppercase mb-4 block select-none">
           {tagText}
         </span>
         
         {/* Headline */}
-        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-[#FAF8F2] tracking-tight font-normal mb-6">
+        <h2 className="text-[23px] sm:text-4xl md:text-5xl leading-[1.25] font-serif text-[#F7F4EE] tracking-tight font-normal mb-6">
           {titleText}
         </h2>
 
         {/* Subline */}
-        <p className="font-sans text-[13px] sm:text-base text-[#FAF8F2]/80 leading-relaxed font-light max-w-2xl mx-auto mb-8">
+        <p className="font-sans text-[13px] sm:text-base text-[#F7F4EE]/80 leading-relaxed font-light max-w-2xl mx-auto mb-8">
           {language === 'de' ? sublineTextGerman : sublineTextEnglish}
         </p>
 
@@ -118,7 +118,7 @@ const Purchase = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isSubmitting}
-                className="flex-1 bg-[#292827] border border-[#FAF8F2]/10 text-[#FAF8F2]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#E6DED2]/70 rounded-sm"
+                className="flex-1 bg-[#292827] border border-[#F7F4EE]/10 text-[#F7F4EE]/90 px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-[#DDD4C8]/70 rounded-sm"
                 required
                 autoComplete="off"
               />
@@ -142,14 +142,14 @@ const Purchase = () => {
         </div>
 
         {/* Microcopy */}
-        <p className="font-sans text-[13px] sm:text-[14px] text-[#FAF8F2]/80 tracking-wide mb-6 md:mb-10 select-none">
+        <p className="font-sans text-[13px] sm:text-[14px] text-[#F7F4EE]/80 tracking-wide mb-6 md:mb-10 select-none">
           {language === 'de' 
             ? "Kein Spam. Nur relevante Updates. Jederzeit abmeldbar."
             : "No spam. Relevant updates only. Unsubscribe anytime."}
         </p>
 
         {/* Trust Info Points */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-2 sm:gap-y-4 gap-x-12 sm:gap-x-16 text-[#FAF8F2]/80 font-sans text-[11.5px] sm:text-[14px] tracking-widest uppercase font-normal mt-4 md:mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-y-2 sm:gap-y-4 gap-x-12 sm:gap-x-16 text-[#F7F4EE]/80 font-sans text-[11.5px] sm:text-[14px] tracking-widest uppercase font-normal mt-4 md:mt-10">
           {infoPoints.map((point, idx) => (
             <div key={idx} className="flex items-center gap-2">
               <span className="text-accent/80 text-[9px] sm:text-[10px] font-bold select-none">✓</span>

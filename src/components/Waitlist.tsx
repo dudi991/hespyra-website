@@ -110,7 +110,7 @@ const Waitlist = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className="flex-1 bg-white border border-primary/10 text-primary px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
+                  className="flex-1 bg-[#FBF8F3] border border-border text-primary px-5 py-4 text-xs font-sans tracking-wide focus:outline-none focus:border-accent transition-colors font-light placeholder-primary/40 rounded-sm"
                   required
                   autoComplete="off"
                 />
