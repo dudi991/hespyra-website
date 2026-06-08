@@ -45,7 +45,7 @@ const BenefitStrip = () => {
       ];
 
   return (
-    <section id="ritual" className="w-full bg-[#F7F4ED] py-20 lg:py-28 border-t border-border/40 relative z-10">
+    <section id="ritual" className="w-full bg-[#F8F5EE] py-20 lg:py-28 border-t border-border/40 relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

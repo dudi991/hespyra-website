@@ -78,7 +78,7 @@ const Testimonials = () => {
           {cases.map((item, idx) => (
             <div 
               key={idx} 
-              className="bg-[#F7F4ED] p-[15px] sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
+              className="bg-[#F8F5EE] p-[15px] sm:p-10 border border-primary/5 rounded-sm text-left flex flex-col justify-start transition-all duration-300 hover:translate-y-[-2px] shadow-[0_8px_24px_rgba(28,25,23,0.02)] h-full"
             >
               {/* Numbering */}
               <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] font-semibold text-accent mb-2 md:mb-5 block select-none">
