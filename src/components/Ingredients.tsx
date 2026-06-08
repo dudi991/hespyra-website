@@ -25,15 +25,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Magnesium Bisglycinat',
-              info: 'Eine gut verträgliche Magnesiumform — verbunden mit Glycine als Teil der Verbindung.'
+              info: 'Eine gut verträgliche Magnesiumform, verbunden mit der Aminosäure Glycin.'
             },
             {
               name: 'Magtein® Magnesium L-Threonat',
-              info: 'Eine patentierte Magnesiumform — ausgewählt für die Rezeptur hinter dem Abendritual.'
+              info: 'Eine patentierte, bioverfügbare Magnesiumform für das Abendritual.'
             },
             {
               name: 'Reishi Mushroom Extract',
-              info: 'Ein funktionaler Pilz mit langer Geschichte in asiatischen Ritual- und Pflanzenwelten.'
+              info: 'Ein funktionaler Vitalpilz mit langer Tradition in asiatischen Pflanzenwelten.'
             }
           ]
         },
@@ -44,15 +44,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Suntheanine® L-Theanin',
-              info: 'Eine Aminosäure, bekannt aus der Teepflanze.'
+              info: 'Eine beruhigende Aminosäure, gewonnen aus grünem Tee.'
             },
             {
               name: 'SerinAid® Phosphatidylserin',
-              info: 'Ein funktionaler Nährstoff, der in modernen Formulierungen für mentale Präsenz eingesetzt wird.'
+              info: 'Ein funktionaler Nährstoff für mentale Erholung und Ruhe am Abend.'
             },
             {
               name: 'Rhodiolife® Rhodiola Rosea',
-              info: 'Ein Pflanzenextrakt, bewusst gewählt als Alternative zu klassischen Abend-Adaptogenen.'
+              info: 'Ein Pflanzenextrakt als bewusste Alternative zu klassischen Adaptogenen.'
             }
           ]
         },
@@ -63,15 +63,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Affron® Safran',
-              info: 'Ein Safran-Extrakt aus Spanien — angebaut, geerntet und verarbeitet nach klaren Qualitätsstandards.'
+              info: 'Ein edler Safran-Extrakt, angebaut nach höchsten Qualitätsstandards.'
             },
             {
               name: 'Kakao',
-              info: 'Die warme Basis des Geschmacks — rund, erwachsen, nicht süß-kindlich.'
+              info: 'Die warme Basis des Abendrituals — rund, erwachsen und ungesüßt.'
             },
             {
               name: 'Vanille & Tonka',
-              info: 'Weiche, vertraute Noten — warm, rund und zurückhaltend.'
+              info: 'Weiche, vertraute Noten — warm, ausbalanciert und zurückhaltend.'
             }
           ]
         }
@@ -84,15 +84,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Magnesium Bisglycinate',
-              info: 'A well-tolerated form of magnesium — bound with glycine as part of the compound.'
+              info: 'A highly bioavailable form of magnesium, bound with the amino acid glycine.'
             },
             {
               name: 'Magtein® Magnesium Threonate',
-              info: 'A patented form of magnesium — selected for the recipe behind the evening ritual.'
+              info: 'A patented, bioavailable form of magnesium for the evening ritual.'
             },
             {
               name: 'Reishi Mushroom Extract',
-              info: 'A functional mushroom with a long history in Asian ritual and plant traditions.'
+              info: 'A functional vital mushroom with a long tradition in Asian botany.'
             }
           ]
         },
@@ -103,15 +103,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Suntheanine® L-Theanine',
-              info: 'An amino acid, well-known from the tea plant.'
+              info: 'A calming amino acid derived from green tea.'
             },
             {
               name: 'SerinAid® Phosphatidylserine',
-              info: 'A functional nutrient used in modern formulations for mental presence.'
+              info: 'A functional nutrient for mental recovery and peace in the evening.'
             },
             {
               name: 'Rhodiolife® Rhodiola Rosea',
-              info: 'A plant extract, deliberately chosen as an alternative to classic evening adaptogens.'
+              info: 'A botanical extract chosen as a modern alternative to classic adaptogens.'
             }
           ]
         },
@@ -122,15 +122,15 @@ const Ingredients = () => {
           items: [
             {
               name: 'Affron® Saffron',
-              info: 'A saffron extract from Spain — grown, harvested, and processed according to clear quality standards.'
+              info: 'A premium saffron extract, grown under strict quality standards.'
             },
             {
               name: 'Kakao',
-              info: 'The warm foundation of the flavor — round, mature, not sweet-childish.'
+              info: 'The warm foundation of the flavor — round, mature, and unsweetened.'
             },
             {
               name: 'Vanilla & Tonka',
-              info: 'Soft, familiar notes — warm, round, and reserved.'
+              info: 'Soft, familiar notes — warm, balanced, and reserved.'
             }
           ]
         }
@@ -156,15 +156,15 @@ const Ingredients = () => {
         </p>
 
         {/* 3-Column Ingredients Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-7 md:gap-0 text-left max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-primary/10 gap-16 md:gap-0 text-left max-w-6xl mx-auto">
           {groups.map((group, gIdx) => (
             <div 
               key={gIdx} 
-              className={`flex flex-col ${gIdx === 0 ? 'md:pr-10 lg:pr-16 pb-8 md:pb-0' : gIdx === 1 ? 'md:px-10 lg:px-16 pb-8 md:pb-0' : 'md:pl-10 lg:pl-16'}`}
+              className={`flex flex-col ${gIdx === 0 ? 'md:pr-10 lg:pr-16 md:pb-0' : gIdx === 1 ? 'md:px-10 lg:px-16 md:pb-0' : 'md:pl-10 lg:pl-16'}`}
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-4 md:min-h-[180px] lg:min-h-[140px]">
+              <div className="mb-8 md:mb-0 md:min-h-[180px] lg:min-h-[140px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
@@ -177,10 +177,10 @@ const Ingredients = () => {
               </div>
 
               {/* Group Ingredients Items */}
-              <div className="space-y-3.5 md:space-y-6">
+              <div className="space-y-6 md:space-y-6">
                 {group.items.map((item, iIdx) => (
                   <div key={iIdx} className="flex flex-col text-left md:min-h-[140px] lg:min-h-[110px]">
-                    <div className="flex justify-between items-baseline mb-1.5 md:mb-2.5">
+                    <div className="flex justify-between items-baseline mb-1 md:mb-2.5">
                       <h4 className="font-sans text-[13px] lg:text-[16px] font-semibold tracking-wide text-primary">
                         {item.name}
                       </h4>
