@@ -204,7 +204,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Philosophy / CustomerStory
     'philosophy.tag': 'THE TRANSITION',
     'philosophy.title': 'The evening is here.\nBut you have not quite arrived.',
-    'philosophy.text1': 'Sometimes the day ends outwardly sooner than it does within.\nThe room grows quieter, the light softer, the tasks less visible.',
+    'philosophy.text1': 'Sometimes the day ends outwardly before it ends within.\nThe room grows quieter, the light softer, the tasks less visible.',
     'philosophy.text2': 'And yet, the day lingers in the mind:\nconversations, decisions, messages, open loops.',
     'philosophy.text3': 'HESPYRA begins where the day still echoes.',
 
@@ -216,7 +216,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ritual
     'ritual.tag': 'THE RITUAL · THREE STEPS',
     'ritual.title': 'A small moment, in three parts.',
-    'ritual.desc': 'Enough to begin the evening. Warm, soft, understated — not sweet, not heavy, not loud.',
+    'ritual.desc': 'Enough to begin the evening. Warm, soft, restrained — not sweet, not heavy, not loud.',
     'ritual.clarity_line1': 'A drinkable ritual in powder form.',
     'ritual.clarity_line2': 'For the moment when the day is allowed to step back.',
     'ritual.step1_tag': 'Release',

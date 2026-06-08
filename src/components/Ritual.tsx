@@ -32,7 +32,7 @@ const Ritual = () => {
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step1_tag')}
               </h3>
-              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/75 font-light whitespace-pre-line">
+              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                 {t('ritual.step1_text')}
               </p>
             </div>
@@ -50,7 +50,7 @@ const Ritual = () => {
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step2_tag')}
               </h3>
-              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/75 font-light whitespace-pre-line">
+              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                 {t('ritual.step2_text')}
               </p>
             </div>
@@ -68,7 +68,7 @@ const Ritual = () => {
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step3_tag')}
               </h3>
-              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/75 font-light whitespace-pre-line">
+              <p className="font-sans text-[12.5px] sm:text-sm lg:text-[15px] leading-relaxed text-primary/85 font-light whitespace-pre-line">
                 {t('ritual.step3_text')}
               </p>
             </div>
