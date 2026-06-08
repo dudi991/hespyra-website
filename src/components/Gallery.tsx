@@ -43,7 +43,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-[35px] lg:pt-[52px] pb-[10px] lg:pb-[13px] overflow-hidden">
+    <section className="w-full bg-white pt-[26px] pb-[8px] lg:pt-[36px] lg:pb-[9px] overflow-hidden">
       {/* Header Container (remains centered and bounded) */}
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12 mb-16 lg:mb-20">
         <div className="text-center">

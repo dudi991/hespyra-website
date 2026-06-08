@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 const CustomerStory = () => {
   const { t } = useLanguage();
   return (
-    <section id="philosophy" className="w-full bg-muted py-[49px] lg:py-[92px] relative z-10">
+    <section id="philosophy" className="w-full bg-muted pt-[30px] pb-[35px] lg:pt-[56px] lg:pb-[64px] relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Category Tag */}

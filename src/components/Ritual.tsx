@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 const Ritual = () => {
   const { t } = useLanguage();
   return (
-    <section id="ritual" className="w-full bg-muted pt-[35px] lg:pt-[92px] pb-[21px] lg:pb-[46px] overflow-hidden relative z-10">
+    <section id="ritual" className="w-full bg-muted pt-[24px] pb-[16px] lg:pt-[60px] lg:pb-[32px] overflow-hidden relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Header Block */}

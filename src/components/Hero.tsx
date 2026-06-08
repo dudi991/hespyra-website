@@ -40,7 +40,7 @@ const Hero = () => {
       ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-light pt-[72px] sm:pt-[84px] lg:pt-[120px] pb-[44px] sm:pb-[56px] lg:pb-[68px] z-10 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-light pt-[96px] sm:pt-[108px] lg:pt-[120px] pb-[32px] sm:pb-[42px] lg:pb-[44px] z-10 overflow-hidden">
       {/* Background grain texture effect */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1f1b18_1px,transparent_1px)] [background-size:16px_16px]"></div>
 

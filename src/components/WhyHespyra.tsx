@@ -28,7 +28,7 @@ const WhyHespyra = () => {
       ];
 
   return (
-    <section id="comparison" className="w-full bg-[#FAF8F2] py-[35px] lg:py-[92px] relative z-10">
+    <section id="comparison" className="w-full bg-[#FAF8F2] py-[26px] lg:py-[64px] relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

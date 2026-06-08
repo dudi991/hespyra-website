@@ -126,7 +126,7 @@ const Exclusions = () => {
     'lg:col-span-3 lg:col-start-10 lg:row-start-4'
   ];
   return (
-    <section id="exclusions" className="w-full bg-light pt-[49px] lg:pt-[92px] pb-[35px] lg:pb-[52px] relative z-10">
+    <section id="exclusions" className="w-full bg-light pt-[36px] pb-[26px] lg:pt-[64px] lg:pb-[36px] relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Grid: 3-6-3 layout with 12 cols, grid items mapped to explicit rows on desktop */}
