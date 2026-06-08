@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-0.5 bg-[#F2EDE3]/70 py-1.5 px-3.5 rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.01)] border border-border/30">
+            <div className="mt-0.5 bg-[#F3EDE3]/70 py-1.5 px-3.5 rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.01)] border border-border/30">
               <h4 className="font-serif text-[12.5px] sm:text-[13px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
@@ -155,7 +155,7 @@ const Hero = () => {
               </div>
               
               {/* Overlay card in bottom-left - overflows left */}
-              <div className="absolute bottom-5 lg:-left-6 bg-[#F2EDE3]/90 backdrop-blur-[2px] py-2.5 px-3.5 w-fit max-w-[260px] sm:max-w-[280px] rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.006)] border border-border/30 transition-all duration-500 z-20">
+              <div className="absolute bottom-5 lg:-left-6 bg-[#F3EDE3]/90 backdrop-blur-[2px] py-2.5 px-3.5 w-fit max-w-[260px] sm:max-w-[280px] rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.006)] border border-border/30 transition-all duration-500 z-20">
                 <h4 className="font-serif text-[16px] text-primary font-semibold mb-1 leading-tight tracking-wide">
                   HESPYRA Evening Ritual
                 </h4>
