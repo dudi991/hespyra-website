@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Menu */}
       <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-[#F8F5EE] transform transition-transform duration-500 ease-in-out ${
+        className={`lg:hidden fixed inset-0 z-40 bg-[#FAF8F2] transform transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
