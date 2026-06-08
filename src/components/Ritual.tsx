@@ -37,7 +37,7 @@ const Ritual = () => {
               </p>
             </div>
             <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
-              <GlassWater className="w-[16px] h-[16px] md:w-5 md:h-5" strokeWidth={1.4} />
+              <GlassWater className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
 
@@ -55,7 +55,7 @@ const Ritual = () => {
               </p>
             </div>
             <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
-              <ChevronsUp className="w-[16px] h-[16px] md:w-5 md:h-5" strokeWidth={1.4} />
+              <ChevronsUp className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
 
@@ -73,7 +73,7 @@ const Ritual = () => {
               </p>
             </div>
             <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
-              <Moon className="w-[16px] h-[16px] md:w-5 md:h-5" strokeWidth={1.4} />
+              <Moon className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
 
