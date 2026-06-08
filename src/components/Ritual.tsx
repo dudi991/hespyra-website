@@ -25,12 +25,12 @@ const Ritual = () => {
           
           {/* Card 01 - Release */}
           <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
-            <div className="flex items-center gap-3.5 md:block mb-2 md:mb-8 select-none">
+            <div className="flex items-baseline gap-5 md:block mb-2 md:mb-8 select-none">
               <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 01
               </span>
-              <div className="text-accent/90 md:hidden flex-shrink-0">
-                <GlassWater className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              <div className="text-accent/75 md:hidden flex-shrink-0">
+                <GlassWater className="w-[16px] h-[16px]" strokeWidth={1.4} />
               </div>
             </div>
             <div>
@@ -48,12 +48,12 @@ const Ritual = () => {
 
           {/* Card 02 - Gather */}
           <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
-            <div className="flex items-center gap-3.5 md:block mb-2 md:mb-8 select-none">
+            <div className="flex items-baseline gap-5 md:block mb-2 md:mb-8 select-none">
               <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 02
               </span>
-              <div className="text-accent/90 md:hidden flex-shrink-0">
-                <ChevronsUp className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              <div className="text-accent/75 md:hidden flex-shrink-0">
+                <ChevronsUp className="w-[16px] h-[16px]" strokeWidth={1.4} />
               </div>
             </div>
             <div>
@@ -71,12 +71,12 @@ const Ritual = () => {
 
           {/* Card 03 - Arrive */}
           <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px]">
-            <div className="flex items-center gap-3.5 md:block mb-2 md:mb-8 select-none">
+            <div className="flex items-baseline gap-5 md:block mb-2 md:mb-8 select-none">
               <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 03
               </span>
-              <div className="text-accent/90 md:hidden flex-shrink-0">
-                <Moon className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              <div className="text-accent/75 md:hidden flex-shrink-0">
+                <Moon className="w-[16px] h-[16px]" strokeWidth={1.4} />
               </div>
             </div>
             <div>
