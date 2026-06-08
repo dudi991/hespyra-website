@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-1 bg-[#EFEAE0]/90 py-1.5 px-3.5 rounded-sm shadow-[0_4px_12px_rgba(28,25,23,0.02)] border border-primary/5">
+            <div className="mt-0.5 bg-[#EFEAE0]/70 py-1.5 px-3.5 rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.01)] border border-border/30">
               <h4 className="font-serif text-[12.5px] sm:text-[13px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
