@@ -103,20 +103,23 @@ const Navbar = () => {
 
           <div className="border-t border-primary/5 pt-5 flex flex-col gap-4 font-sans">
             {/* Language switcher in drawer */}
-            <div className="flex items-center gap-4 text-[13px] tracking-widest">
-              <span className="text-primary/60">LANGUAGE:</span>
+            <div className="flex items-center gap-2.5 text-[13px] font-sans tracking-[0.15em] font-semibold select-none">
               <button 
                 onClick={() => { setLanguage('de'); setIsOpen(false); }} 
-                className={`cursor-pointer ${language === 'de' ? 'text-accent font-bold underline' : 'text-primary/80'}`}
+                className={`cursor-pointer transition-colors duration-200 hover:text-accent ${
+                  language === 'de' ? 'text-accent font-bold' : 'text-primary/50 font-normal'
+                }`}
               >
-                DEUTSCH
+                DE
               </button>
-              <span className="text-primary/30">|</span>
+              <span className="text-primary/20">|</span>
               <button 
                 onClick={() => { setLanguage('en'); setIsOpen(false); }} 
-                className={`cursor-pointer ${language === 'en' ? 'text-accent font-bold underline' : 'text-primary/80'}`}
+                className={`cursor-pointer transition-colors duration-200 hover:text-accent ${
+                  language === 'en' ? 'text-accent font-bold' : 'text-primary/50 font-normal'
+                }`}
               >
-                ENGLISH
+                EN
               </button>
             </div>
 
