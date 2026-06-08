@@ -51,7 +51,7 @@ const WhyHespyra = () => {
         {/* Mobile Comparison Layout (stacked cards) */}
         <div className="block md:hidden space-y-3 max-w-md mx-auto">
           {tableData.map((row, idx) => (
-            <div key={idx} className="bg-[#FBF8F3] rounded-sm border border-primary/10 overflow-hidden shadow-[0_4px_15px_rgba(28,25,23,0.02)] text-left">
+            <div key={idx} className="bg-[#FBF8F3] rounded-sm border border-border/40 overflow-hidden shadow-none text-left">
               {/* Category / Label */}
               <div className="bg-primary/5 px-3.5 py-1.5 border-b border-primary/10 font-sans text-[10.5px] tracking-[0.15em] font-semibold text-primary/80 uppercase select-none">
                 {row.label}
@@ -59,21 +59,23 @@ const WhyHespyra = () => {
               
               <div className="divide-y divide-border/30">
                 {/* HESPYRA Column */}
-                <div className="bg-[#EFE9DF]/40 px-3.5 py-2.5 border-x border-primary/25">
-                  <div className="font-serif text-[11px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
+                <div className="bg-[#FBF8F3] px-3.5 py-2.5 border-x border-border/40 relative">
+                  {/* Subtle left accent indicator */}
+                  <div className="absolute top-0 left-0 bottom-0 w-[2.5px] bg-accent/70"></div>
+                  <div className="font-serif text-[11.5px] tracking-[0.1em] font-semibold text-primary mb-0.5 select-none uppercase">
                     {columnHeaders[0]}
                   </div>
-                  <div className="font-sans text-[13px] text-primary leading-relaxed font-light">
+                  <div className="font-sans text-[13px] text-primary leading-relaxed font-medium">
                     {row.hespyra}
                   </div>
                 </div>
                 
                 {/* Classic Sleep Products Column */}
                 <div className="bg-[#FBF8F3] px-3.5 py-2.5">
-                  <div className="font-sans text-[10px] tracking-[0.12em] font-semibold text-primary/45 mb-0.5 select-none uppercase">
+                  <div className="font-sans text-[10px] tracking-[0.12em] font-semibold text-primary/40 mb-0.5 select-none uppercase">
                     {language === 'de' ? 'Schlafprodukte' : 'Sleep products'}
                   </div>
-                  <div className="font-sans text-[13px] text-primary/75 leading-relaxed font-light">
+                  <div className="font-sans text-[13px] text-primary/60 leading-relaxed font-light">
                     {row.others}
                   </div>
                 </div>
@@ -83,15 +85,17 @@ const WhyHespyra = () => {
         </div>
 
         {/* Comparison Table Card (Desktop only) */}
-        <div className="hidden md:block max-w-3xl mx-auto bg-[#FBF8F3] rounded-sm overflow-hidden shadow-[0_4px_12px_rgba(28,25,23,0.01)] border border-border/50">
+        <div className="hidden md:block max-w-3xl mx-auto bg-[#FBF8F3] rounded-sm overflow-hidden shadow-none border border-border/50">
           
           {/* Table Header Row */}
           <div className="grid grid-cols-12 border-b border-border/50 items-stretch">
             <div className="col-span-4 text-left px-6 py-6 bg-[#FBF8F3]"></div>
-            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#EFE9DF]/40 border-x border-primary/25 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
+            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#FBF8F3] border-x border-border/60 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-semibold uppercase relative">
+              {/* Subtle top accent indicator */}
+              <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-accent/70"></div>
               {columnHeaders[0]}
             </div>
-            <div className="col-span-4 text-center py-5 sm:py-6 text-primary/45 bg-[#FBF8F3] flex items-center justify-center font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-medium uppercase">
+            <div className="col-span-4 text-center py-5 sm:py-6 text-primary/40 bg-[#FBF8F3] flex items-center justify-center font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-medium uppercase">
               {columnHeaders[1]}
             </div>
           </div>
@@ -107,12 +111,12 @@ const WhyHespyra = () => {
                 </div>
  
                 {/* HESPYRA Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#EFE9DF]/40 border-x border-primary/25 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#FBF8F3] border-x border-border/60 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-medium tracking-wide leading-relaxed">
                   {row.hespyra}
                 </div>
  
                 {/* MELATONIN GUMMIES Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary/75 bg-[#FBF8F3] flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary/60 bg-[#FBF8F3] flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.others}
                 </div>
  
