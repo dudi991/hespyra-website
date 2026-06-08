@@ -203,16 +203,15 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'THE TRANSITION',
-    'philosophy.title': 'The evening is here.\nBut not yet within reach.',
+    'philosophy.title': 'The evening is here.\nBut you have not quite arrived.',
     'philosophy.text1': 'Sometimes the day ends outwardly sooner than it does within.\nThe room grows quieter, the light softer, the tasks less visible.',
     'philosophy.text2': 'And yet, the day lingers in the mind:\nconversations, decisions, messages, open loops.',
     'philosophy.text3': 'HESPYRA begins where the day still echoes.',
 
-
     // EditorialPause
-    'pause.part1': 'Not everything has to come',
-    'pause.part2': 'into',
-    'pause.part3': 'the evening.',
+    'pause.part1': 'Not everything',
+    'pause.part2': 'belongs',
+    'pause.part3': 'in the evening.',
 
     // Ritual
     'ritual.tag': 'THE RITUAL · THREE STEPS',
@@ -289,7 +288,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Waitlist
     'waitlist.tag': 'EVENING CULTURE, REIMAGINED',
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to follow the first edition –\nwith early insights, evening notes, and a first look at the ritual.',
+    'waitlist.desc': 'HESPYRA opens in small steps.\nSign up to follow the first edition —\nwith early insights, evening notes, and a first look at the ritual.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'JOIN IN',
     'waitlist.success': 'Thank you. We will reach out quietly.',
@@ -336,7 +335,7 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.q3': 'What makes HESPYRA different from capsules or gummies?',
     'faq.a3': 'HESPYRA is a drink. Stir it, hold the glass, rest for a moment. This turns preparation into a quiet evening routine rather than just a function.',
     'faq.q4': 'What does HESPYRA taste like?',
-    'faq.a4': 'Warm, balanced, and refined — with cocoa, vanilla, and tonka. Not sweet, not heavy, not medicinal.',
+    'faq.a4': 'Warm, balanced, and refined — with cacao, vanilla, and tonka. Not sweet, not heavy, not medicinal.',
     'faq.q5': 'How is HESPYRA prepared?',
     'faq.a5': 'One portion is stirred into water or plant-based milk. HESPYRA can be enjoyed warm or cold.',
     'faq.q6': 'When should I drink HESPYRA?',

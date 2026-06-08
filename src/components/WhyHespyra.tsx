@@ -9,7 +9,7 @@ const WhyHespyra = () => {
 
   const columnHeaders = language === 'de'
     ? ['HESPYRA', 'KLASSISCHE SCHLAFPRODUKTE']
-    : ['HESPYRA', 'CLASSIC SLEEP PRODUCTS'];
+    : ['HESPYRA', 'CONVENTIONAL SLEEP PRODUCTS'];
 
   const tableData = language === 'de'
     ? [
@@ -71,7 +71,7 @@ const WhyHespyra = () => {
                 {/* Classic Sleep Products Column */}
                 <div className="bg-white px-3.5 py-2.5">
                   <div className="font-sans text-[10px] tracking-[0.12em] font-semibold text-primary/45 mb-0.5 select-none uppercase">
-                    {language === 'de' ? 'Schlafprodukte' : 'Sleep Products'}
+                    {language === 'de' ? 'Schlafprodukte' : 'Sleep products'}
                   </div>
                   <div className="font-sans text-[13px] text-primary/75 leading-relaxed font-light">
                     {row.others}

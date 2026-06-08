@@ -78,7 +78,7 @@ const Hero = () => {
                 <p className="font-sans text-[10px] sm:text-[11px] leading-tight text-primary/85 font-normal tracking-wide">
                   {language === 'de' 
                     ? "30 Abendrituale · Kakao · Vanille · Tonka"
-                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
+                    : "30 evening rituals · Cacao · Vanilla · Tonka"}
                 </p>
                 <div className="font-sans font-bold text-[8px] tracking-widest text-accent uppercase">
                   {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}
@@ -162,7 +162,7 @@ const Hero = () => {
                 <p className="font-sans text-[12px] leading-[1.45] text-primary/85 font-normal tracking-wide mb-1.5">
                   {language === 'de' 
                     ? "30 Abendrituale · Kakao · Vanille · Tonka"
-                    : "30 Evening Rituals · Cocoa · Vanilla · Tonka"}
+                    : "30 evening rituals · Cacao · Vanilla · Tonka"}
                 </p>
                 <div className="font-sans font-bold text-[9.5px] tracking-widest text-accent uppercase whitespace-nowrap">
                   {language === 'de' ? 'ERSTE EDITION' : 'FIRST EDITION'}

@@ -10,7 +10,7 @@ const Purchase = () => {
   const [error, setError] = useState('');
 
   const tagText = language === 'de' ? "DIE ERSTE EDITION" : "THE FIRST EDITION";
-  const titleText = language === 'de' ? "Sichere dir frühen Zugang." : "Secure early access.";
+  const titleText = language === 'de' ? "Sichere dir frühen Zugang." : "Join the first edition.";
   
   const sublineTextGerman = (
     <>
@@ -129,7 +129,7 @@ const Purchase = () => {
               >
                 {isSubmitting 
                   ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
-                  : (language === 'de' ? 'ERSTE EDITION SICHERN' : 'SECURE FIRST EDITION')}
+                  : (language === 'de' ? 'ERSTE EDITION SICHERN' : 'JOIN THE FIRST EDITION')}
               </button>
             </form>
           )}

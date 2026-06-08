@@ -118,7 +118,7 @@ const Ingredients = () => {
         {
           num: '03',
           title: 'Taste',
-          desc: 'Warm notes of cocoa, vanilla, and tonka — soft, mature, and reserved.',
+          desc: 'Warm notes of cacao, vanilla, and tonka — soft, mature, and reserved.',
           items: [
             {
               name: 'Affron® Saffron',
