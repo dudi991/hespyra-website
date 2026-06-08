@@ -24,11 +24,16 @@ const Ritual = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto">
           
           {/* Card 01 - Release */}
-          <div className="flex flex-col justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
-            <div>
-              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block mb-2 md:mb-8 select-none">
+          <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
+            <div className="flex items-center justify-between md:block mb-2 md:mb-8 select-none">
+              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 01
               </span>
+              <div className="text-accent/90 md:hidden flex-shrink-0">
+                <GlassWater className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              </div>
+            </div>
+            <div>
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step1_tag')}
               </h3>
@@ -36,17 +41,22 @@ const Ritual = () => {
                 {t('ritual.step1_text')}
               </p>
             </div>
-            <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
+            <div className="hidden md:block text-accent/90 mt-2 md:mt-8 flex-shrink-0">
               <GlassWater className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
 
           {/* Card 02 - Gather */}
-          <div className="flex flex-col justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
-            <div>
-              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block mb-2 md:mb-8 select-none">
+          <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px] border-b md:border-b-0 md:border-r border-primary/10">
+            <div className="flex items-center justify-between md:block mb-2 md:mb-8 select-none">
+              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 02
               </span>
+              <div className="text-accent/90 md:hidden flex-shrink-0">
+                <ChevronsUp className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              </div>
+            </div>
+            <div>
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step2_tag')}
               </h3>
@@ -54,17 +64,22 @@ const Ritual = () => {
                 {t('ritual.step2_text')}
               </p>
             </div>
-            <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
+            <div className="hidden md:block text-accent/90 mt-2 md:mt-8 flex-shrink-0">
               <ChevronsUp className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
 
           {/* Card 03 - Arrive */}
-          <div className="flex flex-col justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px]">
-            <div>
-              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block mb-2 md:mb-8 select-none">
+          <div className="flex flex-col justify-start md:justify-between pt-6 pb-6 md:pt-10 md:pb-8 px-0 md:px-8 lg:px-12 text-left min-h-0 md:min-h-[320px]">
+            <div className="flex items-center justify-between md:block mb-2 md:mb-8 select-none">
+              <span className="font-sans text-xs sm:text-sm tracking-[0.2em] text-accent font-medium block">
                 03
               </span>
+              <div className="text-accent/90 md:hidden flex-shrink-0">
+                <Moon className="w-[18px] h-[18px]" strokeWidth={1.4} />
+              </div>
+            </div>
+            <div>
               <h3 className="font-serif text-2xl lg:text-3xl text-primary font-normal mb-1 md:mb-4">
                 {t('ritual.step3_tag')}
               </h3>
@@ -72,7 +87,7 @@ const Ritual = () => {
                 {t('ritual.step3_text')}
               </p>
             </div>
-            <div className="text-accent/90 mt-2 md:mt-8 flex-shrink-0">
+            <div className="hidden md:block text-accent/90 mt-2 md:mt-8 flex-shrink-0">
               <Moon className="w-[18px] h-[18px] md:w-[23px] md:h-[23px]" strokeWidth={1.4} />
             </div>
           </div>
