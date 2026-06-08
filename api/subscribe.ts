@@ -70,15 +70,20 @@ export default async function handler(req: SubscribeRequest, res: SubscribeRespo
       const errorText = await response.text();
       console.error(`[Subscribe API Error] rapidmail API error (status ${response.status}):`, errorText);
       
-      // If user is already subscribed or already exists, rapidmail may return 409 or another error.
-      // We log it, but we can return a generic 400 error to the client.
-      return res.status(400).json({ error: 'Subscription failed at rapidmail service' });
+      // Pass the API error details back to the client for debugging
+      return res.status(response.status).json({ 
+        error: 'Subscription failed at rapidmail service', 
+        details: errorText 
+      });
     }
 
     const data = await response.json();
     return res.status(200).json({ success: true, data });
-  } catch (error) {
+  } catch (error: any) {
     console.error('[Subscribe API Error] Subscription failed internally:', error);
-    return res.status(500).json({ error: 'An unexpected internal error occurred' });
+    return res.status(500).json({ 
+      error: 'An unexpected internal error occurred',
+      message: error.message 
+    });
   }
 }
