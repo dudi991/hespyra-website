@@ -57,17 +57,17 @@ const Waitlist = () => {
 
   const usps = [
     {
-      icon: <Star className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
+      icon: <Star className="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit1_title'),
       desc: t('waitlist.benefit1_desc')
     },
     {
-      icon: <Mail className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
+      icon: <Mail className="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit2_title'),
       desc: t('waitlist.benefit2_desc')
     },
     {
-      icon: <Gift className="w-[18px] h-[18px] lg:w-[21px] lg:h-[21px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
+      icon: <Gift className="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] mx-auto text-accent waitlist-usp-icon" strokeWidth={1.2} />,
       title: t('waitlist.benefit3_title'),
       desc: t('waitlist.benefit3_desc')
     }
@@ -92,7 +92,7 @@ const Waitlist = () => {
             <p className="font-sans text-[13px] sm:text-base text-primary/75 leading-relaxed font-light mb-4 md:mb-6 max-w-[460px] whitespace-pre-line">
               {t('waitlist.desc')}
             </p>
-
+ 
             {submitted ? (
               <div className="bg-white border border-accent/20 px-6 py-5 rounded-sm max-w-md shadow-sm flex items-center gap-3 text-accent font-sans text-sm">
                 <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0">
@@ -131,7 +131,7 @@ const Waitlist = () => {
               </p>
             )}
           </div>
-
+ 
           {/* Right Column - Brand USPs (Horizontal Grid on desktop) */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 text-center mt-4 lg:mt-0">
             {usps.map((usp, idx) => (
@@ -139,10 +139,10 @@ const Waitlist = () => {
                 <div className="text-accent mb-1 sm:mb-2 md:mb-3 lg:mb-2 select-none h-6 lg:h-7 flex items-center justify-center">
                   {usp.icon}
                 </div>
-                <h4 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold uppercase text-primary">
+                <h4 className="font-sans text-[10px] sm:text-[11px] lg:text-[12px] tracking-[0.2em] font-semibold uppercase text-primary">
                   {usp.title}
                 </h4>
-                <p className="font-sans text-[11.5px] sm:text-[13px] leading-relaxed text-primary/60 font-light mt-0.5 sm:mt-1 md:mt-1.5 max-w-[180px] mx-auto">
+                <p className="font-sans text-[11.5px] sm:text-[13px] leading-relaxed text-primary/60 lg:text-primary/75 font-light mt-0.5 sm:mt-1 md:mt-1.5 max-w-[180px] mx-auto">
                   {usp.desc}
                 </p>
               </div>
