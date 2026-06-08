@@ -20,7 +20,7 @@ const Faq = () => {
     { q: t('faq.q8'), a: t('faq.a8') },
   ];
   return (
-    <section id="faq" className="w-full bg-light py-10 lg:py-28 relative z-10">
+    <section id="faq" className="w-full bg-light py-[35px] lg:py-[92px] relative z-10">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 text-center">
         
         {/* Section Tag */}

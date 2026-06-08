@@ -78,7 +78,7 @@ const Purchase = () => {
     }
   };
   return (
-    <section id="purchase" className="w-full bg-[#333230] py-12 sm:py-16 lg:py-32 relative z-10 text-[#FAF8F2] overflow-hidden">
+    <section id="purchase" className="w-full bg-[#333230] py-[42px] sm:py-[56px] lg:py-[105px] relative z-10 text-[#FAF8F2] overflow-hidden">
       {/* Background radial gradient to give a premium glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[1000px] h-[600px] lg:h-[1000px] bg-accent/5 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
