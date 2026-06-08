@@ -57,9 +57,9 @@ const WhyHespyra = () => {
                 {row.label}
               </div>
               
-              <div className="divide-y divide-primary/5">
+              <div className="divide-y divide-border/30">
                 {/* HESPYRA Column */}
-                <div className="bg-[#F7F4EE]/50 px-3.5 py-2.5">
+                <div className="bg-[#EFE9DF]/40 px-3.5 py-2.5 border-x border-primary/25">
                   <div className="font-serif text-[11px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
                     {columnHeaders[0]}
                   </div>
@@ -83,12 +83,12 @@ const WhyHespyra = () => {
         </div>
 
         {/* Comparison Table Card (Desktop only) */}
-        <div className="hidden md:block max-w-3xl mx-auto bg-[#FBF8F3] rounded-sm overflow-hidden shadow-[0_8px_30px_rgba(28,25,23,0.03)] border border-primary/10">
+        <div className="hidden md:block max-w-3xl mx-auto bg-[#FBF8F3] rounded-sm overflow-hidden shadow-[0_4px_12px_rgba(28,25,23,0.01)] border border-border/50">
           
           {/* Table Header Row */}
-          <div className="grid grid-cols-12 border-b border-primary/10 items-stretch">
+          <div className="grid grid-cols-12 border-b border-border/50 items-stretch">
             <div className="col-span-4 text-left px-6 py-6 bg-[#FBF8F3]"></div>
-            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#F7F4EE] border-x border-primary/10 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
+            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#EFE9DF]/40 border-x border-primary/25 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
               {columnHeaders[0]}
             </div>
             <div className="col-span-4 text-center py-5 sm:py-6 text-primary/45 bg-[#FBF8F3] flex items-center justify-center font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-medium uppercase">
@@ -97,7 +97,7 @@ const WhyHespyra = () => {
           </div>
  
           {/* Table Body Rows */}
-          <div className="divide-y divide-primary/10">
+          <div className="divide-y divide-border/50">
             {tableData.map((row, idx) => (
               <div key={idx} className="grid grid-cols-12 items-stretch">
                 
@@ -107,7 +107,7 @@ const WhyHespyra = () => {
                 </div>
  
                 {/* HESPYRA Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#F7F4EE] border-x border-primary/10 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#EFE9DF]/40 border-x border-primary/25 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.hespyra}
                 </div>
  
