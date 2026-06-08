@@ -155,7 +155,7 @@ const Hero = () => {
               </div>
               
               {/* Overlay card in bottom-left - overflows left */}
-              <div className="absolute bottom-6 -left-6 sm:-left-8 lg:-left-10 bg-[#F4ECE1]/95 backdrop-blur-[2px] py-3.5 px-4 w-fit max-w-[280px] sm:max-w-[300px] rounded-sm shadow-[0_8px_24px_rgba(28,25,23,0.03)] border border-primary/5 transition-transform duration-500 hover:translate-y-[-2px] z-20">
+              <div className="absolute bottom-5 lg:-left-6 bg-[#F4ECE1]/90 backdrop-blur-[2px] py-3.5 px-4 w-fit max-w-[280px] sm:max-w-[300px] rounded-sm shadow-[0_4px_16px_rgba(28,25,23,0.015)] border border-border/30 transition-all duration-500 z-20">
                 <h4 className="font-serif text-[16px] text-primary font-semibold mb-1 leading-tight tracking-wide">
                   HESPYRA Evening Ritual
                 </h4>
