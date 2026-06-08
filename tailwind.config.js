@@ -16,7 +16,7 @@ export default {
         'warm-dark': '#1E1611',
         'warm-dark-card': '#2D231C',
         cream: '#FAF8F2',
-        'cream-dark': '#F1EADF',
+        'cream-dark': '#F3ECE2',
         card: '#FBF8F3',
         midnight: '#111524'
       },
