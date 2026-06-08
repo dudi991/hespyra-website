@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center bg-light pt-20 sm:pt-24 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 z-10 overflow-hidden">
       {/* Background grain texture effect */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1e1b18_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="max-w-[1600px] mx-auto w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-4 lg:gap-4 xl:gap-6 items-stretch">
@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
             
             {/* Caption card below the image on mobile to prevent obscuring image objects */}
-            <div className="mt-0.5 bg-[#EFEAE0]/70 py-1.5 px-3.5 rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.01)] border border-border/30">
+            <div className="mt-0.5 bg-[#E8E3DB]/70 py-1.5 px-3.5 rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.01)] border border-border/30">
               <h4 className="font-serif text-[12.5px] sm:text-[13px] text-primary font-semibold mb-0.5 leading-tight tracking-wide">
                 HESPYRA Evening Ritual
               </h4>
@@ -155,7 +155,7 @@ const Hero = () => {
               </div>
               
               {/* Overlay card in bottom-left - overflows left */}
-              <div className="absolute bottom-5 lg:-left-6 bg-[#F2EDE4]/90 backdrop-blur-[2px] py-2.5 px-3.5 w-fit max-w-[260px] sm:max-w-[280px] rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.006)] border border-border/30 transition-all duration-500 z-20">
+              <div className="absolute bottom-5 lg:-left-6 bg-[#E8E3DB]/90 backdrop-blur-[2px] py-2.5 px-3.5 w-fit max-w-[260px] sm:max-w-[280px] rounded-sm shadow-[0_2px_8px_rgba(28,25,23,0.006)] border border-border/30 transition-all duration-500 z-20">
                 <h4 className="font-serif text-[16px] text-primary font-semibold mb-1 leading-tight tracking-wide">
                   HESPYRA Evening Ritual
                 </h4>

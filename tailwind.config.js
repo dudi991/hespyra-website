@@ -7,16 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FAF8F5',
-        primary: '#1C1917',
-        accent: '#B67A53',
-        'accent-hover': '#9A633F',
-        border: '#E6E1DA',
-        muted: '#78716C',
+        background: '#F3F1EC',
+        primary: '#1E1B18',
+        accent: '#B67F5C',
+        'accent-hover': '#9A6542',
+        border: '#DDD8D0',
+        muted: '#6E6860',
         'warm-dark': '#1E1611',
         'warm-dark-card': '#2D231C',
-        cream: '#FAF8F5',
-        'cream-dark': '#F2EDE4',
+        cream: '#F3F1EC',
+        'cream-dark': '#E8E3DB',
         midnight: '#111524'
       },
       fontFamily: {

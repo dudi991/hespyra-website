@@ -59,7 +59,7 @@ const WhyHespyra = () => {
               
               <div className="divide-y divide-primary/5">
                 {/* HESPYRA Column */}
-                <div className="bg-[#FAF6F0]/50 px-3.5 py-2.5">
+                <div className="bg-[#F3F1EC]/50 px-3.5 py-2.5">
                   <div className="font-serif text-[11px] tracking-[0.1em] font-medium text-accent mb-0.5 select-none uppercase">
                     {columnHeaders[0]}
                   </div>
@@ -88,7 +88,7 @@ const WhyHespyra = () => {
           {/* Table Header Row */}
           <div className="grid grid-cols-12 border-b border-primary/10 items-stretch">
             <div className="col-span-4 text-left px-6 py-6 bg-white"></div>
-            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
+            <div className="col-span-4 text-center py-5 sm:py-6 text-primary bg-[#F3F1EC] border-x border-primary/10 flex items-center justify-center font-serif text-xs sm:text-sm tracking-[0.15em] font-normal uppercase">
               {columnHeaders[0]}
             </div>
             <div className="col-span-4 text-center py-5 sm:py-6 text-primary/45 bg-white flex items-center justify-center font-sans text-[10px] sm:text-[11px] tracking-[0.2em] font-medium uppercase">
@@ -107,7 +107,7 @@ const WhyHespyra = () => {
                 </div>
  
                 {/* HESPYRA Column */}
-                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#FAF6F0] border-x border-primary/10 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
+                <div className="col-span-4 text-center px-3 sm:px-4 py-4 sm:py-5 text-primary bg-[#F3F1EC] border-x border-primary/10 flex items-center justify-center font-sans text-[12.5px] sm:text-[13.5px] md:text-[14.5px] font-normal tracking-wide leading-relaxed">
                   {row.hespyra}
                 </div>
  
