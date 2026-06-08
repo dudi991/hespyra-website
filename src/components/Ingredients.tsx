@@ -164,7 +164,7 @@ const Ingredients = () => {
             >
               
               {/* Group Title (Release, Gather, Arrive) */}
-              <div className="mb-8 md:mb-0 md:min-h-[180px] lg:min-h-[140px]">
+              <div className="mb-8 md:mb-0 md:min-h-[220px] lg:min-h-[170px]">
                 <span className="font-sans text-[11px] sm:text-xs tracking-[0.15em] text-accent font-semibold block mb-4 select-none">
                   {group.num}
                 </span>
